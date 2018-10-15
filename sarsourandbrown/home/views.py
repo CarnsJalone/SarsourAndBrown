@@ -1,8 +1,15 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
+url_titles = {
+        'name': 'Sarsour And Brown',
+        'home_page': 'Home',
+        'about_page': 'About',
+    }
 
 def home(request):
-    return HttpResponse('<h1>Home</h1>')
+    context = {'pages': url_titles}
+    return render(request, 'home/home.html', context)
 
 def about(request):
-    return HttpResponse('<h1>About</h1>')
+    context = {'pages': url_titles}
+    return render(request, 'home/about.html', context)
