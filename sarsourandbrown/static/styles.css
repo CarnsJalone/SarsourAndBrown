@@ -1,3 +1,21 @@
-body {
-    background: lightgrey
+head, body, nav, footer {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+ul.navbar-nav.ml-auto li.nav-item a.nav-link {
+    color: lightgrey;
+}
+
+nav.navbar.navbar-expand-sm {
+    background-color: rgb(47,79,79);
+    opacity: .5;
+    /* TODO - I would like to add some opacity to this, so you 
+    can see an image behind it but I don't want the text to be 
+    affected  */
+}
+
+nav.navbar.navbar-expand-sm a.navbar-brand {
+    letter-spacing: -1.5px;
+    font-size: 2.5rem;
+    color: black;
 }
