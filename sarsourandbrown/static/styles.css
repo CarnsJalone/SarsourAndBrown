@@ -96,9 +96,14 @@ div.form-group input#about_submit_button {
     margin-top: 15px;
 }
  #parent_form_div {
-     max-width: 85%;
-     padding: 0px;
-     margin-left: 15px;
-     margin-top: 15px;
-     margin-right: 0px;
+    max-width: 100%;
+		font-size: 18px;
+ }
+
+ #contact_top_row_1 {
+	 padding-left: 25px;
+ }
+
+ #contact_top_row_2 {
+	 padding-right: 25px;
  }

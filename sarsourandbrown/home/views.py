@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from . forms import ContactForm
 
 url_titles = {
         'name': 'Sarsour And Brown',
@@ -18,4 +19,16 @@ def testimonials(request):
     return render(request, 'home/testimonials.html')
 
 def contact(request):
-    return render(request, 'home/contact.html')
+
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            name = form.cleaned_date['name']
+            email = form.cleaned_data['email']
+            text_area = form.cleaned_data['body']
+        
+        else: 
+            form = ContactForm()
+
+
+    return render(request, 'home/contact.html'),
