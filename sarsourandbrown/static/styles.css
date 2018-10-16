@@ -1,9 +1,13 @@
-head, body, nav, footer {
+head, body, nav, footer, div {
     font-family: 'Ubuntu', sans-serif;
 }
 
 ul.navbar-nav.ml-auto li.nav-item a.nav-link {
     color: lightgrey;
+}
+
+ul.navbar-nav.ml-auto li.nav-item a.nav-link:hover {
+    font-weight: bold;
 }
 
 nav.navbar.navbar-expand-sm {
@@ -15,12 +19,37 @@ nav.navbar.navbar-expand-sm {
 
 nav.navbar.navbar-expand-sm a.navbar-brand {
     letter-spacing: -1.5px;
-    font-size: 2.5rem;
+    font-size: 40px;
     color: black;
+    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: .75px;
+    -webkit-text-stroke-color: black;
+    
+}
+
+ul.navbar-nav.ml-auto li.nav-item {
+    font-size: 20px;
 }
 
 nav.navbar.navbar-expand-sm button.navbar-toggler span.navbar-toggler-icon {
     background-color: lightgrey;
     /* TODO - This needs to be fixed, the dark nav-bar covers up the 
     navbar-toggler-icon */
+}
+
+div.carousel-item, div.carousel-item img {
+    max-height: 650px;
+}
+
+div.carousel-caption {
+    color: black;
+    bottom: 0px;
+}
+
+div.carousel-caption h1 {
+    font-size: 40px;
+}
+
+div.carousel-caption h3 {
+    font-size: 22.5px;
 }
