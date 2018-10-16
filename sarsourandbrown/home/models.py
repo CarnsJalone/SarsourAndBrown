@@ -12,4 +12,7 @@ class Post(models.Model):
         return 'Title: {}, Content: {}. Author: {}'.format(self.title, self.content, self.author)
 
 class Review(models.Model):
+    # TODO - Here I want to create a class that allows a User instance
+    # to fill out a form that will either leave a review or send an 
+    # email. I haven't decided which I want yet. 
     pass
