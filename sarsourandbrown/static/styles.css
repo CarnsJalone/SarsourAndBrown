@@ -28,7 +28,7 @@ nav.navbar.navbar-expand-sm a.navbar-brand {
 }
 
 ul.navbar-nav.ml-auto li.nav-item {
-    font-size: 20px;
+    font-size: 18px;
 }
 
 nav.navbar.navbar-expand-sm button.navbar-toggler span.navbar-toggler-icon {
@@ -39,6 +39,8 @@ nav.navbar.navbar-expand-sm button.navbar-toggler span.navbar-toggler-icon {
 
 div.carousel-item, div.carousel-item img {
     max-height: 650px;
+    /* TODO - for some reason the third image extends further than 
+    650 px when in mobile view (small) */
 }
 
 div.carousel-caption {
@@ -53,3 +55,50 @@ div.carousel-caption h1 {
 div.carousel-caption h3 {
     font-size: 22.5px;
 }
+
+#carousel_prev_button, #carousel_next_button {
+    /* background-color: red; */
+    /* TODO - fix this so only the carets themselves change color,
+    not the entire background of the caret */
+}
+
+div.container {
+    margin-top: 20px;
+}
+
+#about_8_col, #about_4_col {
+    margin-top: 10px;
+}
+
+#about_8_col {
+    padding-left: 30px;
+}
+
+#about_4_col {
+    padding-right: 30px;
+}
+
+div.form-group {
+    margin: 0px;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 0px;
+}
+
+div.form-group label {
+    margin-top: 5px;
+    padding-top: 0px;
+    margin-bottom: 5px;
+    padding-bottom: 0px;
+}
+
+div.form-group input#about_submit_button {
+    margin-top: 15px;
+}
+ #parent_form_div {
+     max-width: 85%;
+     padding: 0px;
+     margin-left: 15px;
+     margin-top: 15px;
+     margin-right: 0px;
+ }

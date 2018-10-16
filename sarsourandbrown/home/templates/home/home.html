@@ -1,27 +1,76 @@
 {% extends "home/base.html" %}
 
 {% block carousel_home %}
-  </div class="d-block w-100 carousel-inner carousel-slide" id="carousel_home" data-ride="carousel">
-    <div class="carousel-item active">
-      <img class="w-100" src="static/Nader-Filler.jpeg"> {# Here will be an image of Nader in his business attire in a powerful pose #}
-      <div class="carousel-caption">
-        <h1 class="display-2">Filler Text Header</h1>
-        <h3>Filler Text H3</h3>
+  <div id="carouselIndicators" class="carousel slide" data-ride="carousel"> 
+    {% comment %} <ol class="carousel-indicators">
+      <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselIndicators" data-slide-to="2"></li>
+    </ol> {% endcomment %}
+    <div class="carousel-inner" id="carousel_home">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="static/Nader-Filler.jpeg" alt="First Slide"> {# Here will be an image of Nader in his business attire in a powerful pose #}
+        <div class="carousel-caption">
+          <h1 class="display-2">Filler Text Header</h1>
+          <h3>Filler Text H3</h3>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="static/Secondslide-Filler.jpeg" alt="Second Slide"> {# Here will be an image of Carly in her business attire in a powerful pose #}
+        <div class="carousel-caption">
+          <h1 class="display-2">Filler Text Header</h1>
+          <h3>Filler Text H3</h3>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="static/thirdslide-Filler.jpg" alt="Third Slide">
+        <div class="carousel-caption">
+          <h1 class="display-2">Filler Text Header</h1>
+          <h3>Filler Text H3</h3>
+        </div>
       </div>
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="#"> {# Here will be an image of Carly in her business attire in a powerful pose #}
-      <div class="carousel-caption">
-        <h1 class="display-2">Filler Text Header</h1>
-        <h3>Filler Text H3</h3>
-      </div>
+    <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
+      <span id="carousel_prev_button" class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
+      <span id="carousel_next_button" class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+{% endblock %}
+
+{% block two_column_container %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+       nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet 
+       nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu 
+       pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+        Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, 
+        feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies 
+        nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum 
+        rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, 
+        hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam 
+        quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales 
+        sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="#">
-      <div class="carousel-caption">
-        <h1 class="display-2">Filler Text Header</h1>
-        <h3>Filler Text H3</h3>
-      </div>
+    <div class="col">
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. 
+      Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+       nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet 
+       nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu 
+       pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
+        Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, 
+        feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies 
+        nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum 
+        rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, 
+        hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam 
+        quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales 
+        sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
     </div>
   </div>
 {% endblock %}
