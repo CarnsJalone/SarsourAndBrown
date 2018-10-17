@@ -26,6 +26,8 @@ def contact(request):
 	email = None 
 	body = None 
 
+	form = ContactForm()
+
 	if request.method == 'POST':
 		form = ContactForm(request.POST)
 
@@ -34,9 +36,10 @@ def contact(request):
 			email = form.cleaned_data['email']
 			body = form.cleaned_data['body']
 
-			print(name)
+		field_args = {'name': name, 'email': email, 'body': body}
+		return render(request, 'home/contact_feedback.html', {'name': name})
 
-			return render(request, 'home/contact_feedback.html')
+		# TODO - Need to figure out how to pull this data over to contact_feedback
 	
 	else: 
 		form = ContactForm()
