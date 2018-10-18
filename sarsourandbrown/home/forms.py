@@ -3,8 +3,11 @@ from . models import Submitter
 
 class ContactForm(forms.ModelForm):
 
-    name = forms.CharField(label="Name", required=True)
-    name.widget.attrs.update({'class': 'form-control', 'name': 'name', 'placeholder': 'Please Enter Your Name'})
+    first_name = forms.CharField(label="First Name", required=True)
+    first_name.widget.attrs.update({'class': 'form-control', 'name': 'first_name', 'placeholder': 'Please Enter Your First Name'})
+
+    last_name = forms.CharField(label="Last Name", required=True)
+    last_name.widget.attrs.update({'class': 'form-control', 'name': 'last_name', 'placeholder': 'Please Enter Your Last Name'})
     
     email = forms.EmailField(widget=forms.EmailInput, label="Email", required=True)
     email.widget.attrs.update({'class': 'form-control', 'name': 'email', 'placeholder': 'Please Enter Your Email'})
@@ -14,5 +17,5 @@ class ContactForm(forms.ModelForm):
 
     class Meta:
         model = Submitter
-        fields = ('name', 'email', 'body')
+        fields = ('first_name', 'last_name', 'email', 'body')
 
