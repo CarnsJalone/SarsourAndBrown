@@ -1,6 +1,7 @@
 from django import forms
+from . models import Submitter
 
-class ContactForm(forms.Form):
+class ContactForm(forms.ModelForm):
 
     name = forms.CharField(label="Name", required=True)
     name.widget.attrs.update({'class': 'form-control', 'name': 'name', 'placeholder': 'Please Enter Your Name'})
@@ -10,4 +11,8 @@ class ContactForm(forms.Form):
     
     body = forms.CharField(widget=forms.Textarea, label="Enter Inquiry Below", max_length="250", required=True)
     body.widget.attrs.update({'class': 'form-control', 'name':'email', 'placeholder':'Please Enter A Brief Description of the Inquiry', 'rows': '10'})
+
+    class Meta:
+        model = Submitter
+        fields = ('name', 'email', 'body')
 
