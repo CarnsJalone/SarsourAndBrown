@@ -92,21 +92,21 @@ div.form-group {
     padding: 0px;
 }
 
-div.form-group label {
+input#id_first_name.form-control, 
+input#id_last_name.form-control, 
+input#id_email.form-control, 
+textarea#id_body.form-control {
     margin-top: 5px;
-    padding-top: 0px;
-    margin-bottom: 5px;
-    padding-bottom: 0px;
+    margin-bottom: 8px;
 }
 
-div.form-group input#about_submit_button {
-    margin-top: 15px;
+input#about_submit_button {
+    margin-top: 10px;
 }
+
  #parent_form_div {
-    max-width: 100%;
     font-size: 16px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 30px;
  }
 
  #contact_top_row_1 {
@@ -121,6 +121,11 @@ div#contact_feedback-div {
     top: 50px;
     margin-top: 10px;
     padding-top: 10px;
+}
+
+div#contact_feedback-div p, div#contact_feedback-div h3 {
+    padding: 0px;
+    margin: 0 auto;
 }
 
 footer#footer-main {
@@ -144,6 +149,7 @@ div#social-media-links a:hover , div#social-media-links a:focus{
     color: grey;
 }
 
-div#social-media-links-div {
-    margin: 0 auto;
+div#social-media-links-div.col {
+    padding-top: 30px;
+
 }
