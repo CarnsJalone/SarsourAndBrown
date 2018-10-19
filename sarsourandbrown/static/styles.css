@@ -2,26 +2,33 @@ head, body, nav, footer, div, table {
     font-family: 'Ubuntu', sans-serif;
 }
 
-ul.navbar-nav.ml-auto li.nav-item a.nav-link {
-    color: lightgrey;
+nav#main-navbar {
+    background-color: black;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
-ul.navbar-nav.ml-auto li.nav-item a.nav-link:hover {
-    font-weight: bold;
-}
-
-nav.navbar.navbar-expand-sm {
-    background-color: rgb(47,79,79);
+div#navbar-nav {
+    background-color: black;
     /* TODO - I would like to add some opacity to this, so you 
     can see an image behind it but I don't want the text to be 
     affected  */
 }
 
+ul.navbar-nav.ml-auto li.nav-item a.nav-link {
+    color: white;
+}
+
+ul.navbar-nav.ml-auto li.nav-item a.nav-link:hover {
+    color: grey;
+    font-weight: bold;
+}
+
 nav.navbar.navbar-expand-sm a.navbar-brand {
     letter-spacing: -1.5px;
     font-size: 40px;
-    color: black;
-    -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+    color: rgb(255,255,255);
+    /* -webkit-text-fill-color: white; Will override color (regardless of order) */
     -webkit-text-stroke-width: .75px;
     -webkit-text-stroke-color: black;
     
@@ -32,7 +39,7 @@ ul.navbar-nav.ml-auto li.nav-item {
 }
 
 nav.navbar.navbar-expand-sm button.navbar-toggler span.navbar-toggler-icon {
-    background-color: lightgrey;
+    background-color: white;
     /* TODO - This needs to be fixed, the dark nav-bar covers up the 
     navbar-toggler-icon */
 }
@@ -62,8 +69,8 @@ div.carousel-caption h3 {
     not the entire background of the caret */
 }
 
-div.container {
-    margin-top: 20px;
+div#home-main-container {
+    padding: 25px;
 }
 
 #about_8_col, #about_4_col {
@@ -97,7 +104,9 @@ div.form-group input#about_submit_button {
 }
  #parent_form_div {
     max-width: 100%;
-	font-size: 16px;
+    font-size: 16px;
+    padding-top: 25px;
+    padding-bottom: 25px;
  }
 
  #contact_top_row_1 {
@@ -108,65 +117,33 @@ div.form-group input#about_submit_button {
 	 padding-right: 25px;
  }
 
-/* Breathing animation for the Sarsour and Brown Title at the top */
-
-#sarsour_and_brown_nav_text {
-    -webkit-animation: breathing 7s ease-out infinite normal;
-    animation: breathing 15s ease-out infinite normal;
-    -webkit-font-smoothing: antialiased;
-    }
-
-
-@-webkit-keyframes breathing {
-  0% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-
-  25% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-
-  60% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-
-  100% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-}
-
-@keyframes breathing {
-  0% {
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-
-  25% {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-  }
-
-  60% {
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-
-  100% {
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
-  }
-}
-
 div#contact_feedback-div {
     top: 50px;
     margin-top: 10px;
     padding-top: 10px;
+}
+
+footer#footer-main {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+div#social-media-links a {
+    color: white;
+    font-size: 22.5px;
+    text-decoration: none;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+div#social-media-links a:hover , div#social-media-links a:focus{
+    color: grey;
+}
+
+div#social-media-links-div {
+    margin: 0 auto;
 }
