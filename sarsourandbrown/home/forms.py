@@ -1,5 +1,6 @@
 from django import forms
 from . models import Submitter
+import re 
 
 class ContactForm(forms.ModelForm):
 
@@ -18,4 +19,10 @@ class ContactForm(forms.ModelForm):
     class Meta:
         model = Submitter
         fields = ('first_name', 'last_name', 'email', 'body')
+
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        if not "." in email:
+            raise forms.ValidationError("Please enter a valid email")
+        return email
 

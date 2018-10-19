@@ -3,6 +3,8 @@ from django.utils import timezone
 from django.shortcuts import HttpResponse
 from django.urls import reverse
 from django.core.mail import send_mail
+from django.core.exceptions import ValidationError
+from django.core.validators import validate_email
 
 from . models import Submitter
 from .forms import ContactForm
@@ -34,6 +36,7 @@ def contact(request):
             first_name = form.cleaned_data['first_name']
             last_name = form.cleaned_data['last_name']
             email = form.cleaned_data['email']
+            email = validate_email(email)
             body = form.cleaned_data['body']
 
             form.save()
@@ -44,7 +47,8 @@ def contact(request):
                 body,
                 email, 
                 ['SarsourAndBrown@gmail.com'],
-                fail_silently=False)
+                fail_silently=False
+            )
 
             # Email to the inquirer about the next steps
             send_mail(
@@ -56,8 +60,12 @@ def contact(request):
             )
             
             field_args = {'first_name': first_name, 'last_name': last_name, 'email': email, 'body': body}
-            return render(request, 'home/contact_feedback.html', field_args)
-            # TODO - Need to figure out how to pull this data over to contact_feedback
+
+            try:
+                return render(request, 'home/contact_feedback.html', field_args)
+            except ValueError:
+                form = ContactForm()
+                return render(request, 'home/contact.html', {'form': form})
 
     else:
         form = ContactForm()
