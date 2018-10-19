@@ -58,6 +58,8 @@ def contact(request):
                 [email],
                 fail_silently=False
             )
+
+            # TODO - I want to send a rendered HTML page into the email, to look more professional. 
             
             field_args = {'first_name': first_name, 'last_name': last_name, 'email': email, 'body': body}
 
