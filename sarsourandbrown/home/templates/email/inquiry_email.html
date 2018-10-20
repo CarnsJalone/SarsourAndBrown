@@ -1,0 +1,26 @@
+{% now "H" as current_time %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+
+<body id="email-body" style="font-family: 'Ubuntu', sans-serif; background-color: black; color: white; padding: 10px;">
+    <h3 id="email-header">Good
+        {% if current_time > 12 %}
+        Afternoon,
+        {% else %}
+        Morning,
+        {% endif %}
+        {{ first_name }}.</h3>
+    <p class="email-paragraph">Thanks for reaching out to us. Your inquiry has been forwarded to a member of the Sarsour
+        And Brown team. We will use the email and/or phone number that you provided in order to reach out to you.</p>
+    <p class="email-paragraph">If you have any questions in the meantime or have an urgent need to speak to us, please
+        contact us at 000-000-0000.</p>
+    <p class="email-paragraph">Thanks again!</p>
+    <p class="email-paragraph">- Sarsour And Brown</p>
+</body>
+
+</html>

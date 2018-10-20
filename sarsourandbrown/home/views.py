@@ -3,6 +3,7 @@ from django.utils import timezone
 from django.shortcuts import HttpResponse
 from django.urls import reverse
 from django.core.mail import send_mail
+from django.template.loader import get_template, render_to_string
 from django.core.exceptions import ValidationError
 from django.core.validators import validate_email
 
@@ -36,10 +37,14 @@ def contact(request):
             first_name = form.cleaned_data['first_name']
             last_name = form.cleaned_data['last_name']
             email = form.cleaned_data['email']
-            email = validate_email(email)
             body = form.cleaned_data['body']
 
             form.save()
+
+            field_args = {'first_name': first_name, 'last_name': last_name, 'email': email, 'body': body}
+
+            inquiry_email_html = render_to_string('email/inquiry_email.html', field_args)
+            inquiry_email_text = render_to_string('email/inquiry_email.txt', field_args)
             
             # Email to Sarsour And Brown about the inquiry
             send_mail( 
@@ -53,16 +58,16 @@ def contact(request):
             # Email to the inquirer about the next steps
             send_mail(
                 'Hello from Sarsour And Brown',
-                'Hey {}. Thanks for reaching out to us. Your inquiry has been forwarded to a member of the team. Please look out for our contact regarding the next steps. We are excited to work together!'.format(first_name), 
+                inquiry_email_text, 
                 'SarsourAndBrown@gmail.com',
                 [email],
+                html_message=inquiry_email_html,
                 fail_silently=False
             )
 
             # TODO - I want to send a rendered HTML page into the email, to look more professional. 
             
-            field_args = {'first_name': first_name, 'last_name': last_name, 'email': email, 'body': body}
-
+            
             try:
                 return render(request, 'home/contact_feedback.html', field_args)
             except ValueError:

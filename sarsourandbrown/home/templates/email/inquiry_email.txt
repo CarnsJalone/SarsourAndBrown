@@ -1,0 +1,9 @@
+Hello {{first_name}}.
+
+Thanks for reaching out to us. Your inquiry has been forwarded to a member of Sarsour And Brown team. We will use the email and/or phone number that you provided in order to reach out to you.
+
+If you have any questions in the meantime or have an urgent need to speak to us, please contact us at 000-000-0000.
+
+Thanks again!
+
+- Sarsour And Brown
