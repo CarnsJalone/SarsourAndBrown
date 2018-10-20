@@ -37,21 +37,25 @@ def contact(request):
             first_name = form.cleaned_data['first_name']
             last_name = form.cleaned_data['last_name']
             email = form.cleaned_data['email']
+            phone_number = form.cleaned_data['phone_number']
             body = form.cleaned_data['body']
 
             form.save()
 
-            field_args = {'first_name': first_name, 'last_name': last_name, 'email': email, 'body': body}
+            field_args = {'first_name': first_name, 'last_name': last_name, 'email': email, 'phone_number': phone_number, 'body': body}
 
             inquiry_email_html = render_to_string('email/inquiry_email.html', field_args)
             inquiry_email_text = render_to_string('email/inquiry_email.txt', field_args)
+            sarsour_and_brown_automated_html = render_to_string('email/sarsour_and_brown_automated.html', field_args)
+            sarsour_and_brown_automated_text = render_to_string('email/sarsour_and_brown_automated.txt', field_args)
             
             # Email to Sarsour And Brown about the inquiry
             send_mail( 
-                'Inquiry from {} {} at {}'.format(first_name, last_name, email),
-                body,
+                'New Automated Inquiry',
+                sarsour_and_brown_automated_text,
                 email, 
                 ['SarsourAndBrown@gmail.com'],
+                html_message=sarsour_and_brown_automated_html,
                 fail_silently=False
             )
 

@@ -153,3 +153,9 @@ div#social-media-links-div.col {
     padding-top: 30px;
 
 }
+
+#bottom-page-link {
+    font-size: 5px;
+    text-decoration: none;
+    color: white;
+}

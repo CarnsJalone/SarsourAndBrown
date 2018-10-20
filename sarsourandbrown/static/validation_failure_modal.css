@@ -1,4 +1,4 @@
-div#validation_failure_modal {
+div#validation_failure_modal_email {
     display: none;
     position: fixed;
     z-index: 1;
@@ -10,7 +10,7 @@ div#validation_failure_modal {
     background-color: rgba(255,255,255,.5)
 }
 
-div#modal-content{
+div#email-modal-content{
     font-size: 18px;
     margin: 20% auto;
     background-color: rgb(47,79,79);
@@ -22,20 +22,62 @@ div#modal-content{
     box-shadow: 0 5px 8px 0 rgba(0,0,0,.2), 0 7px 20px 0 rgba(0,0,0,0.17);
 }
 
-span#validation_modal_span {
+span#email-validation_modal_span {
     color: #ccc;
     float: right;
     font-size: 40px;
 }
 
-span#validation_modal_span:hover, span#validation_modal_span:focus {
+span#email-validation_modal_span:hover, span#vemail-alidation_modal_span:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
     font-size: 40px;
 }
 
-div#modal-content p {
+div#email-modal-content p {
+    margin: 0 auto;
+    padding: 20px;
+}
+
+div#validation_failure_modal_phone_number {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(255,255,255,.5)
+}
+
+div#phone-number-modal-content{
+    font-size: 18px;
+    margin: 20% auto;
+    background-color: rgb(47,79,79);
+    color: white;
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+    border-radius: .25rem;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+}
+
+span#phone-number-validation_modal_span {
+    color: #ccc;
+    float: right;
+    font-size: 40px;
+}
+
+span#phone-number-validation_modal_span:hover, span#validation_modal_span:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+div#phone-number-modal-content p {
     margin: 0 auto;
     padding: 20px;
 }

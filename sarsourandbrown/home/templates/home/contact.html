@@ -36,10 +36,16 @@
 	{% comment %} TODO - This modal is cool but let's implement one from bootstrap, they
 		look infinitely better
 	{% endcomment %}
-	<div id="validation_failure_modal">
-		<div id="modal-content">
-			<span id="validation_modal_span">&times;</span>
+	<div id="validation_failure_modal_email">
+		<div id="email-modal-content">
+			<span id="email-validation_modal_span">&times;</span>
 			<p>Please enter a valid email address!</p>
+		</div>
+	</div>
+	<div id="validation_failure_modal_phone_number">
+		<div id="phone-number-modal-content">
+			<span id="phone-number-validation_modal_span">&times;</span>
+			<p>Please enter a valid phone number!</p>
 		</div>
 	</div>
 {% endblock %}
