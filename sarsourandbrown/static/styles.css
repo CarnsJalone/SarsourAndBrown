@@ -159,3 +159,9 @@ div#social-media-links-div.col {
     text-decoration: none;
     color: white;
 }
+
+img#logo-lower-right-hand-corner {
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
