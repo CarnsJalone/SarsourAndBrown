@@ -1,5 +1,7 @@
 1) Fix CSS in Contact page. The form needs to sit on the left side of the page. 
 2) Fix CSS for the two links at the bottom of the page in base.html
-3) Broke the contact form by adding a telephone verification, needs fixed
+3) Broke the contact form by adding a telephone verification, needs fixed.
+    a) Fixed the regex test, everything appears functional.
+    b) Want to make this modal from bootstrap. 
 4) Fix the logo, doesn't look right and it's kinda big.     
 5) Fix the footer, format the text correctly and the image needs to go all the way to the right of the page

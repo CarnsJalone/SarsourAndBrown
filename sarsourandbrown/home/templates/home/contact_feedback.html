@@ -1,9 +1,13 @@
 {% extends 'home/base.html' %}
 {% block contact_feedback %}
-    <div id="contact_feedback_div">
+<div class="container" id="contact_feedback_div">
+    <div class="row" id="contact_feedback_header">
         <h3>Thanks for your feedback, {{ first_name }}!</h3>
+    </div>
+    <div class="row" id="contact_feedback_paragraph">
         <p>Your inquiry has been submitted to Sarsour And Brown.
-        We will contact you as soon as we are able to!
+            We will contact you as soon as we are able to!
         </p>
     </div>
+</div>
 {% endblock %}
