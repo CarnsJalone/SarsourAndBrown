@@ -8,4 +8,5 @@ urlpatterns = [
     path('contact/', views.contact, name='contact-page'),
     path('contact/contact_feedback/', views.contact, name='contact-feedback-page'),
     path('display_inquiries/', views.display_inquiries, name='display_inquiries'),
+    path('privacy_policy/', views.privacy_policy, name='privacy_policy'),
 ]

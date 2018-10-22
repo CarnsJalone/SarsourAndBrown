@@ -89,3 +89,6 @@ def display_inquiries(request):
 
     return render(request, 'home/display_inquiries.html', context)
 
+def privacy_policy(request):
+    return render(request, 'home/privacy_policy.html')
+

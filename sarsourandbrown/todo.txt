@@ -5,3 +5,5 @@
     b) Want to make this modal from bootstrap. 
 4) Fix the logo, doesn't look right and it's kinda big.     
 5) Fix the footer, format the text correctly and the image needs to go all the way to the right of the page
+    a) Fix the absolute positioning on the logo in the bottom right hand corner of the screen
+    b) Social media links stay lit when you've clicked the link, probably has to do with the target-"_blank"

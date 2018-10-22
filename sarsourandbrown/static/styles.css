@@ -2,10 +2,19 @@ head, body, nav, footer, div, table {
     font-family: 'Ubuntu', sans-serif;
 }
 
+/* div.navbar_border {
+    width: 100%;
+    height: 10px;
+    background-color: grey;
+} */
+
+/*  Navigation Bar  */
+
 nav#main-navbar {
     background-color: black;
     padding-top: 25px;
     padding-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 div#navbar-nav {
@@ -34,23 +43,18 @@ nav.navbar.navbar-expand-sm a.navbar-brand {
     
 }
 
-nav.navbar#main-navbar::before {
-    content: '';
-    background-color: grey;
-    width: 100%;
-    height: 10px;
-
+nav.navbar#main-navbar {
+    padding: 15px;
+    display: flex;
 }
 
 ul.navbar-nav.ml-auto li.nav-item {
     font-size: 18px;
 }
 
-nav.navbar.navbar-expand-sm button.navbar-toggler span.navbar-toggler-icon {
-    background-color: white;
-    /* TODO - This needs to be fixed, the dark nav-bar covers up the 
-    navbar-toggler-icon */
-}
+/* Navbar Toggler Icon */
+
+/* Carousel - Carousel Div */
 
 div.carousel-item, div.carousel-item img {
     max-height: 650px;
@@ -93,6 +97,10 @@ div#home-main-container {
     padding-right: 30px;
 }
 
+/*  Contact Page  */
+
+/* Form */
+
 div.form-group {
     margin: 0px;
     max-width: 100%;
@@ -112,18 +120,26 @@ input#about_submit_button {
     margin-top: 10px;
 }
 
- #parent_form_div {
+/* Form Container */
+
+ div#parent_form_div.container {
+    width: 100%;
     font-size: 16px;
-    padding: 30px;
+    padding: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15px;
  }
 
- #contact_top_row_1 {
-     padding-left: 25px;
+ div.col#contact_top {
+
  }
 
- #contact_top_row_2 {
-	 padding-right: 25px;
- }
+ 
+
+ /* Contact Feedback Page */
 
 div#contact_feedback_header {
     padding-top: 20px;
@@ -145,6 +161,7 @@ div#logo-lower-right-hand-corner {
     right: 0;
     bottom: 0;
 }
+/* Footer - Footer */
 
 footer#footer-main {
     padding-top: 25px;
@@ -154,33 +171,68 @@ footer#footer-main {
     text-align: center;
 }
 
+/* Footer - Social Media Links */
+
 div#social-media-links a {
     color: white;
     font-size: 22.5px;
     text-decoration: none;
-    padding-right: 10px;
-    padding-left: 10px;
     padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 10px;
+    transition: .25s;
 }
 
-div#social-media-links a:hover , div#social-media-links a:focus{
-    color: grey;
+/*  Footer - Social Media Specific Colors */
+
+a#fb_icon:hover, a#fb_icon:focus {
+    color: rgb(59, 89, 152);
 }
 
-div#social-media-links-div.col {
-    padding-top: 30px;
-
+a#twitter_icon:hover, a#twitter_icon:focus {
+    color: rgb(29, 161, 242);
 }
 
-#bottom-page-link {
-    font-size: 5px;
+a#google_plus_icon:hover, a#google_plus_icon:focus {
+    color: rgb(219, 68, 55);
+}
+
+a#linkedin_icon:hover, a#linked_in:focus {
+    color: rgb(0, 119, 181);
+}
+
+a#youtube_icon:hover, a#youtube_icon:focus {
+    color: rgb(204,24,30);
+}
+
+
+/* Footer - Copyright Info */
+
+#bottom-page-link, 
+div#sarsour_and_brown_copyright, 
+a.bottom-page-link,
+a#privacy_policy_link {
+    font-size: 12px;
     text-decoration: none;
     color: white;
 }
 
+/* Footer - Privacy Policy Link */
+
+div#privacy_policy_container {
+    text-align: right;
+    padding-bottom: 20px;
+}
+
+/* Footer - Logo */
+
 img#sarsour_and_brown_logo_footer {
     position: absolute;
-    left: 25px;
-    bottom: 25px;
-    width: 150px;
+    bottom: 0;
+    right: 0;
+    width: 75px;
 }
+
+/*  Testimonials Page  */
