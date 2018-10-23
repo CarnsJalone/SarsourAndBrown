@@ -14,8 +14,9 @@ nav#main-navbar {
     background-color: black;
     padding-top: 25px;
     padding-bottom: 25px;
-    margin-bottom: 15px;
 }
+
+/* Navigation Bar - Main Container */
 
 div#navbar-nav {
     background-color: black;
@@ -23,6 +24,8 @@ div#navbar-nav {
     can see an image behind it but I don't want the text to be 
     affected  */
 }
+
+/* Navigation Bar - Link */
 
 ul.navbar-nav.ml-auto li.nav-item a.nav-link {
     color: white;
@@ -85,6 +88,8 @@ div#home-main-container {
     padding: 25px;
 }
 
+/* About Page */
+
 #about_8_col, #about_4_col {
     margin-top: 10px;
 }
@@ -95,6 +100,62 @@ div#home-main-container {
 
 #about_4_col {
     padding-right: 30px;
+}
+
+/* About Page */
+
+/* About Page - Specialization - Main Div */
+
+div#specialization-div {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* About Page - Specialization - Specialization Field */
+
+div.specialization-specialization {
+    text-align: left;
+    border-collapse: collapse;
+    position: relative;
+}
+
+/* About Page - Specialization - Specialization Field - Specialization Text */
+
+div.specialization-text-div {
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    left: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+div.specialization-specialization p {
+    font-size: 50px;
+    margin: 0;
+}
+
+/* About Page - Specialization - Images */
+
+img#immigration-specialization-img {
+    max-width: 100%;
+    opacity: .5;
+}
+
+/* About Page - Specialization - Border */
+
+div.specialization-border {
+    border: .5px solid black;
+    border-collapse: collapse;
+}
+
+/* About Page - Specialization - Icon Div */
+
+div#icon-div.col {
+    padding: 0px;
+    text-align: center;
+    font-size: 20px;
+    vertical-align: middle;
 }
 
 /*  Contact Page  */
