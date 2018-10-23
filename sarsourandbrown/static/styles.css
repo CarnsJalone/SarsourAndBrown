@@ -314,3 +314,13 @@ div#privacy_policy_contact_info_container p {
     padding-bottom: -15px;
 }
 
+/* Section Divider Div */
+
+div.black-section-filler-div {
+    background-color: black;
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    opacity: .5;
+}
