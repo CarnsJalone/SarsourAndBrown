@@ -236,3 +236,20 @@ img#sarsour_and_brown_logo_footer {
 }
 
 /*  Testimonials Page  */
+
+/* Privacy Policy Page */
+
+div#privacy_policy_container {
+    text-align: left;
+}
+
+div#privacy_policy_container h5, div#privacy_policy_container h3 {
+    font-weight: bold;
+}
+
+div#privacy_policy_contact_info_container p {
+    text-align: center;
+    padding-top: -15px;
+    padding-bottom: -15px;
+}
+
