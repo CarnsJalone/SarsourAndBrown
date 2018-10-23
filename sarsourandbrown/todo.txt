@@ -12,3 +12,4 @@
     There's a great example at https://www.oykhmancriminaldefence.com/ , looks like it's using fusion boxes or something
 8) Nader wants a different font, we'll let him choose
 9) Fix the specialization div, border and images in the about page. 
+10) When on a mobile device, the Sarsour And Brown Text does not fit correctly in the nav bar. Need to make it responsive. 
