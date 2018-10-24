@@ -2,7 +2,7 @@ $(document).ready(function() {
   // Email Regex Function
   var $email_field = $("#id_email");
   var $phone_number_field = $("#id_phone_number");
-  var $submit_button = $("#about_submit_button");
+  var $submit_button = $("#contact-submit-button");
   var email_modal = document.getElementById("validation_failure_modal_email");
   var phone_modal = document.getElementById("validation_failure_modal_phone_number")
   var email_modal_content = document.getElementById("email-modal-content");

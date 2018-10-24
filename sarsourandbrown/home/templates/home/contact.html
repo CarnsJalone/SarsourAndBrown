@@ -1,52 +1,59 @@
 {% extends "home/base.html" %}
 
 {% block contact_form %}
-	<div id="parent_form_div" class="container">
-		<div class="row">
-			<div class="col" id="contact_top_row_1">
-				<form id="inquiry_form" role="form" action="/contact/contact_feedback/" method="post">
-					{% csrf_token %}
-					{{ form }}
-					<input id="about_submit_button" type="submit" value="Submit" name="submit">
-				</form>
-			</div>
-			<div class="col" id="contact_top_row_2">
-				<h1>Filler Information</h1>
-				<p>Far far away, behind the word mountains, far from the countries 
-				Vokalia and Consonantia, there live the blind texts. Separated they 
-				live in Bookmarksgrove right at the coast of the Semantics, a large 
+<div id="contact-top-parent-div" class="container">
+	<div class="row" id="exception-spacing-top-contact-row">
+		<div class="col contact-top-child-div">
+			<form id="inquiry-form" role="form" action="/contact/contact_feedback/" method="post">
+				{% csrf_token %}
+				{{ form }}
+				<input id="contact-submit-button" type="submit" value="Submit" name="submit">
+			</form>
+		</div>
+		<div class="col contact-top-child-div">
+			<h1>Filler Information</h1>
+			<p>Far far away, behind the word mountains, far from the countries
+				Vokalia and Consonantia, there live the blind texts. Separated they
+				live in Bookmarksgrove right at the coast of the Semantics, a large
 				language ocean. A small river named Duden flows by their place and
-				 supplies it with the necessary regelialia. It is a paradisematic 
-				 country, in which roasted parts of sentences fly into your mouth. 
-				 Even the all-powerful Pointing has no control about the blind texts 
-				 it is an almost unorthographic life One day however a small line of 
-				 blind text by the name of Lorem Ipsum decided to leave for the far 
-				 World of Grammar. The Big Oxmox advised her not to do so, because 
-				 there were thousands of bad Commas, wild Question Marks and devious 
-				 Semikoli, but the Little Blind Text didn’t listen. She packed her 
-				 seven versalia, put her initial into the belt and made herself on the 
-				 way. When she reached the first hills of the Italic Mountains, she had
-				  a last view back on the skyline of her hometown Bookmarksgrove, the 
-					headline of Alphabet Village and the subline of her own road, the Line
-					 Lane. Pityful a rethoric question ran over her cheek, then</p>
-			</div>
+				supplies it with the necessary regelialia. It is a paradisematic
+				country, in which roasted parts of sentences fly into your mouth.
+				Even the all-powerful Pointing has no control about the blind texts
+				it is an almost unorthographic life One day however a small line of
+				blind text by the name of Lorem Ipsum decided to leave for the far
+				World of Grammar. The Big Oxmox advised her not to do so, because
+				there were thousands of bad Commas, wild Question Marks and devious
+				Semikoli, but the Little Blind Text didn’t listen. She packed her
+				seven versalia, put her initial into the belt and made herself on the
+				way. When she reached the first hills of the Italic Mountains, she had
+				a last view back on the skyline of her hometown Bookmarksgrove, the
+				headline of Alphabet Village and the subline of her own road, the Line
+				Lane. Pityful a rethoric question ran over her cheek, then</p>
 		</div>
 	</div>
+</div>
 
-	{% comment %} TODO - This modal is cool but let's implement one from bootstrap, they
-		look infinitely better
-	{% endcomment %}
-	<div id="validation_failure_modal_email">
-		<div id="email-modal-content">
-			<span id="email-validation_modal_span">&times;</span>
-			<p>Please enter a valid email address!</p>
-		</div>
+{% comment %} TODO - This modal is cool but let's implement one from bootstrap, they
+look infinitely better
+{% endcomment %}
+
+<div id="validation_failure_modal_email">
+	<div id="email-modal-content">
+		<span id="email-validation_modal_span">&times;</span>
+		<p>Please enter a valid email address.</p>
+		<p>The correct format is:</p>
+		<ul>
+			<li>Letters and/or Digits before the @</li>
+			<li>Letters and/or Digits after the @</li>
+			<li>A valid domain (ex: .com, .gov, .edu) at the end.</li>
+		</ul>
 	</div>
-	<div id="validation_failure_modal_phone_number">
-		<div id="phone-number-modal-content">
-			<span id="phone-number-validation_modal_span">&times;</span>
-			<p>Please enter a valid phone number!</p>
-			<p>The correct format is 9999999999 without spaces or hyphens.</p>
-		</div>
+</div>
+<div id="validation_failure_modal_phone_number">
+	<div id="phone-number-modal-content">
+		<span id="phone-number-validation_modal_span">&times;</span>
+		<p>Please enter a valid phone number.</p>
+		<p>The correct format is 9999999999 without spaces or hyphens.</p>
 	</div>
+</div>
 {% endblock %}

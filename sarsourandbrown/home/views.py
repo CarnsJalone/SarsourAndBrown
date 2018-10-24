@@ -6,6 +6,7 @@ from django.core.mail import send_mail
 from django.template.loader import get_template, render_to_string
 from django.core.exceptions import ValidationError
 from django.core.validators import validate_email
+from django.contrib.auth.decorators import login_required
 
 from . models import Submitter
 from .forms import ContactForm
@@ -42,7 +43,7 @@ def contact(request):
 
             form.save()
 
-            field_args = {'first_name': first_name, 'last_name': last_name, 'email': email, 'phone_number': phone_number, 'body': body}
+            field_args = {'first_name': first_name, 'last_name': last_name, 'email': email, 'phone_number': phone_number, 'body': body, 'form': form}
 
             inquiry_email_html = render_to_string('email/inquiry_email.html', field_args)
             inquiry_email_text = render_to_string('email/inquiry_email.txt', field_args)
@@ -71,18 +72,21 @@ def contact(request):
 
             # TODO - I want to send a rendered HTML page into the email, to look more professional. 
             
-            
-            try:
-                return render(request, 'home/contact_feedback.html', field_args)
-            except ValueError:
-                form = ContactForm()
-                return render(request, 'home/contact.html', {'form': form})
+            return render(request, 'home/contact_feedback.html', field_args)
+
+        else: 
+            form = ContactForm()
+            return render(request, 'home/contact.html', {'form': form})
 
     else:
         form = ContactForm()
         return render(request, 'home/contact.html', {'form': form})
 
+@login_required()
 def display_inquiries(request):
+    # if not request.user.is_authenticated:
+    #     return redirect()
+    
     query_results = Submitter.objects.all()
 
     context = {'query_results': query_results, 'n': range(10000)}
