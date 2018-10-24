@@ -82,7 +82,6 @@ def contact(request):
         form = ContactForm()
         return render(request, 'home/contact.html', {'form': form})
 
-@login_required()
 def display_inquiries(request):
     # if not request.user.is_authenticated:
     #     return redirect()
@@ -95,4 +94,7 @@ def display_inquiries(request):
 
 def privacy_policy(request):
     return render(request, 'home/privacy_policy.html')
+
+# def login(request):
+#     return render(request, 'authorization/login.html')
 
