@@ -323,3 +323,13 @@ div.black-section-filler-div {
     margin-bottom: 20px;
     opacity: .5;
 }
+
+/* Login Page */
+
+/* Login Page - Main Form Div */
+
+div#main-login-div.container {
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}

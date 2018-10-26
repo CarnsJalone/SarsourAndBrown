@@ -95,6 +95,9 @@ def display_inquiries(request):
 def privacy_policy(request):
     return render(request, 'home/privacy_policy.html')
 
-# def login(request):
-#     return render(request, 'authorization/login.html')
+def login(request):
+    return render(request, 'home/authorization/login.html')
+
+def profile(reqeust):
+    return render(reqeust, 'home/profile.html')
 

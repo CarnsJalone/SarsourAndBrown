@@ -3,6 +3,8 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from django.core.validators import RegexValidator
 
+import datetime
+
 class Submitter(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100, default="Doe")
@@ -13,7 +15,6 @@ class Submitter(models.Model):
     date_submitted = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return "Name: {} {}, Email: {}, Inquiry: {}, Posted on: {}".format(self.first_name, self.last_name, self.email, self.body, self.date_submitted)
+        formatted_date_submitted = datetime.datetime.strftime(self.date_submitted, "%m/%d/%Y at %I:%M %p" )
+        return "{} {} from {} at {}".format(self.first_name, self.last_name, self.email, formatted_date_submitted)
 
-# Create a review class 
-# Stores reviews by people

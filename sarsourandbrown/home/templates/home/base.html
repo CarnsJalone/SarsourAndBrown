@@ -56,6 +56,7 @@
   {% block two_column_container %}{% endblock %}
   {% block testimonials_body %}{% endblock %}
   {% block privacy_policy %}{% endblock %}
+  {% block account_login %}{% endblock %}
 
   <footer id="footer-main">
     <div class="container" id="main_footer_container">
@@ -82,6 +83,9 @@
           </div>
           <div class="container" id="privacy_policy_container">
             <a href="{% url 'privacy_policy' %}" id="privacy_policy_link">Privacy Policy</a>
+          </div>
+          <div class="container">
+            <a href="{% url 'login' %}">Admin Login</a>
           </div>
         </div>
       </div>
