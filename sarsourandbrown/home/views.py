@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from django.utils import timezone 
 from django.shortcuts import HttpResponse
 from django.urls import reverse
@@ -8,6 +8,8 @@ from django.core.exceptions import ValidationError
 from django.core.validators import validate_email
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib import messages 
+from django.contrib.auth import logout
 
 from . models import Submitter
 from . forms import ContactForm
@@ -83,15 +85,6 @@ def contact(request):
         form = ContactForm()
         return render(request, 'home/contact.html', {'form': form})
 
-def display_inquiries(request):
-    # if not request.user.is_authenticated:
-    #     return redirect()
-    
-    query_results = Submitter.objects.all()
-
-    context = {'query_results': query_results, 'n': range(10000)}
-
-    return render(request, 'home/display_inquiries.html', context)
 
 def privacy_policy(request):
     return render(request, 'home/privacy_policy.html')
@@ -99,24 +92,57 @@ def privacy_policy(request):
 
 # TODO - Fix this too, seems excessive
 def login(request):
-    if request == 'POST':
-        form = AuthenticationForm(request.POST)
-        if form.is_valid():
-            field_args = {'user' : user, 'first_name': user.first_name, 'last_name': user.last_name}
-            return render(request, 'home/profile.html', field_args)
-    
+    if not request.user.is_authenticated:
+        if request == 'POST':
+            form = AuthenticationForm(request.POST)
+            if form.is_valid():
+                field_args = {'user' : user, 'first_name': user.first_name, 'last_name': user.last_name}
+                return render(request, 'home/profile.html', field_args)
+        
+        else:
+            form = AuthenticationForm()
+            return render(request, 'home/authorization/login.html', {'form': form})
     else:
-        form = AuthenticationForm()
-        return render(request, 'home/authorization/login.html', {'form': form})
+        return redirect('profile-page')
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')
 
 
-# TODO - Fix This
-# @login_required()
 def profile(request):
-    if request.user.is_authenticated:
-        field_args = {'user': request.user, 'first_name': request.user.first_name, 'last_name': request.user.last_name}
-        return render(request, 'home/profile.html', field_args)
-
+    if not request.user.is_authenticated:
+        return redirect('login')
     else:
-        return render(request, 'home/authorization/login.html')
+        all_entries = Submitter.objects.all
+        context = {'user': request.user, 'first_name': request.user.first_name, 'last_name': request.user.last_name, 'all_entries': all_entries}
+        return render(request, 'home/profile.html', context)
 
+def delete_entry(request, entry_id):
+    if not request.user.is_authenticated:
+        return redirect('login')
+    else:
+        entry = Submitter.objects.get(pk=entry_id)
+        entry.delete()
+        messages.success(request, ('Entry Has Been Deleted'))
+        return redirect('profile-page')
+
+def complete_entry(request, entry_id):
+    if not request.user.is_authenticated:
+        return redirect('login')
+    else:
+        entry = Submitter.objects.get(pk=entry_id)
+        entry.completed = True
+        entry.save()
+        messages.success(request, 'Entry Has Been Marked As Complete')
+        return redirect('profile-page')
+
+def uncomplete_entry(request, entry_id):
+    if not request.user.is_authenticated:
+        return redirect('login')
+    else:
+        entry = Submitter.objects.get(pk=entry_id)
+        entry.completed = False
+        entry.save()
+        messages.success(request, 'Entry Has Been Marked As Incomplete')
+        return redirect('profile-page')

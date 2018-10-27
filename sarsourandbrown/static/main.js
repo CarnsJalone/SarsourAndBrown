@@ -47,4 +47,19 @@ $(document).ready(function() {
       }
     }
   });
+
+  // Admin Page Delete Button Function
+  // Will ask the user to confirm whether or not they want to permanently delete 
+  // An entry
+  
+  $delete_entry_button = $('#profile_entries_delete_button')
+  $delete_entry_button.on('click', function(event){
+    var confirmation = confirm('Are you sure you wish to permanently delete this entry?')
+    if (!confirmation) {
+      event.preventDefault();
+    }
+    else {
+      return true;
+    }
+  })
 });

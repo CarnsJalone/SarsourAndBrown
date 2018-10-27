@@ -2,6 +2,76 @@
 
 {% block admin_profile %}
 
-<p>Hello {{ first_name }} {{ last_name }}</p>
+<div class="container">
+    <p id="profile_user_greeting">Hello {{ first_name }} {{ last_name }}</p>
+</div>
+
+{% if all_entries %}
+
+<div class="container">
+    <p id="profile_entries_table_div_paragraph">Below are the current inquiries available for processing. You can mark
+        as complete/incomplete or delete from visibility. If a submitter is deleted accidentally, you can refer to the
+        prebuilt administration link below to see broad information regarding that request.</p>
+</div>
+<div class="container" id="profile_entries_table_div">
+    <table class="table table-bordered" id="profile_entries_table_table">
+        <thead class="thead-dark">
+            <tr id="profile_entries_table_tr">
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Inquiry</th>
+                <th scope="col">Date Posted</th>
+                <th colspan="2">Actions</th>
+            </tr>
+
+        </thead>
+        {% for entry in all_entries %}
+        {% if entry.completed %}
+        <tr class="profile_entries_table_tr" id="profile_entries_table_tr_completed">
+            <td>{{ entry.first_name }} {{ entry.last_name }}</td>
+            <td>{{ entry.email }}></a></td>
+            <td>{{ entry.phone_number }}</td>
+            <td>{{ entry.body }}</td>
+            <td>{{ entry.date_submitted }}</td>
+            <td>
+                <a class="btn btn-warning" href="{% url 'uncomplete_entry' entry.id %}">Mark As Incomplete</a>
+            </td>
+            <td>
+                <a id="profile_entries_delete_button" class="btn btn-danger" href="{% url 'delete_entry' entry.id %}">Delete</a>
+            </td>
+        </tr>
+        {% else %}
+        <tr class="profile_entries_table_tr">
+            <td>{{ entry.first_name }} {{ entry.last_name }}</td>
+            <td>{{ entry.email }}</td>
+            <td>{{ entry.phone_number }}</td>
+            <td>{{ entry.body }}</td>
+            <td>{{ entry.date_submitted }}</td>
+            <td>
+                <a class="btn btn-success" href="{% url 'complete_entry' entry.id %}">Mark As Complete</a>
+            </td>
+            <td>
+                <a id="profile_entries_delete_button" class="btn btn-danger" href="{% url 'delete_entry' entry.id %}">Delete</a>
+            </td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </table>
+    {% else %}
+    <h1>There are currently no entries in the Database</h1>
+    {% endif %}
+</div>
+
+<div class="container" id="profile_entries_logout_button_div">
+    <a class="btn btn-info" href="{% url 'logout' %}">Log Out</a>
+</div>
+
+<div class="container">
+    <p>For More Information you can refer to the <a href="{% url 'admin:index' %}"> pre-built administration page.</a>
+    </p>
+    <p>Here you can add users and provide credentials to those users. As a word of caution, please do not adjust
+        anything inside the submitter class. Please, instead, use the personally built Profile page to manage entries.</p>
+</div>
 
 {% endblock %}

@@ -13,8 +13,11 @@ urlpatterns = [
     path('testimonials/', views.testimonials, name='testimonials-page'),
     path('contact/', views.contact, name='contact-page'),
     path('contact/contact_feedback/', views.contact, name='contact-feedback-page'),
-    path('display_inquiries/', views.display_inquiries, name='display_inquiries'),
     path('privacy_policy/', views.privacy_policy, name='privacy_policy'),
     path('account/login/', LoginView.as_view(template_name='authorization/login.html'), name="login"),
+    path('account/logout/', views.logout_view, name="logout"),
     path('account/profile/', views.profile, name="profile-page"),
+    path('account/delete_entry/<entry_id>', views.delete_entry, name="delete_entry"),
+    path('account/complete_entry/<entry_id>', views.complete_entry, name="complete_entry"),
+    path('account/uncomplete_entry/<entry_id>', views.uncomplete_entry, name="uncomplete_entry"),
     ]

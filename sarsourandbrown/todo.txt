@@ -22,3 +22,5 @@
 12) Login page and all backend programming required
 13) Want to turn display_inquiries into a crud application, this is where we will display all the 
 database entries for Submitter
+    a) Want to make the emails hyperlink and send an email
+    b) Want to add a phone number field
