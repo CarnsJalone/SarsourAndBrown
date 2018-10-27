@@ -134,5 +134,5 @@ EMAIL_USE_SSL = False
 X_FRAME_OPTIONS = 'ALLOWALL'
 XS_SHARING_ALLOWED_METHODS = ['POST', 'GET', 'OPTIONS', 'PUT', 'DELETE']
 
-# LOGIN_REDIRECT_URL = '/account/profile/'
-# LOGOUT_REDIRECT_URL = '/account/login/'
+LOGIN_REDIRECT_URL = '/account/profile/'
+LOGOUT_REDIRECT_URL = '/account/login/'

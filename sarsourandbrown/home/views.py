@@ -7,9 +7,10 @@ from django.template.loader import get_template, render_to_string
 from django.core.exceptions import ValidationError
 from django.core.validators import validate_email
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import AuthenticationForm
 
 from . models import Submitter
-from .forms import ContactForm
+from . forms import ContactForm
 
 def home(request):
     return render(request, 'home/home.html')
@@ -96,8 +97,22 @@ def privacy_policy(request):
     return render(request, 'home/privacy_policy.html')
 
 def login(request):
-    return render(request, 'home/authorization/login.html')
+    if request == 'POST':
+        form = AuthenticationForm(request.POST)
+        if form.is_valid():
+            field_args = {'user' : user, 'first_name': user.first_name, 'last_name': user.last_name}
+            return render(request, 'home/profile.html', field_args)
+    
+    else:
+        form = AuthenticationForm()
+        return render(request, 'home/authorization/login.html', {'form': form})
 
-def profile(reqeust):
-    return render(reqeust, 'home/profile.html')
+# @login_required()
+def profile(request):
+    if request.user.is_authenticated:
+        field_args = {'user': request.user, 'first_name': request.user.first_name, 'last_name': request.user.last_name}
+        return render(request, 'home/profile.html', field_args)
+
+    else:
+        return render(request, 'home/authorization/login.html')
 

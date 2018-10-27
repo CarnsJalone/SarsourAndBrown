@@ -57,6 +57,7 @@
   {% block testimonials_body %}{% endblock %}
   {% block privacy_policy %}{% endblock %}
   {% block account_login %}{% endblock %}
+  {% block admin_profile %}{% endblock %}
 
   <footer id="footer-main">
     <div class="container" id="main_footer_container">
@@ -81,24 +82,29 @@
               <a href="#" class="fa fa-youtube" id="youtube_icon"></a>
             </div>
           </div>
-          <div class="container" id="privacy_policy_container">
-            <a href="{% url 'privacy_policy' %}" id="privacy_policy_link">Privacy Policy</a>
-          </div>
-          <div class="container">
-            <a href="{% url 'login' %}">Admin Login</a>
-          </div>
         </div>
       </div>
+
+      {% comment %} Privacy Policy, Admin Links {% endcomment %}
+      <div class="container" id="footer_supplemental_link_container">
+        <div class="col">
+          <a href="{% url 'privacy_policy' %}" id="privacy_policy_link">Privacy Policy</a>
+          <p>&#9679;</p>
+          <a href="{% url 'login' %}" id="admin_login_link">Admin Login</a>
+        </div>
+      </div>
+
+
       <div class="container">
 
-        <div class="footer-copyright text-center" id="sarsour_and_brown_copyright">2018 Copyright
-          <a href="https://opencorporates.com/companies/us_oh/4100703" class="bottom-page-link" target="_blank">Sarsour
+        <div class="footer-copyright text-center">
+          <a href="https://opencorporates.com/companies/us_oh/4100703" id="llc_info_link" target="_blank">2018 Copyright Sarsour
             &amp Brown</a>
         </div>
 
         <div class="footer-copyright text-center">
-          <a href="#" id="bottom-page-link">Sarsour &amp Brown, LLC - 2 Maritime Plaza - 3rd Floor - Toledo, Ohio
-            43604</a>
+          <p id="footer_address_paragraph">Sarsour &amp Brown, LLC - 2 Maritime Plaza - 3rd Floor - Toledo, Ohio
+            43604</p>
         </div>
 
       </div>
