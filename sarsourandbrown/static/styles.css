@@ -281,7 +281,8 @@ a#footer_youtube_icon:hover, a#footer_youtube_icon:focus {
 p#footer_address_paragraph, 
 a#footer_llc_info_link,
 a#footer_privacy_policy_link,
-a#footer_admin_login_link {
+a#footer_admin_login_link, 
+p#footer_disclaimer_paragraph {
     font-size: .75rem;
     text-decoration: none;
     color: white;
@@ -395,6 +396,7 @@ tr#profile_entries_table_tr_completed {
 
 
 div#profile_entries_logout_button_div {
+    max-width: 100%;
     margin-top: 15px;
     margin-bottom: 15px;
     margin-left: auto;
