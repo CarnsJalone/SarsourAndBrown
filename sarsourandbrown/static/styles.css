@@ -254,43 +254,42 @@ div#social-media-links a {
 
 /*  Footer - Social Media Specific Colors */
 
-a#fb_icon:hover, a#fb_icon:focus {
+a#footer_fb_icon:hover, a#footer_fb_icon:focus {
     color: rgb(59, 89, 152);
 }
 
-a#twitter_icon:hover, a#twitter_icon:focus {
+a#footer_twitter_icon:hover, a#footer_twitter_icon:focus {
     color: rgb(29, 161, 242);
 }
 
-a#google_plus_icon:hover, a#google_plus_icon:focus {
+a#footer_google_plus_icon:hover, a#footer_google_plus_icon:focus {
     color: rgb(219, 68, 55);
 }
 
-a#linkedin_icon:hover, a#linked_in:focus {
+a#footer_linkedin_icon:hover, a#footer_linkedin_icon:focus {
     color: rgb(0, 119, 181);
 }
 
-a#youtube_icon:hover, a#youtube_icon:focus {
+a#footer_youtube_icon:hover, a#footer_youtube_icon:focus {
     color: rgb(204,24,30);
 }
-
 
 /* Footer - Copyright Info */
 
 /* Footer - Links (Decoration/Hover) */
 
 p#footer_address_paragraph, 
-a#llc_info_link,
-a#privacy_policy_link,
-a#admin_login_link {
+a#footer_llc_info_link,
+a#footer_privacy_policy_link,
+a#footer_admin_login_link {
     font-size: .75rem;
     text-decoration: none;
     color: white;
 }
 
-a#llc_info_link:hover,
-a#privacy_policy_link:hover,
-a#admin_login_link:hover {
+a#footer_llc_info_link:hover,
+a#footer_privacy_policy_link:hover,
+a#footer_admin_login_link:hover {
     color: grey;
 }
 
@@ -306,7 +305,9 @@ div#footer_supplemental_link_container.container p {
     padding-left: 2.5px;
     padding-right: 2.5px;
 }
+
 /* Footer - Privacy Policy Link */
+
 /* Footer - Admin Login Link */
 
 /* Footer - Logo */

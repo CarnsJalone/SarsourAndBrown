@@ -20,3 +20,5 @@
 10) When on a mobile device, the Sarsour And Brown Text does not fit correctly in the nav bar. Need to make it responsive. 
 11) When Sarsour and Brown sends an email, it always says "Good Morning", needs fixed.
 12) Login page and all backend programming required
+13) Want to turn display_inquiries into a crud application, this is where we will display all the 
+database entries for Submitter

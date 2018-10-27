@@ -96,6 +96,8 @@ def display_inquiries(request):
 def privacy_policy(request):
     return render(request, 'home/privacy_policy.html')
 
+
+# TODO - Fix this too, seems excessive
 def login(request):
     if request == 'POST':
         form = AuthenticationForm(request.POST)
@@ -107,6 +109,8 @@ def login(request):
         form = AuthenticationForm()
         return render(request, 'home/authorization/login.html', {'form': form})
 
+
+# TODO - Fix This
 # @login_required()
 def profile(request):
     if request.user.is_authenticated:
