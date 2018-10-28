@@ -1,26 +1,19 @@
-1) Fix CSS in Contact page. The form needs to sit on the left side of the page. 
-    Completed
-2) Fix CSS for the two links at the bottom of the page in base.html
-    Completed
-3) Broke the contact form by adding a telephone verification, needs fixed.
-    Completed
-    a) Fixed the regex test, everything appears functional.
-        Completed
-    b) Want to make this modal from bootstrap. 
-        Completed - I am happy with this modal
-4) Fix the logo, doesn't look right and it's kinda big.     
-5) Fix the footer, format the text correctly and the image needs to go all the way to the right of the page
+1) Modal 
+    c) Need to fix the display of the modal - Currently displays at the bottom of the page when full-screened. 
+4) Logo - Need a real one  
+5) Footer - Fix the footer, format the text correctly and the image needs to go all the way to the right of the page
     a) Fix the absolute positioning on the logo in the bottom right hand corner of the screen
     b) Social media links stay lit when you've clicked the link, probably has to do with the target-"_blank"
-6) Create a mailing list, this may require a blog.
-7) Areas of expertise:
+6) Mailing List - Create a mailing list, this may require a blog.
+7) About:
     There's a great example at https://www.oykhmancriminaldefence.com/ , looks like it's using fusion boxes or something
-8) Nader wants a different font, we'll let him choose
-9) Fix the specialization div, border and images in the about page. 
-10) When on a mobile device, the Sarsour And Brown Text does not fit correctly in the nav bar. Need to make it responsive. 
-11) When Sarsour and Brown sends an email, it always says "Good Morning", needs fixed.
+8) Font - Nader wants a different font, we'll let him choose
+9) Specialization Page - Fix the specialization div, border and images in the about page. 
+10) Header - When on a mobile device, the Sarsour And Brown Text does not fit correctly in the nav bar. Need to make it responsive. 
+11) Contact_Feedback - When Sarsour and Brown sends an email, it always says "Good Morning", needs fixed.
 12) Login page and all backend programming required
 13) Want to turn display_inquiries into a crud application, this is where we will display all the 
 database entries for Submitter
     a) Want to make the emails hyperlink and send an email
     b) Want to add a phone number field
+14) Want to add a custom loader when the form is loading. 
