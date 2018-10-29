@@ -22,7 +22,7 @@ $(document).ready(function() {
 
   // On-Click Function executed when the user submits the form
   $submit_button.on("click", function(evt) {
-    var email_verification_regex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)\b/;
+    var email_verification_regex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|gov|edu|mil|biz|info|int|mobi|mil|name|arpa|aero|jobs|museum)\b/;
     var phone_number_verification_regex = /\d{10}/;
 
     // This function verifies the email input field against the regex test

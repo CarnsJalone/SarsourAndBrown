@@ -7,6 +7,7 @@ table {
   font-family: "Ubuntu", sans-serif;
 }
 
+
 /* Formatting all divs */
 
 /* div.navbar_border {
@@ -30,6 +31,11 @@ div#navbar-nav {
   /* TODO - I would like to add some opacity to this, so you 
     can see an image behind it but I don't want the text to be 
     affected  */
+}
+
+nav#main-navbar hr {
+  color: white;
+  border-top: 1px solid white;
 }
 
 /* Navigation Bar - Nav Brand Link */
@@ -137,6 +143,7 @@ div#map {
 
 div#about_specialization_card_div {
   text-align: center;
+  max-width: 60%;
 }
 
 
