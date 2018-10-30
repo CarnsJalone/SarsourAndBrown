@@ -16,18 +16,18 @@
   <title>Sarsour And Brown</title>
 </head>
 
-<body>
+<body class="off-white">
   <div class="navbar_border"></div>
   <nav class="navbar navbar-expand-sm" id="main-navbar">
-    {% comment %} <hr> {% endcomment %}
-    {% comment %} <img src="static/Sarsour_And_Brown_Logo_White.png" width=150 height=100 /> {% endcomment %}
-    <a class="navbar-brand" id="sarsour_and_brown_nav_text">Sarsour &amp Brown, LLC</a>
+    <div id="navbar-brand-div">
+      <a class="navbar-brand" id="sarsour_and_brown_nav_text">Sarsour &amp Brown, LLC</a>
+    </div>
 
     <button class="navbar-toggler navbar-dark" data-toggle="collapse" data-target="#navbarMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarMenu">
-      <ul class="navbar-nav ml-auto">
+      <ul class=" nav navbar-nav ml-auto nav-pills nav-fill">
         <li class="nav-item">
           <a href="{% url 'home-page' %}" class="nav-link">Home</a>
         </li>
@@ -42,7 +42,8 @@
         </li>
       </ul>
     </div>
-    {% comment %} <hr> {% endcomment %}
+    {% comment %}
+    <hr> {% endcomment %}
   </nav>
   <div class="navbar_border"></div>
   {% comment %} </div> {% endcomment %}
@@ -63,16 +64,6 @@
 
   <footer id="footer-main">
     <div class="container" id="main_footer_container">
-      <div class="container" id="footer-div">
-        <div class="row">
-          <div class="col">
-            <p>Hello, this is my footer</p>
-          </div>
-          <div class="col">
-            <p>Hello, this is also my footer</p>
-          </div>
-        </div>
-      </div>
       <div class="container">
         <div class="row">
           <div class="col" id="social-media-links-div">
@@ -97,7 +88,8 @@
       </div>
       <div class="container" id="footer_disclaimer_container">
         <div class="col">
-          <p id="footer_disclaimer_paragraph">Disclaimer: Prior results do not guarantee similar outcome.</p>
+          <p id="footer_disclaimer_paragraph">Disclaimer: Prior results do not guarantee similar outcome. Amounts
+            listed may be aggregates.</p>
         </div>
       </div>
 
@@ -105,13 +97,11 @@
       <div class="container">
 
         <div class="footer-copyright text-center">
-          <a href="https://opencorporates.com/companies/us_oh/4100703" id="footer_llc_info_link" target="_blank">2018
-            Copyright Sarsour
-            &amp Brown</a>
-        </div>
-
-        <div class="footer-copyright text-center">
-          <p id="footer_address_paragraph">Sarsour &amp Brown, LLC - 2 Maritime Plaza - 3rd Floor - Toledo, Ohio
+          <p id="footer_address_paragraph">
+            <a href="https://opencorporates.com/companies/us_oh/4100703" id="footer_llc_info_link" target="_blank">2018
+              Copyright Sarsour
+              &amp Brown, LLC</a>
+             - 2 Maritime Plaza - 3rd Floor - Toledo, Ohio
             43604</p>
         </div>
 
@@ -131,7 +121,8 @@
     crossorigin="anonymous"></script>
   <script src="{% static 'main.js' %}" type="text/javascript"></script>
   <script src="{% static 'google-map.js' %}" type="text/javascript"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC20Wte_JjfGrdG1cdixhGjflg0oA0YtcM&callback=initMap" async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC20Wte_JjfGrdG1cdixhGjflg0oA0YtcM&callback=initMap"
+    async defer></script>
 </body>
 
 </html>

@@ -7,49 +7,86 @@ table {
   font-family: "Ubuntu", sans-serif;
 }
 
-
-/* Formatting all divs */
-
-/* div.navbar_border {
-    width: 100%;
-    height: 10px;
-    background-color: grey;
-} */
-
 /*  Navigation Bar  */
 
 nav#main-navbar {
-  background-color: black;
   padding-top: 25px;
   padding-bottom: 25px;
 }
 
+/* Color Scheme */
+
+.off-white {
+  background-color:#f2f0ec ;
+}
+
+
+/* Header, Footer Color Scheme */
+#main-navbar,
+#footer-main {
+  background-color: #262626;
+  color: #f2f0ec;
+}
+
+/* Header Link Colors */
+ul.navbar-nav.ml-auto li.nav-item a.nav-link {
+  color: #f2f0ec;
+}
+
+/* Footer - Social Media Icons, Privacy Policy Link
+Admin Page Link Colors */
+a#footer_fb_icon,
+a#footer_twitter_icon,
+a#footer_google_plus_icon,
+a#footer_linkedin_icon, 
+a#footer_youtube_icon,
+a#footer_privacy_policy_link,
+a#footer_admin_login_link {
+  color: #f2f0ec;
+}
+
+/* Footer - Privacy Policy Link, Admin Page Link Hover Colors */
+a#footer_privacy_policy_link:hover,
+a#footer_admin_login_link:hover,
+a#footer_llc_info_link:hover {
+  color:#000;
+}
+
+/* Home - Carousel - Text - Color Scheme */
+div.carousel-caption {
+  color: black;
+}
+
+
 /* Navigation Bar - Main Container */
 
-div#navbar-nav {
-  background-color: black;
-  /* TODO - I would like to add some opacity to this, so you 
-    can see an image behind it but I don't want the text to be 
-    affected  */
+nav.navbar#main-navbar {
+  display: flex;
+  padding: 0px;
+  height:10vh;
 }
 
-nav#main-navbar hr {
-  color: white;
-  border-top: 1px solid white;
+div#navbarMenu {
+  margin: 0 auto;
 }
+
 
 /* Navigation Bar - Nav Brand Link */
 
+div#navbar-brand-div {
+  width: 50%;
+  height: 100%;
+}
+
 a#sarsour_and_brown_nav_text.navbar-brand {
-  font-size: 40px;
-  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* Navigation Bar - Link */
 
-ul.navbar-nav.ml-auto li.nav-item a.nav-link {
-  color: white;
-}
 
 ul.navbar-nav.ml-auto li.nav-item a.nav-link:hover {
   color: grey;
@@ -59,15 +96,10 @@ ul.navbar-nav.ml-auto li.nav-item a.nav-link:hover {
 nav.navbar.navbar-expand-sm a.navbar-brand {
   letter-spacing: -1.5px;
   font-size: 40px;
-  color: rgb(255, 255, 255);
+  /* color: rgb(255, 255, 255); */
   /* -webkit-text-fill-color: white; Will override color (regardless of order) */
   -webkit-text-stroke-width: 0.75px;
-  -webkit-text-stroke-color: black;
-}
-
-nav.navbar#main-navbar {
-  padding: 15px;
-  display: flex;
+  -webkit-text-stroke-color: black; */
 }
 
 ul.navbar-nav.ml-auto li.nav-item {
@@ -86,7 +118,6 @@ div.carousel-item img {
 }
 
 div.carousel-caption {
-  color: black;
   bottom: 0px;
 }
 
@@ -96,13 +127,6 @@ div.carousel-caption h1 {
 
 div.carousel-caption h3 {
   font-size: 22.5px;
-}
-
-#carousel_prev_button,
-#carousel_next_button {
-  /* background-color: red; */
-  /* TODO - fix this so only the carets themselves change color,
-    not the entire background of the caret */
 }
 
 div#home-main-container {
@@ -247,7 +271,7 @@ ul#form_submit_loader_ul {
   padding-right: 22.5px;
   transform: translate(-50%, -50%);
   display: flex;
-  background rgba(255,255,255,255, 1);
+  background rgba(255,255,255, 1);
 }
 
 li.form_submit_loader_li {
@@ -323,17 +347,14 @@ div#logo-lower-right-hand-corner {
 /* Footer - Footer */
 
 footer#footer-main {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  background-color: black;
-  color: white;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
   text-align: center;
 }
 
 /* Footer - Social Media Links */
 
 div#social-media-links a {
-  color: white;
   font-size: 22.5px;
   text-decoration: none;
   padding-top: 10px;
@@ -383,18 +404,15 @@ p#footer_disclaimer_paragraph {
   font-size: 0.75rem;
   text-decoration: none;
   color: white;
-}
-
-a#footer_llc_info_link:hover,
-a#footer_privacy_policy_link:hover,
-a#footer_admin_login_link:hover {
-  color: grey;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 /* Footer - Privacy Policy, Admin Login Link Container */
 
 div#footer_supplemental_link_container.container {
-  margin: 0 auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
   display: inline-block;
 }
 
