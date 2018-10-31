@@ -20,6 +20,10 @@ nav#main-navbar {
   background-color:#f2f0ec ;
 }
 
+/* Text Color */
+p {
+  /* color: #262626 */
+}
 
 /* Header, Footer Color Scheme */
 #main-navbar,
