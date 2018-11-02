@@ -45,14 +45,16 @@ a#footer_google_plus_icon,
 a#footer_linkedin_icon, 
 a#footer_youtube_icon,
 a#footer_privacy_policy_link,
-a#footer_admin_login_link {
+a#footer_admin_login_link,
+a#footer_blog_page_link {
   color: #f2f0ec;
 }
 
 /* Footer - Privacy Policy Link, Admin Page Link Hover Colors */
 a#footer_privacy_policy_link:hover,
 a#footer_admin_login_link:hover,
-a#footer_llc_info_link:hover {
+a#footer_llc_info_link:hover,
+a#footer_blog_page_link:hover {
   color:#000;
 }
 
@@ -61,19 +63,30 @@ div.carousel-caption {
   color: black;
 }
 
+/* Contact - Form - Submit Button Color */
+input#contact-submit-button {
+  background-color: #262626;
+  color: #f2f0ec;
+  border: none;
+}
+
+input#contact-submit-button:hover {
+  background-color: #f2f0ec;
+  color: #262626;
+  border: .5px solid #262626;
+}
+
 
 /* Navigation Bar - Main Container */
 
 nav.navbar#main-navbar {
   display: flex;
   padding: 0px;
-  height:10vh;
 }
 
 div#navbarMenu {
-  margin: 0 auto;
+  margin-right: 8px; 
 }
-
 
 /* Navigation Bar - Nav Brand Link */
 
@@ -158,7 +171,14 @@ div#home-main-container {
 
 div#about_map_div {
   width: 50%;
-  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div#about_map_div h3 {
+  text-align: center;
 }
 
 div#map {
@@ -351,9 +371,26 @@ div#logo-lower-right-hand-corner {
 /* Footer - Footer */
 
 footer#footer-main {
+  position: relative;
   padding-top: 7.5px;
   padding-bottom: 7.5px;
   text-align: center;
+}
+
+div#main_footer_container {
+  max-width: 85%;
+}
+
+/* Footer - Logo */
+div#footer_logo_div {
+  /* position: absolute; */
+}
+
+img#footer_logo_logo {
+  position: absolute;
+  height: 25px;
+  right: 15px;
+  bottom: 11.25px;
 }
 
 /* Footer - Social Media Links */
@@ -404,6 +441,7 @@ p#footer_address_paragraph,
 a#footer_llc_info_link,
 a#footer_privacy_policy_link,
 a#footer_admin_login_link,
+a#footer_blog_page_link,
 p#footer_disclaimer_paragraph {
   font-size: 0.75rem;
   text-decoration: none;
@@ -445,6 +483,7 @@ img#sarsour_and_brown_logo_footer {
 
 div#privacy_policy_container {
   text-align: left;
+  margin-top: 15px;
 }
 
 div#privacy_policy_container h5,
@@ -476,12 +515,12 @@ div.black-section-filler-div {
 div#main-login-div.container {
   width: 100%;
   text-align: center;
-  height: 600px;
+  height: 100%;
   vertical-align: middle;
   padding-left: 0px;
   padding-right: 0px;
-  margin-top: 10%;
-  margin-bottom: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 /* Login Page - Form */
@@ -514,7 +553,8 @@ tr#profile_entries_table_tr_completed {
   text-decoration: line-through;
 }
 
-div#profile_entries_logout_button_div {
+div#profile_entries_logout_button_div,
+div#profile_entries_blog_page_button_div {
   max-width: 100%;
   margin-top: 15px;
   margin-bottom: 15px;

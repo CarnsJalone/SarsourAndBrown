@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <form role="form" action="/blog/new_blog/" method="post">
-        {% csrf_token %}
-        {{ form }}
-        <input type="submit" value="Post" name="blog_submit">
-    </form>
-
-    <a href="{% url 'blog-view_blogs' %}">View All Blogs Here</a>
-</body>
-</html>
+{% extends 'blog/home.html' %}
+{% block new_blog %}
+<div class="container">
+    <div id="new_blog_form_div">
+        <form id="new_blog_form_form" role="form" action="/blog/new_blog/" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input id="new_blog_form_submit" type="submit" value="Post" name="blog_submit">
+        </form>
+    </div>
+</div>
+{% endblock %}

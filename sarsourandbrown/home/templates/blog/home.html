@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <title>Blog</title>
+</head>
+
+<body class="off-white">
+
+    <div class="container" id="blog_header">
+        <div id="blog_header_inner">
+            <div class="row">
+                <div class="col-sm">
+                    <p><a href="{% url 'all_blogs' %}">View All Blogs</a></p>
+                </div>
+                <div class="col-sm">
+                    <p><a href="{% url 'new_blog' %}">Create New Blog</a></p>
+                </div>
+                <div class="col-sm">
+                    <p><a href="{% url 'home-page' %}">View Website</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    {% block all_blogs %} {% endblock %}
+    {% block new_blog %} {% endblock %}
+    {% block post_success %} {% endblock %}
+
+</body>
+
+</html>
