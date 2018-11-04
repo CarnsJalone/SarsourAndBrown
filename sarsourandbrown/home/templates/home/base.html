@@ -18,35 +18,49 @@
 </head>
 
 <body class="off-white">
-  <div class="navbar_border"></div>
-  <nav class="navbar navbar-expand-sm" id="main-navbar">
-    <div id="navbar-brand-div">
-      <a class="navbar-brand" id="sarsour_and_brown_nav_text">Sarsour &amp Brown, LLC</a>
-    </div>
 
-    <button class="navbar-toggler navbar-dark" data-toggle="collapse" data-target="#navbarMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarMenu">
-      <ul class=" nav navbar-nav ml-auto nav-pills nav-fill">
-        <li class="nav-item">
-          <a href="{% url 'home-page' %}" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="{% url 'about-page' %}" class="nav-link">About</a>
-        </li>
-        <li class="nav-item">
-          <a href="{% url 'testimonials-page' %}" class="nav-link">Testimonials</a>
-        </li>
-        <li class="nav-item">
-          <a href="{% url 'contact-page' %}" class="nav-link">Contact</a>
-        </li>
-      </ul>
-    </div>
-    {% comment %}
-    <hr> {% endcomment %}
-  </nav>
-  <div class="navbar_border"></div>
+
+  <div id="navbar_main_navbar_div">
+    <nav class="navbar navbar-expand-sm" id="navbar_main_navbar_navbar">
+
+      <div id="navbar_left_container">
+        <h3 class="navbar-brand">Sarsour And Brown, LLC</h3>
+      </div>
+
+      <div id="navbar_right_container">
+
+        <div id="navbar_right_container_expand_button_div">
+          <button class="navbar-toggler navbar-dark" id="navbar_right_container_expand_button_button" 
+            type="button" data-toggle="collapse" data-target="#navbar_right_container_links_div"
+            aria-controls="navbar_right_container_links_div" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" id="navbar_right_container_expand_button_span"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar_right_container_links_div">
+          <ul class="navbar-nav ml-auto" id="navbar_right_container_links_ul">
+            <li class="nav-item navbar_right_container_links_list_item">
+              <a href="{% url 'home-page' %}" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item navbar_right_container_links_list_item">
+              <a href="{% url 'about-page' %}" class="nav-link">About</a>
+            </li>
+            <li class="nav-item navbar_right_container_links_list_item">
+              <a href="{% url 'testimonials-page' %}" class="nav-link">Testimonials</a>
+            </li>
+            <li class="nav-item navbar_right_container_links_list_item">
+              <a href="{% url 'contact-page' %}" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+
+      </div>
+
+    </nav>
+  </div>
+
   {% comment %} </div> {% endcomment %}
   {# The DIVS below will only be for the homepage, these need to be migrated to home.html #}
   {% block home-page %}{% endblock %}

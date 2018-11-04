@@ -27,16 +27,11 @@ p {
 }
 
 /* Header, Footer Color Scheme */
-#main-navbar,
 #footer-main {
   background-color: #262626;
   color: #f2f0ec;
 }
 
-/* Header Link Colors */
-ul.navbar-nav.ml-auto li.nav-item a.nav-link {
-  color: #f2f0ec;
-}
 
 /* Footer - Social Media Icons, Privacy Policy Link
 Admin Page Link Colors */
@@ -87,57 +82,149 @@ input#contact-submit-button:hover {
   border: .5px solid #262626;
 }
 
-
-/* Navigation Bar - Main Container */
-
-nav.navbar#main-navbar {
-  display: flex;
+/* Navigation Bar - Main Div */
+div#navbar_main_navbar_div {
+  margin: 0px; 
+  position: relative; 
+  background-color: #262626;
+  color: #f2f0ec;
+  z-index: 0;
+} 
+nav#navbar_main_navbar_navbar {
   padding: 0px;
 }
 
-div#navbarMenu {
-  margin-right: 8px; 
-}
-
-/* Navigation Bar - Nav Brand Link */
-
-div#navbar-brand-div {
-  width: 50%;
+/* Navigation Bar - Left Container */
+div#navbar_left_container {
   height: 100%;
+  width: 100%;
+  z-index: 10;
 }
 
-a#sarsour_and_brown_nav_text.navbar-brand {
+div#navbar_left_container h3 {
+  margin: 0px;
+  padding: 0px;
+  letter-spacing: -1.5px;
+  font-weight: normal;
+}
+
+div#navbar_right_container {
   width: 100%;
   height: 100%;
-  margin: 0 auto;
-  padding: 20px;
-  letter-spacing: -1.5px;
-  font-size: 40px;
-  font-weight: 0;
+  text-align: right;
+  z-index: 10;
 }
 
-/* Sarsour & Brown Brand - Hover */
-/* a#sarsour_and_brown_nav_text.navbar-brand:hover {
-  text-shadow: -10px -10px 10px rgba(255,255,255,.4);
-  font-style: italic;
-} */
-
-/* Navigation Bar - Link */
-
-
-ul.navbar-nav.ml-auto li.nav-item a.nav-link:hover {
-  color: grey;
-  font-weight: bold;
+@media (max-width: 575px) {
+  div#navbar_left_container h3 {
+    font-size: 1.5rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  div#navbar_right_container a,
+  div#navbar_right_container_expand_button_div {
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
-ul.navbar-nav.ml-auto li.nav-item {
-  font-size: 18px;
+@media (min-width: 576px) {
+  div#navbar_left_container h3 {
+    font-size: 1.5rem;
+    margin-left: 10%;
+  }
+  li.navbar_right_container_links_list_item {
+    font-size: .85rem
+  }
+  div#navbar_right_container {
+    margin-right: 4.0%;
+  }
 }
 
-/* Navbar Toggler Icon */
+@media (min-width: 768px) {
+  div#navbar_left_container h3 {
+    font-size: 2.0rem;
+    margin-left: 12.5%;
+  }
+  li.navbar_right_container_links_list_item {
+    font-size: 1.05rem
+  }
+  div#navbar_right_container {
+    margin-right: 5.5%;
+  }
+}
+
+@media (min-width: 992px) {
+  div#navbar_left_container h3 {
+    font-size: 2.5rem;
+    margin-left: 15%;
+  }
+  li.navbar_right_container_links_list_item {
+    font-size: 1.15rem
+  }
+  div#navbar_right_container {
+    margin-right: 7%;
+  }
+}
+
+@media (min-width: 1200px) {
+  div#navbar_left_container h3 {
+    font-size: 3.0rem;
+    margin-left: 17.5%;
+  }
+
+  li.navbar_right_container_links_list_item {
+    font-size: 1.25rem
+  }
+  div#navbar_right_container {
+    margin-right: 8.5%;
+  }
+}
+
+/* Navigation Bar - Right Container */
+div#navbar_right_container {
+  width: 100%;
+  height: 100%;
+  text-align: right;
+}
+
+div#navbar_left_container,
+div#navbar_right_container {
+  padding: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* Navigation Bar - Toggler Button */
+div#navbar_right_container_expand_button_div {
+  max-width: 100%;
+  height: 100%;
+}
+button#navbar_right_container_expand_button_button {
+}
+span#navbar_right_container_expand_button_span {}
+
+/* Navigation Bar - Links */
+div#navbar_right_container_links_div {}
+ul#navbar_right_container_links_ul {
+
+}
+ul#navbar_right_container_links_ul li {
+
+}
+
+li.navbar_right_container_links_list_item a {
+  text-decoration: none;
+  color: #f2f0ec;
+}
+
+li.navbar_right_container_links_list_item a:hover {
+  color: #fff;
+  text-shadow: -3.5px -3.5px 2.5px
+}
+
 
 /* Carousel - Carousel Div */
-
 div.carousel-item,
 div.carousel-item img {
   max-height: 650px;
