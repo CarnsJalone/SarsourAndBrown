@@ -1,4 +1,4 @@
-{% load static %}
+{% load staticfiles %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +13,8 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-  <title><link rel="shortcut icon" type="image/png" href="/static/images/SB_Logo_Black.png">Sarsour And Brown</title>
+  <title>Sarsour And Brown</title>
+  <link rel="icon" sizes="11X11" type="image/x-icon" href="{% static 'images/SB_Logo_Favicon.png' %}" />
 </head>
 
 <body class="off-white">
@@ -108,7 +109,7 @@
             <a href="https://opencorporates.com/companies/us_oh/4100703" id="footer_llc_info_link" target="_blank">2018
               Copyright Sarsour
               &amp Brown, LLC</a>
-             - 2 Maritime Plaza - 3rd Floor - Toledo, Ohio
+            - 2 Maritime Plaza - 3rd Floor - Toledo, Ohio
             43604</p>
         </div>
 
