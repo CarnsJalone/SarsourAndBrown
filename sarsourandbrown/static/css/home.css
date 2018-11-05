@@ -254,6 +254,10 @@ div#navbar_right_container {
   }
 }
 
+span#navbar_llc_span {
+  color: #41474a;
+}
+
 /* Navigation Bar - Right Container */
 div#navbar_right_container {
   width: 100%;
