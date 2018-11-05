@@ -62,12 +62,19 @@
     {% endif %}
 </div>
 
+<div class="container" id="profile_generate_pdf">
+    <a href="{% url 'generate_pdf' %}" class="btn btn-info" target="_blank">Generate PDF</a>
+    <hr>
+</div>
+
+
 <div class="container">
     <p>For more information, you can refer to the <a class="sarsour_and_brown_external_link" href="{% url 'admin:index' %}"> pre-built administration page.</a></p>
     <p>Here you can add users and provide credentials to those users. As a word of caution, please do not adjust
         anything inside the submitter class. Please, instead, use the "/account/profile" url to manage entries.</p>
     <hr>
 </div>
+
 
 <div class="container" id="profile_entries_blog_page_button_div">
     <a class="btn btn-info" href="{% url 'all_blogs' %}">Blog Page</a>

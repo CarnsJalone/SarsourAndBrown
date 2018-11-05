@@ -1,3 +1,4 @@
+# Django Imports
 from django.shortcuts import render, redirect, reverse
 from django.utils import timezone 
 from django.shortcuts import HttpResponse
@@ -10,22 +11,26 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages 
 from django.contrib.auth import logout
+from django.views.generic import View
 
+# Project Imports
 from . models import Submitter
 from . forms import ContactForm
+from . utils import render_to_pdf
 
+# Home Page
 def home(request):
     return render(request, 'home/home.html')
 
-
+# About Page
 def about(request):
     return render(request, 'home/about.html')
 
-
+# Testimonials Page
 def testimonials(request):
     return render(request, 'home/testimonials.html')
 
-
+# Contact Page
 def contact(request):
     first_name = None
     last_name = None
@@ -85,12 +90,12 @@ def contact(request):
         form = ContactForm()
         return render(request, 'home/contact.html', {'form': form})
 
-
+# Privacy Policy Page
 def privacy_policy(request):
     return render(request, 'home/privacy_policy.html')
 
 
-# TODO - Fix this too, seems excessive
+# Login Page
 def login(request):
     if not request.user.is_authenticated:
         if request == 'POST':
@@ -105,11 +110,12 @@ def login(request):
     else:
         return redirect('profile-page')
 
+# Logout Page
 def logout_view(request):
     logout(request)
     return redirect('login')
 
-
+# Admin Page
 def profile(request):
     if not request.user.is_authenticated:
         return redirect('login')
@@ -118,6 +124,7 @@ def profile(request):
         context = {'user': request.user, 'first_name': request.user.first_name, 'last_name': request.user.last_name, 'all_entries': all_entries}
         return render(request, 'home/profile.html', context)
 
+# Admin Page - CRUD - Delete
 def delete_entry(request, entry_id):
     if not request.user.is_authenticated:
         return redirect('login')
@@ -127,6 +134,7 @@ def delete_entry(request, entry_id):
         messages.success(request, ('Entry Has Been Deleted'))
         return redirect('profile-page')
 
+# Admin Page - CRUD - Update
 def complete_entry(request, entry_id):
     if not request.user.is_authenticated:
         return redirect('login')
@@ -137,6 +145,7 @@ def complete_entry(request, entry_id):
         messages.success(request, 'Entry Has Been Marked As Complete')
         return redirect('profile-page')
 
+# Admin Page - CRUD - Update
 def uncomplete_entry(request, entry_id):
     if not request.user.is_authenticated:
         return redirect('login')
@@ -146,3 +155,10 @@ def uncomplete_entry(request, entry_id):
         entry.save()
         messages.success(request, 'Entry Has Been Marked As Incomplete')
         return redirect('profile-page')
+
+# Admin Page - Generate PDF
+def generate_pdf(request, *args, **kwargs):
+    all_entries = Submitter.objects.all
+    data = {'all_entries': all_entries}
+    pdf = render_to_pdf('pdf/pdf.html', data)
+    return HttpResponse(pdf, content_type='application/pdf')

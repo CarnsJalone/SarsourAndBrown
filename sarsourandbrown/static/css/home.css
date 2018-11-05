@@ -193,7 +193,7 @@ div#navbar_right_container {
 
 @media (min-width: 992px) {
   div#navbar_left_container h3 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     margin-left: 15%;
   }
   li.navbar_right_container_links_list_item {
@@ -219,7 +219,7 @@ div#navbar_right_container {
 
 @media (min-width: 1200px) {
   div#navbar_left_container h3 {
-    font-size: 3.0rem;
+    font-size: 3.25rem;
     margin-left: 17.5%;
   }
 
