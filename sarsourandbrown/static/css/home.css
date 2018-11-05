@@ -243,6 +243,17 @@ div#navbar_right_container {
   }
 }
 
+@media (min-width: 1500px) {
+  img#navbar_sarsour_and_brown_logo {
+    position: absolute;
+    opacity: .225;
+    height: 200%;
+    top: -40%;
+    left: 88.75%;
+    transform: translateX(-82.5%)
+  }
+}
+
 /* Navigation Bar - Right Container */
 div#navbar_right_container {
   width: 100%;
