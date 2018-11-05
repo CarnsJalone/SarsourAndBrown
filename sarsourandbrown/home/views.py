@@ -158,7 +158,7 @@ def uncomplete_entry(request, entry_id):
 
 # Admin Page - Generate PDF
 def generate_pdf(request, *args, **kwargs):
-    all_entries = Submitter.objects.all
+    all_entries = Submitter.objects.order_by('-date_submitted')
     data = {'all_entries': all_entries}
     pdf = render_to_pdf('pdf/pdf.html', data)
     return HttpResponse(pdf, content_type='application/pdf')

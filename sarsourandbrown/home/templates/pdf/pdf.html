@@ -5,43 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" />
-    <title>Generated PDF</title>
+    <title>Inquiries</title>
+    <style type="text/css">
+        div#pdf_header {
+            width: 100%;
+            height: auto;
+            text-align: center;
+        }
+
+        div#pdf_table_div {
+            border: .5px solid #000;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        table#pdf_table_table {
+            margin-top: auto;
+            margin-bottom: auto;
+            padding-top: 5px;
+            padding-bottom: 2.5px;
+        }
+
+        thead#pdf_table_thead {
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: 15px;
+        }
+
+        tr#pdf_table_tr {
+            margin-top: 50%;
+        }
+
+        th.pdf_table_th {
+            padding-top: 7.5px;
+            background-color: lightgrey;
+        }
+
+        td.pdf_table_td {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="pdf_header">
+        <h1>Inquries</h1>
+    </div>
     {% if all_entries %}
 
-    <div class="container" id="profile_entries_table_div">
-        <table class="table table-bordered" id="profile_entries_table_table">
-            <thead class="thead-dark">
-                <tr id="profile_entries_table_tr">
-                    <th scope="col">Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Phone</th>
-                    <th scope="col">Inquiry</th>
-                    <th scope="col">Date Posted</th>
+    <div id="pdf_table_div">
+        <table id="pdf_table_table">
+            <thead id="pdf_table_thead">
+                <tr id="pdf_table_tr">
+                    <th class="pdf_table_th">Name</th>
+                    <th class="pdf_table_th">Email</th>
+                    <th class="pdf_table_th">Phone</th>
+                    <th class="pdf_table_th">Inquiry</th>
+                    <th class="pdf_table_th">Date Posted</th>
                 </tr>
 
             </thead>
             {% for entry in all_entries %}
-            {% if entry.completed %}
-            <tr class="profile_entries_table_tr" id="profile_entries_table_tr_completed">
-                <td>{{ entry.first_name }} {{ entry.last_name }}</td>
-                <td>{{ entry.email }}></td>
-                <td>{{ entry.phone_number }}</td>
-                <td>{{ entry.body }}</td>
-                <td>{{ entry.date_submitted }}</td>
+            <tr id="pdf_table_tr">
+                <td class="pdf_table_td">{{ entry.first_name }} {{ entry.last_name }}</td>
+                <td class="pdf_table_td">{{ entry.email }}</td>
+                <td class="pdf_table_td">{{ entry.phone_number }}</td>
+                <td class="pdf_table_td">{{ entry.body }}</td>
+                <td class="pdf_table_td">{{ entry.date_submitted }}</td>
             </tr>
-            {% else %}
-            <tr class="profile_entries_table_tr">
-                <td>{{ entry.first_name }} {{ entry.last_name }}</td>
-                <td>{{ entry.email }}</td>
-                <td>{{ entry.phone_number }}</td>
-                <td>{{ entry.body }}</td>
-                <td>{{ entry.date_submitted }}</td>
-            </tr>
-            {% endif %}
             {% endfor %}
         </table>
         {% else %}
