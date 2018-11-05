@@ -70,6 +70,11 @@ thead#contact_hours_of_operation_table_thead tr th {
   border-color: #262626;
 }
 
+table#contact_hours_of_operation_table_table td,
+table#contact_hours_of_operation_table_table th {
+  background-color: #fff;
+}
+
 /* Contact - Form - Submit Button Color */
 input#contact-submit-button {
   background-color: #262626;
@@ -215,7 +220,7 @@ div#navbar_right_container {
     font-size: 1.875rem;
   }
 }
-}
+
 
 @media (min-width: 1200px) {
   div#navbar_left_container h3 {
@@ -449,10 +454,21 @@ div.contact-top-child-div h3 {
   text-align: center;
 }
 
+ul#contact_phone_number_unordered_list {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 ul#contact_phone_number_unordered_list,
 li.contact_phone_number {
   list-style-type: none;
   text-decoration: none;
+}
+
+hr#contact_phone_number_ul_hr {
+  width: 90%;
+  margin-left: 0px;
 }
 
 .sarsour_and_brown_external_link:link {
@@ -790,6 +806,20 @@ div#profile_entries_blog_page_button_div {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+
+div#profile_generate_pdf {
+  width: 100%;
+  max-width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+a#profile_generate_pdf_button {
+  margin-left: 78.5%;
+  /* transform: translateX(-90%); */
 }
 
 /* Section Separator Div */

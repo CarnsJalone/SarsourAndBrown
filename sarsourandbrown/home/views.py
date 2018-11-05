@@ -120,7 +120,7 @@ def profile(request):
     if not request.user.is_authenticated:
         return redirect('login')
     else:
-        all_entries = Submitter.objects.all
+        all_entries = Submitter.objects.order_by('-date_submitted')
         context = {'user': request.user, 'first_name': request.user.first_name, 'last_name': request.user.last_name, 'all_entries': all_entries}
         return render(request, 'home/profile.html', context)
 
