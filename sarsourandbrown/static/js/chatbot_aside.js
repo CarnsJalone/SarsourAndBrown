@@ -6,41 +6,47 @@ $(document).ready(function() {
   var $mouse_leave_div = $("#created_hover_div");
   var $hover_close_button = $("#live_chat_hover_close_div");
   var $live_chat_close_button = $("#live_chat_live_chat_close_div");
+  var $live_chat_inner_div = $("#activate_chat_window_inner_div");
+  var $conversation_display = $("#chat_bot_conversation_display_div");
+  var $user_input = $("#user_input_div");
+  var $submit_button = $("#user_input_submit_div");
 
   function active_hover() {
-    $side_nav_div.css("display", "block");
+    $side_nav_div.css({ width: "10px" });
     $chat_bot_image_icon.css({
       opacity: "1",
       cursor: "pointer",
       display: "block"
     });
-    $chat_bot_image_span.css({ right: "-25px" });
+    $chat_bot_image_span.css({ right: "-50px" });
     $hover_div.css({
       right: "90px",
       top: "37.5%",
       transform: "rotate(0deg)",
       opacity: "1",
       width: "200px",
-      padding: "7.5px"
+      padding: "7.5px",
+      cursor: "auto"
     });
-    $hover_close_button.css({ right: "172.5px" });
+    $hover_close_button.css({ right: "172.5px", zIndex: "4" });
     $hover_div.html("Click on Sarsour and Brown logo for live chat.");
     $mouse_leave_div.css({
-      display: "block",
-      width: "25%",
-      height: "30%",
-      right: "-5",
-      top: "30%",
+      width: "297px",
+      height: "160px",
+      right: "0px",
+      top: "36.75%",
       position: "fixed",
       transform: "none",
       margin: "none",
-      backgroundColor: "#262626",
-      opacity: ".375"
+      backgroundColor: "#f2f0ec",
+      opacity: ".5",
+      zIndex: "1",
+      display: "block"
     });
   }
 
   function inactive_hover() {
-    $side_nav_div.css("display", "none");
+    $side_nav_div.css({ width: "0px" });
     $chat_bot_image_icon.css({
       opacity: ".5",
       cursor: "auto",
@@ -53,11 +59,12 @@ $(document).ready(function() {
       transform: "rotate(-90deg)",
       opacity: ".75",
       width: "75px",
-      padding: "2.5px"
+      padding: "2.5px",
+      cursor: "auto"
     });
     $hover_close_button.css({ right: "-172.5px" });
     $hover_div.html("Live Chat");
-    $mouse_leave_div.css({ display: "none" });
+    $mouse_leave_div.css({ right: "-500px", zIndex: "-1" });
   }
 
   $hover_close_button.click(function(event) {
@@ -75,26 +82,35 @@ $(document).ready(function() {
   var activate_chat_window = function() {
     $side_nav_div.css({ width: "400px" });
     $mouse_leave_div.css({
-      display: "block",
       width: "20%",
       height: "20%",
-      right: "-5",
+      right: "-500px",
       top: "50",
       position: "fixed",
       transform: "none",
       margin: "none",
       backgroundColor: "#262626",
-      opacity: ".5"
+      opacity: ".5",
+      zIndex: "-1"
     });
     $chat_bot_image_span.css({
       top: "20px",
-      right: "15%",
+      right: "calc(0% + 200px)",
       transform: "rotate(90deg)"
     });
-    $chat_bot_image_icon.css({cursor: "initial"})
-    $hover_div.css({ right: "175%"});
-    $hover_close_button.css({ right: "-172.5px"});
-    $live_chat_close_button.css({ right: "5%" });
+    $chat_bot_image_icon.css({ cursor: "initial" });
+    $hover_div.css({ right: "-175%", cursor: "auto" });
+    $hover_close_button.css({ right: "-172.5px" });
+    $live_chat_close_button.css({ right: "calc(0% + 100px)" });
+    $live_chat_inner_div.css({ right: "20px", left: "-340px" });
+    $conversation_display.css({
+      right: "12.5px",
+      left: "-340px",
+      top: "28.5px",
+      bottom: "-40px"
+    });
+    $user_input.css({ left: "-335px" });
+    $submit_button.css({ right: "256px" });
   };
 
   $live_chat_close_button.click(function() {
@@ -120,8 +136,11 @@ $(document).ready(function() {
       transform: "rotate(-90deg)",
       cursor: "pointer"
     });
-    $mouse_leave_div.css({display: "none"})
-
+    $mouse_leave_div.css({ right: "-500px", zIndex: "-1" });
+    $live_chat_inner_div.css({ right: "-200px", left: "340px" });
+    $conversation_display.css({ right: "-200px", left: "340px" });
+    $user_input.css({ left: "335px" });
+    $submit_button.css({ right: "-335px" });
     $hover_div.html("Live Chat");
   }
 });

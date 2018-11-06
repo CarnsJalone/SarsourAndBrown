@@ -70,14 +70,20 @@
   </span>
 
   <div id="chat_bot_side_nav_div">
-
     <div id="chat_bot_convo_div">
-      <div id="chat_bot_user_input">
+      <div id="activate_chat_window_inner_div">
       </div>
-      <div id="chat_bot_chat_bot_reply">
+      <div id="chat_bot_conversation_display_div">
+      </div>
+      <div id="user_input_div">
+        <textarea class="form-control" id="user_input_input" type="text" rows="3" placeholder="Enter your inquiry here."></textarea>
+      </div>
+      <div id="user_input_submit_div">
+        <input id="user_input_submit_submit" class="form-control" type="submit">
       </div>
     </div>
   </div>
+
 
   <div id="hover_for_live_chat">
     <p>Live Chat</p>
@@ -169,6 +175,7 @@
       </div>
     </div>
   </footer>
+  <script src="https://unpkg.com/rivescript@latest/dist/rivescript.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
@@ -177,6 +184,7 @@
     crossorigin="anonymous"></script>
   <script src="{% static 'js/main.js' %}" type="text/javascript"></script>
   <script src="{% static 'js/chatbot_aside.js' %}" type="text/javascript"></script>
+  <script src="{% static 'js/rivescript.js' %}" type="text/javascript"></script>
   <script src="{% static 'js/google-map.js' %}" type="text/javascript"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC20Wte_JjfGrdG1cdixhGjflg0oA0YtcM&callback=initMap"
     async defer></script>
