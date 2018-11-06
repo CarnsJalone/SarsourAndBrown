@@ -64,9 +64,11 @@
 
   </div>
 
+  {% block live_chat %}
   <span id="open_close_chat_bot_aside">
     <img id="chat_bot_image" src="{% static 'images/SB_Logo_White.png' %}" alt="SB Logo">
   </span>
+
   <div id="chat_bot_side_nav_div">
 
     <div id="chat_bot_convo_div">
@@ -77,10 +79,25 @@
     </div>
   </div>
 
+  <div id="hover_for_live_chat">
+    <p>Live Chat</p>
+  </div>
+  <div id="click_for_live_chat_div">
+    <p>Click on Sarsour And Brown Logo for live chat.</p>
+  </div>
+
+  <div id="created_hover_div"></div>
 
 
 
+  <div id="live_chat_hover_close_div">
+    <i id="live_chat_hover_close" class="far fa-times-circle"></i>
+  </div>
 
+  <div id="live_chat_live_chat_close_div">
+    <i id="live_chat_live_chat_close_icon" class="far fa-times-circle"></i>
+  </div>
+  {% endblock %}
 
   {% comment %} </div> {% endcomment %}
   {# The DIVS below will only be for the homepage, these need to be migrated to home.html #}
@@ -116,7 +133,7 @@
               <a href="#" class="fab fa-youtube" id="footer_youtube_icon"></a>
             </div>
           </div>
-          
+
         </div>
       </div>
 

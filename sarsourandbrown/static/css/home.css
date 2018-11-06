@@ -8,6 +8,10 @@ span {
   font-family: "Ubuntu", sans-serif;
 }
 
+body {
+  position: relative;
+}
+
 /*  Navigation Bar  */
 
 nav#main-navbar {

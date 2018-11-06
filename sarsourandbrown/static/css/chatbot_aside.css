@@ -15,7 +15,7 @@ div#chat_bot_side_nav_div {
     top: 50%;
     transform: translateY(-50%);
     background-color:#262626;
-    transition: .25s;
+    transition: .75s;
     display: none;
     /* Needs to be display: block */
 }
@@ -33,11 +33,11 @@ div#chat_bot_convo_div {
 span#open_close_chat_bot_aside {
     position: fixed;
     z-index: 2;
-    right: -60px;
+    right: -100px;
     top: 50%;
     transform: translateY(-50%);
     height: 130px;
-    transition: .25s
+    transition: .75s
 }
 
 img#chat_bot_image {
@@ -45,12 +45,111 @@ img#chat_bot_image {
     margin: 0 auto;
     background: #262626;
     padding: 7.5px;
-    border-top-right-radius: 10%;
-    border-top-left-radius: 10%;
-    border-bottom-right-radius: 0%;
-    border-bottom-left-radius: 0%;
     transform: rotate(-90deg);
-    opacity: .5;
-    transition: .25s;
+    opacity: .75;
+    transition: .5s;
+    -webkit-border-radius: 1em;
+    display: none;
 }
+
+div#click_for_live_chat_div {
+    display: none;
+    position: fixed;
+    top: 47.5%;
+    left: 75%;
+    transform: translate(-50%, -75%);
+    width: auto;
+    height: auto%;
+    background-color: #262626;
+    color: #f2f0ec;
+    text-align: center;
+    z-index: 3;
+    border-radius: 1em;
+    transition: .75s;
+}
+
+div#click_for_live_chat_div p {
+    padding: 5px;
+    margin: 0;
+}
+
+div#hover_for_live_chat {
+    position: fixed;
+    top: 45.5%;
+    right: -25px;
+    transform: translate(-50%, -50%);
+    background-color: #262626;
+    color: #f2f0ec;
+    border-radius: .5em;
+    transform: rotate(-90deg);
+    z-index: 3;
+    opacity: .75;
+    text-align: center;
+    width: 75px;
+    transition: .75s;
+}
+
+div#hover_for_live_chat p {
+    padding: 2.5px;
+    margin: 0;
+    font-size: 1em;
+}
+
+div#created_hover_div {
+    position: fixed;
+    width: 350px;
+    height: 350px;
+    right: 0px;
+    top: 46.5%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    z-index: 1;
+    display: none;
+    transition: .75s;
+    border: 1px solid #262626;
+    border-radius: 1rem;
+}
+
+div#live_chat_hover_close_div {
+    position: fixed;
+    right: -172.5px;
+    top: 44.5%;
+    z-index: 4;
+    transition: .75s;
+    color: #262626;
+    /* background-color: #f2f0ec; */
+    border-radius: 50%;
+    padding: 0px;
+}
+
+i#live_chat_hover_close {
+    font-size: 2.5em;
+}
+
+i#live_chat_hover_close:hover {
+    cursor: pointer;
+    text-shadow: 0px 0px 1.5px #3366ff;
+}
+
+div#live_chat_live_chat_close_div {
+    position: fixed;
+    right: -75%;
+    top: 65px;
+    z-index: 4;
+    transition: .75s;
+    color: #fff;
+    /* background-color: #f2f0ec; */
+    border-radius: 50%;
+    padding: 0px;
+}
+
+i#live_chat_live_chat_close_icon {
+    font-size: 2.25em;
+}
+
+i#live_chat_live_chat_close_icon:hover {
+    cursor: pointer;
+    text-shadow: 0px 0px 10px #3366ff;
+}
+
 
