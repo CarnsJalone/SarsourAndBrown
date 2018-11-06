@@ -91,8 +91,9 @@ $(document).ready(function() {
       right: "15%",
       transform: "rotate(90deg)"
     });
-    $hover_div.css({ display: "none" });
-    $hover_close_button.css({ right: "-172.5px" });
+    $chat_bot_image_icon.css({cursor: "initial"})
+    $hover_div.css({ right: "175%"});
+    $hover_close_button.css({ right: "-172.5px"});
     $live_chat_close_button.css({ right: "5%" });
   };
 
