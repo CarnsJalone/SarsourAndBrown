@@ -71,14 +71,16 @@ $(document).ready(function() {
       } else {
         return true;
       }
-
     }
-    
+
     email_regex_validation();
     phone_regex_validation();
 
-    function verify_and_display(){
-      if (email_regex_validation() == true && phone_regex_validation() == true) {
+    function verify_and_display() {
+      if (
+        email_regex_validation() == true &&
+        phone_regex_validation() == true
+      ) {
         $form_submit_loader_div.css("display", "block");
       } else {
         return false;
@@ -86,7 +88,7 @@ $(document).ready(function() {
     }
 
     verify_and_display();
-  
+
     // End On Click Function Event
   });
 
@@ -107,21 +109,125 @@ $(document).ready(function() {
 
   // About page hover function
 
-  var $card_card = $('.about_specialization_card_card');
+  var $card_card = $(".about_specialization_card_card");
 
-  $card_card.hover(function(event){
-    $(this).children("div").children("h3").css({
-      fontSize: "2.5em",
-      textShadow: "0px 0px 10px #fff", 
-    });
+  $card_card.hover(function(event) {
+    if ($(window).width() >= 1500) {
+      $(this)
+        .children("div")
+        .children("h3")
+        .css({
+          fontSize: "2.5em",
+          textShadow: "0px 0px 10px #fff"
+        });
+    } else if ($(window).width() >= 1200 && $(window).width() <= 1499) {
+      $(this)
+        .children("div")
+        .children("h3")
+        .css({
+          fontSize: "2.5em",
+          textShadow: "0px 0px 10px #fff"
+        });
+    } else if ($(window).width() >= 979 && $(window).width() <= 1199) {
+      $(this)
+        .children("div")
+        .children("h3")
+        .css({
+          fontSize: "2.5em",
+          textShadow: "0px 0px 10px #fff"
+        });
+    } else if ($(window).width() >= 769 && $(window).width() <= 978) {
+      $(this)
+        .children("div")
+        .children("h3")
+        .css({
+          fontSize: "2.5em",
+          textShadow: "0px 0px 10px #fff"
+        });
+    } else if ($(window).width() >= 480 && $(window).width() <= 768) {
+      $(this)
+        .children("div")
+        .children("h3")
+        .css({
+          fontSize: "2.0em",
+          textShadow: "0px 0px 10px #fff"
+        });
+    } else if ($(window).width() >= 200 && $(window).width() <= 479) {
+      $(this)
+        .children("div")
+        .children("h3")
+        .css({
+          fontSize: "1.5em",
+          textShadow: "0px 0px 10px #fff"
+        });
+    } else {
+      $(this)
+        .children("div")
+        .children("h3")
+        .css({
+          fontSize: "1.25em",
+          textShadow: "0px 0px 10px #fff"
+        });
+    }
   });
 
-  $card_card.mouseleave(function(){
-    $(this).children("div").children("h3").css({
-      fontSize: "1.75em",
-      textShadow: "none"
-    })
-  })
-
-
+  $card_card.mouseleave(function() {
+    if ($(window).width() >= 1500) {
+      $(this)
+        .children("div")
+        .children("h3")
+        .css({
+          fontSize: "1.75em",
+          textShadow: "0px 0px 10px #fff"
+        });
+    } else if ($(window).width() >= 1200 && $(window).width() <= 1499) {
+      $(this)
+        .children("div")
+        .children("h3")
+        .css({
+          fontSize: "1.75em",
+          textShadow: "0px 0px 10px #fff"
+        });
+    } else if ($(window).width() >= 979 && $(window).width() <= 1199) {
+      $(this)
+        .children("div")
+        .children("h3")
+        .css({
+          fontSize: "1.75em",
+          textShadow: "0px 0px 10px #fff"
+        });
+    } else if ($(window).width() >= 769 && $(window).width() <= 978) {
+      $(this)
+        .children("div")
+        .children("h3")
+        .css({
+          fontSize: "1.5em",
+          textShadow: "0px 0px 10px #fff"
+        });
+    } else if ($(window).width() >= 480 && $(window).width() <= 768) {
+      $(this)
+        .children("div")
+        .children("h3")
+        .css({
+          fontSize: "1.25em",
+          textShadow: "0px 0px 10px #fff"
+        });
+    } else if ($(window).width() >= 200 && $(window).width() <= 479) {
+      $(this)
+        .children("div")
+        .children("h3")
+        .css({
+          fontSize: "1.0em",
+          textShadow: "0px 0px 10px #fff"
+        });
+    } else {
+      $(this)
+        .children("div")
+        .children("h3")
+        .css({
+          fontSize: ".75em",
+          textShadow: "0px 0px 10px #fff"
+        });
+    }
+  });
 });

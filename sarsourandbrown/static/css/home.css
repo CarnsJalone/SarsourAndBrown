@@ -452,7 +452,9 @@ div.about_specialization_card_text {
   transition: 1.5s;
 }
 
-@media (min-width: 1200px) {
+/* Specialization Card - Responsive Media Queries */
+
+@media (min-width: 1500px) {
   img.about_card_img {
     max-height: 250px;
     height: 250px;
@@ -460,72 +462,75 @@ div.about_specialization_card_text {
   div.about_specialization_card_card {
     margin-left: 5%;
     max-width: 30%;
-    width: 30%;
   }
-}
+} 
 
-@media (min-width: 978px) {
+@media (min-width: 1200px) and (max-width: 1499px) {
   img.about_card_img {
     max-height: 250px;
     height: 250px;
   }
   div.about_specialization_card_card {
     margin-left: 5%;
-    max-width: 45%;
-  }
-}
-
-@media (max-width: 978px) {
-  img.about_card_img {
-    max-height: 150px;
-    height: 150px;
-  }
-  div.about_specialization_card_card {
-    margin-left: 5%;
-    max-width: 45%;
-  }
-}
-
-@media (max-width: 600px) {
-  img.about_card_img {
-    max-height: 125px;
-    height: 125px;
-  }
-  div.about_specialization_card_card {
-    margin-left: 5%;
-    max-width: 55%;
-    width: 55%;
-  }
-}
-
-@media (max-width: 400px) {
-  img.about_card_img {
-    max-height: 100px;
-    height: 100px;
-  }
-  div.about_specialization_card_card {
-    margin-left: 5%;
-    max-width: 60%;
-    width: 60%;
-  }
-}
-
-
-
-
-/* @media (min-width: 970px) {
-  img.about_card_img {
-    max-height: 275px;
-    height: 275px;
-  }
-  div.about_specialization_card_card {
-    margin-left: 2.5%;
     max-width: 37.5%;
   }
-} */
+} 
 
+@media (min-width: 979px) and (max-width: 1199px) {
+  img.about_card_img {
+    height: 200px;
+  }
+  div.about_specialization_card_card {
+    margin-left: 5%;
+    max-width: 40%;
+  }
+}
 
+@media (min-width: 769px) and (max-width: 978px) {
+  img.about_card_img {
+    height: 180px;
+  }
+  div.about_specialization_card_card {
+    margin-left: 5%;
+    max-width: 42.5%;
+  }
+  div#about_specialization_card_text_im h3 {
+    font-size: 1.5em;
+  }
+}
 
+@media (min-width: 480px) and (max-width: 768px) {
+  img.about_card_img {
+    height: 140px;
+  }
+  div.about_specialization_card_card {
+    margin-left: 5%;
+    max-width: 45%;
+  }
+  div#about_specialization_card_text_im h3 {
+    font-size: 1.25em;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 479px) {
+  img.about_card_img {
+    height: 100px;
+    max-height: 100px;
+  }
+  div.about_specialization_card_card {
+    margin-left: 5%;
+    max-width: 45%;
+  }
+  div#about_specialization_card_text_im h3 {
+    font-size: 1.0em;
+  }
+}
+
+@media (max-width: 199px) {
+  div#about_specialization_card_text_im h3 {
+    font-size: .75em;
+  }
+}
 
 
 /*  Contact Page  */
