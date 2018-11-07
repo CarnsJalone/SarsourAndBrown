@@ -104,4 +104,24 @@ $(document).ready(function() {
       return true;
     }
   });
+
+  // About page hover function
+
+  var $card_card = $('.about_specialization_card_card');
+
+  $card_card.hover(function(event){
+    $(this).children("div").children("h3").css({
+      fontSize: "2.5em",
+      textShadow: "0px 0px 10px #fff", 
+    });
+  });
+
+  $card_card.mouseleave(function(){
+    $(this).children("div").children("h3").css({
+      fontSize: "1.75em",
+      textShadow: "none"
+    })
+  })
+
+
 });

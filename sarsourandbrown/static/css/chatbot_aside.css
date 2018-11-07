@@ -110,6 +110,10 @@ div#hover_for_live_chat {
     transition: .75s;
 }
 
+div#hover_for_live_chat:hover {
+    cursor: pointer;
+}
+
 div#hover_for_live_chat p {
     padding: 2.5px;
     margin: 0;

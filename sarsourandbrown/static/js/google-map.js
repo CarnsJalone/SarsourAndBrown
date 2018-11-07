@@ -1,15 +1,23 @@
 $(document).ready(function() {
+  var sarsour_and_brown_location;
+  var marker;
+  var $map = document.getElementById('map')
 
+  function initMap() {
+    var options = {
+      center: { lat: 41.653531, lng: -83.528592 },
+      zoom: 14
+    };
 
-      function initMap() {
-        var two_maritime_plaza = {lat: 41.653531, lng: -83.528592};
-        // The map, centered at 2 Maritime Plaza
-        var map = new google.maps.Map(
-            document.getElementById('map'), {zoom: 14, center: two_maritime_plaza});
-        // The marker, positioned at 2 Maritizme Plaza
-        var marker = new google.maps.Marker({position: two_maritime_plaza, map: map});
-      }
+    sarsour_and_brown_location = new google.maps.Map($map, options);
 
-      initMap();
+      var marker_options = {
+        position: { lat: 41.653531, lng: -83.528592 },
+        map: sarsour_and_brown_location
+      };
 
+      marker = new google.maps.Marker(marker_options);
+  };
+
+  initMap();
 });

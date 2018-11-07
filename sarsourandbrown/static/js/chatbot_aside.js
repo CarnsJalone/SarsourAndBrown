@@ -61,7 +61,7 @@ $(document).ready(function() {
       opacity: ".75",
       width: "75px",
       padding: "2.5px",
-      cursor: "auto"
+      cursor: "pointer"
     });
     $hover_close_button.css({ right: "-172.5px" });
     $hover_div.html("Live Chat");
@@ -72,7 +72,7 @@ $(document).ready(function() {
     inactive_hover();
   });
 
-  $hover_div.mouseenter(function(event) {
+  $hover_div.click(function(event) {
     active_hover();
   });
 

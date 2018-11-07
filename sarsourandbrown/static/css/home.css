@@ -125,6 +125,7 @@ div#navbar_right_container {
   z-index: 10;
 }
 
+/* Media Queries */
 @media (max-width: 575px) {
   div#navbar_left_container h3 {
     font-size: 1.5rem;
@@ -261,6 +262,7 @@ div#navbar_right_container {
     left: 88.75%;
     transform: translateX(-82.5%)
   }
+
 }
 
 span#navbar_llc_span {
@@ -375,47 +377,156 @@ div#map {
   background-color: grey;
 }
 
+p#map_div_refresh_suggestion_paragraph {
+  margin-top: 15px;
+  font-size: .75em;
+}
+
 /* About Page - Specialization Cards */
 
 div#about_specialization_card_div {
   text-align: center;
-  max-width: 60%;
+  max-width: 100%;
+  transition: .75s;
 }
 
+div#about_specialization_card_plus_complimentary_text {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 
 div.about_specialization_card_card {
-  position: relative;
+  height: 20%;
+  width: 45%;
+  margin-left: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  padding: 10px;
+  background-color: #262626;
   border: none;
-
-}
-img.about_card_img {
-  position: relative;
-  height: 300px;
-  z-index: 0;
-  opacity: .25;
+  border-radius: 1em;
+  transition: .75s;
 }
 
-img.about_card_img img {
-  border-radius: .25rem;
+div.about_specialization_card_complimentary_text {
+  width: 50%;
+  margin-right: 25px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  padding: 10px;
 }
 
-div.about_specialization_card_content {
+div.about_specialization_card_complimentary_text p {
+  width: 50%;
+  height: 50%;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+img.about_card_img {
   width: 100%;
   height: 100%;
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 120px;
-  z-index: 1;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: .5em;
+  opacity: .375;
+  transition: .75s;
+}
+
+div.about_specialization_card_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f2f0ec;
+  transition: 1.5s;
+}
+
+@media (min-width: 1200px) {
+  img.about_card_img {
+    max-height: 250px;
+    height: 250px;
+  }
+  div.about_specialization_card_card {
+    margin-left: 5%;
+    max-width: 30%;
+    width: 30%;
+  }
+}
+
+@media (min-width: 978px) {
+  img.about_card_img {
+    max-height: 250px;
+    height: 250px;
+  }
+  div.about_specialization_card_card {
+    margin-left: 5%;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 978px) {
+  img.about_card_img {
+    max-height: 150px;
+    height: 150px;
+  }
+  div.about_specialization_card_card {
+    margin-left: 5%;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 600px) {
+  img.about_card_img {
+    max-height: 125px;
+    height: 125px;
+  }
+  div.about_specialization_card_card {
+    margin-left: 5%;
+    max-width: 55%;
+    width: 55%;
+  }
+}
+
+@media (max-width: 400px) {
+  img.about_card_img {
+    max-height: 100px;
+    height: 100px;
+  }
+  div.about_specialization_card_card {
+    margin-left: 5%;
+    max-width: 60%;
+    width: 60%;
+  }
 }
 
 
-img.about_card_img img:hover,
-div.about_specialization_card_content:hover 
-{
-  cursor: pointer;
-  /* background: linear-gradient(0deg, #000, transparent) */
-}
+
+
+/* @media (min-width: 970px) {
+  img.about_card_img {
+    max-height: 275px;
+    height: 275px;
+  }
+  div.about_specialization_card_card {
+    margin-left: 2.5%;
+    max-width: 37.5%;
+  }
+} */
+
+
+
+
 
 /*  Contact Page  */
 
