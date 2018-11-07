@@ -10,6 +10,7 @@ $(document).ready(function() {
   var $conversation_display = $("#chat_bot_conversation_display_div");
   var $user_input = $("#user_input_div");
   var $submit_button = $("#user_input_submit_div");
+  var $activate_chat_modal = $('#activated_chat_full_page_modal');
 
   function active_hover() {
     $side_nav_div.css({ width: "10px" });
@@ -28,7 +29,7 @@ $(document).ready(function() {
       padding: "7.5px",
       cursor: "auto"
     });
-    $hover_close_button.css({ right: "172.5px", zIndex: "4" });
+    $hover_close_button.css({ right: "172.5px", zIndex: "6" });
     $hover_div.html("Click on Sarsour and Brown logo for live chat.");
     $mouse_leave_div.css({
       width: "297px",
@@ -39,8 +40,8 @@ $(document).ready(function() {
       transform: "none",
       margin: "none",
       backgroundColor: "#f2f0ec",
-      opacity: ".5",
-      zIndex: "1",
+      opacity: ".875",
+      zIndex: "5",
       display: "block"
     });
   }
@@ -111,6 +112,7 @@ $(document).ready(function() {
     });
     $user_input.css({ left: "-335px" });
     $submit_button.css({ right: "256px" });
+    $activate_chat_modal.css({width: "0%"})
   };
 
   $live_chat_close_button.click(function() {
@@ -141,6 +143,7 @@ $(document).ready(function() {
     $conversation_display.css({ right: "-200px", left: "340px" });
     $user_input.css({ left: "335px" });
     $submit_button.css({ right: "-335px" });
+    $activate_chat_modal.css({width: "0%"})
     $hover_div.html("Live Chat");
   }
 });

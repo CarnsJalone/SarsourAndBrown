@@ -1,4 +1,5 @@
 {% extends "home/base.html" %}
+{% load staticfiles %}
 
 {% block testimonials_body %}
 <div class="container">
@@ -22,5 +23,39 @@
 
 
 </div>
+
+{% comment %} Begin Live Chat Section {% endcomment %}
+<span id="open_close_chat_bot_aside">
+    <img id="chat_bot_image" src="{% static 'images/logos/SB_Logo_White.png' %}" alt="SB Logo">
+</span>
+<div id="chat_bot_side_nav_div">
+    <div id="chat_bot_convo_div">
+        <div id="activate_chat_window_inner_div">
+        </div>
+        <div id="chat_bot_conversation_display_div">
+        </div>
+        <div id="user_input_div">
+            <textarea class="form-control" id="user_input_input" type="text" rows="3" placeholder="Enter your inquiry here."></textarea>
+        </div>
+        <div id="user_input_submit_div">
+            <input id="user_input_submit_submit" class="form-control" type="submit" role="submit">
+        </div>
+    </div>
+</div>
+<div id="activated_chat_full_page_modal"></div>
+<div id="hover_for_live_chat">
+    <p>Live Chat</p>
+</div>
+<div id="click_for_live_chat_div">
+    <p>Click on Sarsour And Brown Logo for live chat.</p>
+</div>
+<div id="created_hover_div"></div>
+<div id="live_chat_hover_close_div">
+    <i id="live_chat_hover_close" class="far fa-times-circle"></i>
+</div>
+<div id="live_chat_live_chat_close_div">
+    <i id="live_chat_live_chat_close_icon" class="far fa-times-circle"></i>
+</div>
+{% comment %} End Live Chat Section {% endcomment %}
 
 {% endblock %}

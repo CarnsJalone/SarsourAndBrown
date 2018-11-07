@@ -1,4 +1,5 @@
 {% extends "home/base.html" %}
+{% load staticfiles %}
 
 {% block contact_8_by_4_container %}
 <div id="about_8_col" class="row">
@@ -46,6 +47,40 @@
 	</div>
 </div>
 
+{% comment %} Begin Live Chat Section {% endcomment %}
+<span id="open_close_chat_bot_aside">
+	<img id="chat_bot_image" src="{% static 'images/logos/SB_Logo_White.png' %}" alt="SB Logo">
+</span>
+<div id="chat_bot_side_nav_div">
+	<div id="chat_bot_convo_div">
+		<div id="activate_chat_window_inner_div">
+		</div>
+		<div id="chat_bot_conversation_display_div">
+		</div>
+		<div id="user_input_div">
+			<textarea class="form-control" id="user_input_input" type="text" rows="3" placeholder="Enter your inquiry here."></textarea>
+		</div>
+		<div id="user_input_submit_div">
+			<input id="user_input_submit_submit" class="form-control" type="submit" role="submit">
+		</div>
+	</div>
+</div>
+<div id="activated_chat_full_page_modal"></div>
+<div id="hover_for_live_chat">
+	<p>Live Chat</p>
+</div>
+<div id="click_for_live_chat_div">
+	<p>Click on Sarsour And Brown Logo for live chat.</p>
+</div>
+<div id="created_hover_div"></div>
+<div id="live_chat_hover_close_div">
+	<i id="live_chat_hover_close" class="far fa-times-circle"></i>
+</div>
+<div id="live_chat_live_chat_close_div">
+	<i id="live_chat_live_chat_close_icon" class="far fa-times-circle"></i>
+</div>
+{% comment %} End Live Chat Section {% endcomment %}
+
 <div class="container" id="about_specialization_card_div">
 	<hr>
 	<div id="about_specialization_header_paragraph">
@@ -53,7 +88,7 @@
 	</div>
 	<hr>
 	<div class="card about_specialization_card_card">
-		<img class="img-thumbnail about_card_img" src="/static/Immigration-Specialization.png" alt="Immigration Card">
+		<img class="img-thumbnail about_card_img" src="/static/images/specializations/Immigration-Specialization.png" alt="Immigration Card">
 		<div class="about_specialization_card_content">
 			<h3>Immigration</h3>
 		</div>
@@ -61,7 +96,8 @@
 	</div>
 	<hr>
 	<div class="card about_specialization_card_card">
-		<img class="img-thumbnail about_card_img" src="/static/Domestic-Relations-Specialization.jpg" alt="Immigration Card">
+		<img class="img-thumbnail about_card_img" src="/static/images/specializations/Domestic-Relations-Specialization.jpg"
+		 alt="Immigration Card">
 		<div class="about_specialization_card_content">
 			<h3>Domestic Relations</h3>
 		</div>
@@ -69,7 +105,8 @@
 	</div>
 	<hr>
 	<div class="card about_specialization_card_card">
-		<img class="img-thumbnail about_card_img" src="/static/Criminal-Defense-Specialization.jpeg" alt="Immigration Card">
+		<img class="img-thumbnail about_card_img" src="/static/images/specializations/Criminal-Defense-Specialization.jpeg"
+		 alt="Immigration Card">
 		<div class="about_specialization_card_content">
 			<h3>Criminal Defense</h3>
 		</div>
@@ -77,7 +114,7 @@
 	</div>
 	<hr>
 	<div class="card about_specialization_card_card">
-		<img class="img-thumbnail about_card_img" src="/static/Child-Custody_Specialization.jpg" alt="Immigration Card">
+		<img class="img-thumbnail about_card_img" src="/static/images/specializations/Child-Custody_Specialization.jpg" alt="Immigration Card">
 		<div class="about_specialization_card_content">
 			<h3>Child Custody</h3>
 		</div>
@@ -85,7 +122,7 @@
 	</div>
 	<hr>
 	<div class="card about_specialization_card_card">
-		<img class="img-thumbnail about_card_img" src="/static/Estate-Planning-Specialization.jpg" alt="Immigration Card">
+		<img class="img-thumbnail about_card_img" src="/static/images/specializations/Estate-Planning-Specialization.jpg" alt="Immigration Card">
 		<div class="about_specialization_card_content">
 			<h3>Estate Planning</h3>
 		</div>
@@ -99,7 +136,7 @@
 	<h3>Find Us!</h3>
 	<p>Our office is located in Downtown Toledo in the Maritiime Plaza on the corner of Summit and Main Street.
 		We are directly adjacent to the Maumee River between the Promenade Docks and the Toledo-Lucas
-		 County Port Authority.
+		County Port Authority.
 	</p>
 	<div id="map"></div>
 	<p>Please refresh page if map doesn't load properly.</p>

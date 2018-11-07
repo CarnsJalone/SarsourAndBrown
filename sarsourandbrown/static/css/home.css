@@ -296,7 +296,7 @@ ul#navbar_right_container_links_ul {
 
 }
 ul#navbar_right_container_links_ul li {
-
+  z-index: 2;
 }
 
 li.navbar_right_container_links_list_item a {

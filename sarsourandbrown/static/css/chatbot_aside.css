@@ -4,13 +4,14 @@ div#main_aside_div {
     width: 10px;
     right: 0;
     display: none;
+    z-index: 6;
 }
 div#chat_bot_side_nav_div {
     height: 100%;
     width: 0px;
     position: fixed;
     overflow-x: hidden;
-    z-index: 1;
+    z-index: 6;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -32,6 +33,7 @@ div#activate_chat_window_inner_div {
     border-radius: 1em;
     transition: .75s;
     opacity: .75;
+    z-index: 6;
 }
 
 div#chat_bot_convo_div {
@@ -42,11 +44,12 @@ div#chat_bot_convo_div {
     top: 50%;
     transform: translateY(-50%);
     background-color: #f2f0ec;
+    z-index: 6;
 }
 
 span#open_close_chat_bot_aside {
     position: fixed;
-    z-index: 2;
+    z-index: 7;
     right: -100px;
     top: 50%;
     transform: translateY(-50%);
@@ -66,6 +69,7 @@ img#chat_bot_image {
     transition: .5s;
     -webkit-border-radius: 1em;
     display: none;
+    z-index: 5;
 }
 
 div#click_for_live_chat_div {
@@ -79,7 +83,7 @@ div#click_for_live_chat_div {
     background-color: #262626;
     color: #f2f0ec;
     text-align: center;
-    z-index: 3;
+    z-index: 6;
     border-radius: 1em;
     transition: .75s;
 }
@@ -87,6 +91,7 @@ div#click_for_live_chat_div {
 div#click_for_live_chat_div p {
     padding: 5px;
     margin: 0;
+    z-index: 6;
 }
 
 div#hover_for_live_chat {
@@ -98,7 +103,7 @@ div#hover_for_live_chat {
     color: #f2f0ec;
     border-radius: .5em;
     transform: rotate(-90deg);
-    z-index: 3;
+    z-index: 6;
     opacity: .75;
     text-align: center;
     width: 75px;
@@ -109,6 +114,7 @@ div#hover_for_live_chat p {
     padding: 2.5px;
     margin: 0;
     font-size: 1em;
+    z-index: 6;
 }
 
 div#created_hover_div {
@@ -129,7 +135,7 @@ div#live_chat_hover_close_div {
     position: fixed;
     right: -200px;
     top: 46.75%;
-    z-index: 1;
+    z-index: 6;
     transition: .75s;
     color: #262626;
     border-radius: 50%;
@@ -138,6 +144,7 @@ div#live_chat_hover_close_div {
 
 i#live_chat_hover_close {
     font-size: 2.5em;
+    z-index: 6;
 }
 
 i#live_chat_hover_close:hover {
@@ -149,7 +156,7 @@ div#live_chat_live_chat_close_div {
     position: fixed;
     right: -75%;
     top: 65px;
-    z-index: 4;
+    z-index: 6;
     transition: .75s;
     color: #fff;
     /* background-color: #f2f0ec; */
@@ -159,6 +166,7 @@ div#live_chat_live_chat_close_div {
 
 i#live_chat_live_chat_close_icon {
     font-size: 2.25em;
+    z-index: 6;
 }
 
 i#live_chat_live_chat_close_icon:hover {
@@ -176,23 +184,35 @@ div#chat_bot_conversation_display_div {
     bottom: -40px;
     margin-top: 5px;
     margin-left: 5px;
-    z-index: 5;
+    z-index: 6;
     top: 28.5px;
     border-radius: 1em;
     transition: .75s;
+    overflow: scroll;
+}
+
+div#chat_bot_conversation_display_div p {
+    font-size: 1em;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-right: 15px;
+    margin-left: 5px;
+    text-align: left;
 }
 
 div#user_input_div {
     position: fixed;
-    bottom: -12.5px;
+    bottom: -7.75px;
     left: 335px;
     width: 350px;
     transition: .75s;
+    z-index: 6;
 }
 
 textarea#user_input_input {
     background-color: #f2f0ec;
     border-radius: .5em;
+    z-index: 6;
 }
 
 div#user_input_submit_div {
@@ -200,10 +220,26 @@ div#user_input_submit_div {
     bottom: -56.5px;
     right: -335px;
     transition: .75s;
+    z-index: 6;
 }
 
 input#user_input_submit_submit {
     background-color: #262626;
     color: #f2f0ec;
+    z-index: 6;
+}
+
+input#user_input_submit_submit:hover {
+    cursor: pointer;
+}
+
+div#activated_chat_full_page_modal {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background-color: #262626;
+    opacity: .75;
+    z-index: 5;
+    transition: 1.25s;
 }
 
