@@ -13,7 +13,7 @@ class ContactForm(forms.ModelForm):
     email = forms.EmailField(widget=forms.EmailInput, label="Email", required=True)
     email.widget.attrs.update({'class': 'form-control', 'name': 'email', 'placeholder': 'Please Enter Your Email'})
     
-    phone_number = forms.IntegerField(widget=forms.TextInput, label="Phone Number (Optional)", required=True)
+    phone_number = forms.IntegerField(widget=forms.TextInput, label="Phone Number", required=True)
     phone_number.widget.attrs.update({'class': 'form-control', 'name': 'phone_number', 'placeholder': 'Format: 9999999999'})
 
     body = forms.CharField(widget=forms.Textarea, label="Enter Inquiry Below", max_length="250", required=True)

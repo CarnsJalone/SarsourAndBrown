@@ -64,6 +64,9 @@ div.carousel-caption {
   color: black;
 }
 
+/* Contact Page */
+
+
 /* Contact - Hours Of Operation Table Color */
 table#contact_hours_of_operation_table_table {
   border: 1px solid #262626; 
@@ -461,7 +464,8 @@ div.about_specialization_card_text {
   }
   div.about_specialization_card_card {
     margin-left: 5%;
-    max-width: 30%;
+    /* width: 32.5%; */
+    max-width: 32.5%;
   }
 } 
 
@@ -536,7 +540,6 @@ div.about_specialization_card_text {
 /*  Contact Page  */
 
 /* Contact Page - Form */
-
 form#inquiry-form input {
   margin-bottom: 7.5px;
 }
@@ -545,20 +548,30 @@ form input#contact-submit-button {
   margin-top: 15px;
 }
 
-/* Contact Page - Top Div - Parent */
+/* Contact - Intro Div */
+div#contact_intro_div {
+  width: 75%;
+  height: auto;
+  margin-left: auto; 
+  margin-right: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  text-align: center;
+}
 
+/* Contact Page - Top Div - Parent */
 div.row#exception-spacing-top-contact-row {
   margin-left: 0;
   margin-right: 0;
 }
 
 div#contact-top-parent-div {
-  max-width: 100%;
+  max-width: 90%;
   font-size: 16px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  margin-bottom: 3%;
 }
 
 /* Contact Page - Top Div - Child */
@@ -578,17 +591,14 @@ ul#contact_phone_number_unordered_list {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+  padding: 0px;
 }
 
 ul#contact_phone_number_unordered_list,
 li.contact_phone_number {
   list-style-type: none;
   text-decoration: none;
-}
-
-hr#contact_phone_number_ul_hr {
-  width: 90%;
-  margin-left: 0px;
 }
 
 .sarsour_and_brown_external_link:link {
@@ -600,6 +610,24 @@ hr#contact_phone_number_ul_hr {
 .sarsour_and_brown_external_link:link:hover {
   color: #000;
   text-shadow: -.5px -.5px 7.5px #3366ff;
+}
+
+/* Contage Page - Main DIVS Mobile */
+@media (min-width: 0px) and (max-width: 495px) {
+  /* div#contact-top-parent-div {
+    max-width: 100%;
+  } */
+  div.contact-top-child-div {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 474px) and (max-width: 540px) {
+  div.contact-top-child-div {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 /* Contact Page - Hours Of Operation */
@@ -619,13 +647,13 @@ table#contact_hours_of_operation_table_table th {
 }
 
 /* Contact Page - Media Specific HR */
-@media (max-width: 429px) {
+@media (min-width: 0px) and (max-width: 495px) {
   hr#about_media_spaced_hr {
     display: block;
   }
 }
 
-@media (min-width: 430px) {
+@media (min-width: 496px) {
   hr#about_media_spaced_hr {
     display: none;
   }
@@ -889,11 +917,31 @@ div#main-login-div.container {
 }
 
 /* Login Page - Form */
+
 /* Profile Page - User Greeting */
 
 p#profile_user_greeting {
   margin-top: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
+
+/* Profile Page - No Entries in DB */
+ div#profile_no_entries_div {
+   margin: 0 auto;
+ }
+
+ div#profile_no_entries_div h3,
+ div#profile_no_entries_div p {
+   text-align: center;
+ }
+
+ /* Profile Page - For More Info Div */
+ div#profile_for_more_info_div {
+   text-align: center;
+ }
+
 
 /* Profile Page - Entries Table Div */
 
@@ -941,18 +989,3 @@ a#profile_generate_pdf_button {
   margin-left: 78.5%;
   /* transform: translateX(-90%); */
 }
-
-/* Section Separator Div */
-
-/* div.selection_separator_outer_div {
-  width: 100%;
-  background: black;
-  height: 30px;
-}
-
-div.selection_seperator_inner_div {
-  width: 90%;
-  background: white;
-  margin: 0 auto;
-  height: 15px;
-} */

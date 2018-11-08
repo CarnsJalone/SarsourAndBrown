@@ -21,4 +21,5 @@ urlpatterns = [
     path('account/complete_entry/<entry_id>', views.complete_entry, name="complete_entry"),
     path('account/uncomplete_entry/<entry_id>', views.uncomplete_entry, name="uncomplete_entry"),
     path('account/generate_pdf', views.generate_pdf, name="generate_pdf"),
+    path('test', views.style_test, name="test"),
     ]

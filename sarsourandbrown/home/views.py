@@ -162,3 +162,6 @@ def generate_pdf(request, *args, **kwargs):
     data = {'all_entries': all_entries}
     pdf = render_to_pdf('pdf/pdf.html', data)
     return HttpResponse(pdf, content_type='application/pdf')
+
+def style_test(request):
+    return render(request, 'email/inquiry_email.html')
