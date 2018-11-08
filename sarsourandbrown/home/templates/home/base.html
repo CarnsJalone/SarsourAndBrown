@@ -21,8 +21,9 @@
 
 <body class="off-white">
 
-
   <div id="navbar_main_navbar_div">
+    <img id="navbar_sarsour_and_brown_logo" src="{% static 'images/logos/SB_Logo_White.png'%}" alt="Sarsour And Brown Logo">
+
     <nav class="navbar navbar-expand-sm" id="navbar_main_navbar_navbar">
 
       <div id="navbar_left_container">
@@ -32,6 +33,7 @@
       <div id="navbar_right_container">
 
         <div id="navbar_right_container_expand_button_div">
+
           <button class="navbar-toggler navbar-dark" id="navbar_right_container_expand_button_button" type="button"
             data-toggle="collapse" data-target="#navbar_right_container_links_div" aria-controls="navbar_right_container_links_div"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -60,9 +62,14 @@
       </div>
 
     </nav>
-    <img id="navbar_sarsour_and_brown_logo" src="{% static 'images/logos/SB_Logo_White.png'%}" alt="Sarsour And Brown Logo">
 
   </div>
+
+  <div id="background_image_div">
+    <img src="{% static 'images/Court_Room.jpg' %}" alt="courtroom image" id="background_image_image">
+  </div>
+  <div id="background_img_div_cover"></div>
+
 
   {% comment %} </div> {% endcomment %}
   {# The DIVS below will only be for the homepage, these need to be migrated to home.html #}

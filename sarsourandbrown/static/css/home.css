@@ -8,13 +8,70 @@ span {
   font-family: "Ubuntu", sans-serif;
 }
 
-body {
-  position: relative;
+body p{
+  position: flex;
+  flex-direction: column;
+  color: #f2f0ec;
+}
+
+@media (min-width: 1500px) {
+  img#background_image_image {}
+} 
+
+@media (min-width: 1200px) and (max-width: 1499px) {
+  img#background_image_image {}
+} 
+
+@media (min-width: 979px) and (max-width: 1199px) {
+  img#background_image_image {}
+}
+
+@media (min-width: 769px) and (max-width: 978px) {
+  img#background_image_image {
+    /* width: 100%;
+    zoom: 3; */
+  }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  img#background_image_image {}
+}
+
+@media (min-width: 200px) and (max-width: 479px) {
+  img#background_image_image {}
+}
+
+@media (max-width: 199px) {
+  img#background_image_image {}
+}
+
+
+/* Background Image */
+div#background_image_div {
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -5;
+  overflow: hidden;
+  background-color: #262626;
+}
+
+img#background_image_image {
+  position: fixed;
+  width: auto;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1em;
+  opacity: .25;
 }
 
 /*  Navigation Bar  */
 
 nav#main-navbar {
+  width: 100%;
   padding-top: 25px;
   padding-bottom: 25px;
 }
@@ -141,12 +198,14 @@ div#navbar_right_container {
     text-align: center;
   }
   img#navbar_sarsour_and_brown_logo {
+    overflow: hidden;
     position: absolute;
     opacity: .225;
     height: 100%;
     top: 0;
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+
   }
   span#navbar_llc_span {
     font-style: italic;
@@ -266,6 +325,10 @@ div#navbar_right_container {
     transform: translateX(-82.5%)
   }
 
+}
+
+img#navbar_sarsour_and_brown_logo {
+  z-index: -6;
 }
 
 span#navbar_llc_span {
@@ -838,6 +901,7 @@ div#logo-lower-right-hand-corner {
 
 footer#footer-main {
   position: relative;
+  width: 100%;
   padding-top: 7.5px;
   padding-bottom: 7.5px;
   text-align: center;
