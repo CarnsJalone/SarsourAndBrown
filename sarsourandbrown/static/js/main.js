@@ -118,7 +118,7 @@ $(document).ready(function() {
         .children("h3")
         .css({
           fontSize: "2.5em",
-          textShadow: "0px 0px 10px #fff"
+          textShadow: "10px 10px 10px #262626", 
         });
     } else if ($(window).width() >= 1200 && $(window).width() <= 1499) {
       $(this)
@@ -126,7 +126,7 @@ $(document).ready(function() {
         .children("h3")
         .css({
           fontSize: "2.5em",
-          textShadow: "0px 0px 10px #fff"
+          textShadow: "10px 10px 10px #262626",
         });
     } else if ($(window).width() >= 979 && $(window).width() <= 1199) {
       $(this)
@@ -134,7 +134,7 @@ $(document).ready(function() {
         .children("h3")
         .css({
           fontSize: "2.5em",
-          textShadow: "0px 0px 10px #fff"
+          textShadow: "10px 10px 10px #262626",
         });
     } else if ($(window).width() >= 769 && $(window).width() <= 978) {
       $(this)
@@ -142,7 +142,7 @@ $(document).ready(function() {
         .children("h3")
         .css({
           fontSize: "2.5em",
-          textShadow: "0px 0px 10px #fff"
+          textShadow: "10px 10px 10px #262626",
         });
     } else if ($(window).width() >= 480 && $(window).width() <= 768) {
       $(this)
@@ -150,7 +150,7 @@ $(document).ready(function() {
         .children("h3")
         .css({
           fontSize: "2.0em",
-          textShadow: "0px 0px 10px #fff"
+          textShadow: "10px 10px 10px #262626",
         });
     } else if ($(window).width() >= 200 && $(window).width() <= 479) {
       $(this)
@@ -158,7 +158,7 @@ $(document).ready(function() {
         .children("h3")
         .css({
           fontSize: "1.5em",
-          textShadow: "0px 0px 10px #fff"
+          textShadow: "10px 10px 10px #262626",
         });
     } else {
       $(this)
@@ -166,7 +166,7 @@ $(document).ready(function() {
         .children("h3")
         .css({
           fontSize: "1.25em",
-          textShadow: "0px 0px 10px #fff"
+          textShadow: "10px 10px 10px #262626",
         });
     }
   });
@@ -178,7 +178,7 @@ $(document).ready(function() {
         .children("h3")
         .css({
           fontSize: "1.75em",
-          textShadow: "0px 0px 10px #fff"
+          textShadow: "none"
         });
     } else if ($(window).width() >= 1200 && $(window).width() <= 1499) {
       $(this)
@@ -186,7 +186,7 @@ $(document).ready(function() {
         .children("h3")
         .css({
           fontSize: "1.75em",
-          textShadow: "0px 0px 10px #fff"
+          textShadow: "none"
         });
     } else if ($(window).width() >= 979 && $(window).width() <= 1199) {
       $(this)
@@ -194,7 +194,7 @@ $(document).ready(function() {
         .children("h3")
         .css({
           fontSize: "1.75em",
-          textShadow: "0px 0px 10px #fff"
+          textShadow: "none"
         });
     } else if ($(window).width() >= 769 && $(window).width() <= 978) {
       $(this)
@@ -202,7 +202,7 @@ $(document).ready(function() {
         .children("h3")
         .css({
           fontSize: "1.5em",
-          textShadow: "0px 0px 10px #fff"
+          textShadow: "none"
         });
     } else if ($(window).width() >= 480 && $(window).width() <= 768) {
       $(this)
@@ -210,7 +210,7 @@ $(document).ready(function() {
         .children("h3")
         .css({
           fontSize: "1.25em",
-          textShadow: "0px 0px 10px #fff"
+          textShadow: "none"
         });
     } else if ($(window).width() >= 200 && $(window).width() <= 479) {
       $(this)
@@ -218,7 +218,7 @@ $(document).ready(function() {
         .children("h3")
         .css({
           fontSize: "1.0em",
-          textShadow: "0px 0px 10px #fff"
+          textShadow: "none"
         });
     } else {
       $(this)

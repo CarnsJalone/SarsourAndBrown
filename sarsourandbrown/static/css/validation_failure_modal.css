@@ -8,6 +8,7 @@ div#validation_failure_modal_email {
     width: 100%;
     overflow: auto;
     background-color: rgba(255,255,255,.75)
+    transition: .5s;
 }
 
 div#email-modal-content{
@@ -23,12 +24,14 @@ div#email-modal-content{
     text-align: center;
     border-radius: .25rem;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+    transition: .5s;
 }
 
 span#email-validation_modal_span {
     color: #ccc;
     float: right;
     font-size: 40px;
+    transition: .5s;
 }
 
 div#email-modal-content ul {
@@ -56,7 +59,8 @@ div#validation_failure_modal_phone_number {
     height: 100%;
     width: 100%;
     overflow: auto;
-    background-color: rgba(255,255,255,.75)
+    background-color: rgba(255,255,255,.75);
+    transition: .5s;
 }
 
 div#phone-number-modal-content{
@@ -72,12 +76,14 @@ div#phone-number-modal-content{
     text-align: center;
     border-radius: .25rem;
     box-shadow: 0 5px 8px 0 rgba(0,0,0,.2), 0 7px 20px 0 rgba(0,0,0,0.17);
+    transition: .5s;
 }
 
 span#phone-number-validation_modal_span {
     color: #ccc;
     float: right;
     font-size: 40px;
+    transition: .5s;
 }
 
 span#phone-number-validation_modal_span:hover, span#validation_modal_span:focus {
@@ -85,6 +91,7 @@ span#phone-number-validation_modal_span:hover, span#validation_modal_span:focus 
     text-decoration: none;
     cursor: pointer;
     font-size: 40px;
+    transition: .5s;
 }
 
 div#phone-number-modal-content p {

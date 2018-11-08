@@ -362,7 +362,7 @@ div#home-main-container {
 /* About Page - Google Map */
 
 div#about_map_div {
-  width: 50%;
+  width: 60%;
   margin-top: 15px;
   margin-bottom: 15px;
   margin-left: auto;
@@ -385,6 +385,34 @@ p#map_div_refresh_suggestion_paragraph {
   font-size: .75em;
 }
 
+/* About Page - Google Map - Responsive Breakpoint */
+@media (max-width: 576px) {
+  div#about_map_div {
+    width: 90%;
+  }
+  div#map {
+    height: 250px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  div#about_map_div {
+    width: 80%;
+  } 
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  div#about_map_div {
+    width: 75%;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  div#about_map_div {
+    width: 70%;
+  }
+}
+ 
 /* About Page - Specialization Cards */
 
 div#about_specialization_card_div {
@@ -518,7 +546,7 @@ div.about_specialization_card_text {
 
 @media (min-width: 200px) and (max-width: 479px) {
   img.about_card_img {
-    height: 100px;
+    height: 75px;
     max-height: 100px;
   }
   div.about_specialization_card_card {
@@ -644,6 +672,51 @@ table#contact_hours_of_operation_table_table {
 
 table#contact_hours_of_operation_table_table th {
   font-weight: normal;
+}
+
+/* Contact Page - Responsive Table */
+
+@media (max-width: 576px) {
+  div#contact_hours_of_operation_table_div thead th,
+  div#contact_hours_of_operation_table_div tbody td {
+    margin: 0 auto;
+    padding: 2.5px;
+  }
+
+  div#contact_hours_of_operation_table_div tbody th {
+    padding-top: 12.5px;
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+    padding-bottom: 0px;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  div#contact_hours_of_operation_table_div thead th,
+  div#contact_hours_of_operation_table_div tbody th,
+  div#contact_hours_of_operation_table_div tbody td {
+    padding: 5px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  div#contact_hours_of_operation_table_div thead th,
+  div#contact_hours_of_operation_table_div tbody th,
+  div#contact_hours_of_operation_table_div tbody td {
+    padding: 7.5px;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1000px) {
+  div#contact_hours_of_operation_table_div {
+    max-width: 100%;
+  }
+
+  div#contact_hours_of_operation_table_div thead th,
+  div#contact_hours_of_operation_table_div tbody th,
+  div#contact_hours_of_operation_table_div tbody td {
+    padding: 10px;
+  }
 }
 
 /* Contact Page - Media Specific HR */
