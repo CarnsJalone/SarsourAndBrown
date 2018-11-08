@@ -1,177 +1,250 @@
-{% extends "home/base.html" %}
-{% load staticfiles %}
-
+{% extends "home/base.html" %} {% load staticfiles %} 
 {% block contact_8_by_4_container %}
+
+<div id="background_image_div">
+  <img
+    src="{% static 'images/Court_Room.jpg' %}"
+    alt="courtroom image"
+    id="background_image_image"
+  />
+</div>
+<div id="background_img_div_cover"></div>
+
 <div id="about_8_col" class="row">
-	<div class="col-8">col-8
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-			Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-			nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
-			nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu
-			pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-			tellus.
-			Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis,
-			feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
-			ultricies
-			nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-			condimentum
-			rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus
-			pulvinar,
-			hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
-			Nullam
-			quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec
-			sodales
-			sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-		</p>
-	</div>
-	<div id="about_4_col" class="col-4">col-4
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-			Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-			nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet
-			nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu
-			pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
-			tellus.
-			Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis,
-			feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
-			ultricies
-			nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget
-			condimentum
-			rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus
-			pulvinar,
-			hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.
-			Nullam
-			quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec
-			sodales
-			sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,
-		</p>
-	</div>
+  <div class="col-8">
+    col-8
+    <p>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+      ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+      dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+      nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
+      enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
+      felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
+      elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo
+      ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+      ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla
+      ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies
+      nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam
+      rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
+      libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
+      vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
+      tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam
+      quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed
+      fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed
+      consequat, leo eget bibendum sodales, augue velit cursus nunc,
+    </p>
+  </div>
+  <div id="about_4_col" class="col-4">
+    col-4
+    <p>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+      ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
+      dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
+      nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+      Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
+      enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
+      felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
+      elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo
+      ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
+      ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla
+      ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies
+      nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam
+      rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper
+      libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit
+      vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
+      tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam
+      quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed
+      fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed
+      consequat, leo eget bibendum sodales, augue velit cursus nunc,
+    </p>
+  </div>
 </div>
 
 {% comment %} Begin Live Chat Section {% endcomment %}
 <span id="open_close_chat_bot_aside">
-	<img id="chat_bot_image" src="{% static 'images/logos/SB_Logo_White.png' %}" alt="SB Logo">
+  <img
+    id="chat_bot_image"
+    src="{% static 'images/logos/SB_Logo_White.png' %}"
+    alt="SB Logo"
+  />
 </span>
 <div id="chat_bot_side_nav_div">
-	<div id="chat_bot_convo_div">
-		<div id="activate_chat_window_inner_div">
-		</div>
-		<div id="chat_bot_conversation_display_div">
-		</div>
-		<div id="user_input_div">
-			<textarea class="form-control" id="user_input_input" type="text" rows="3" placeholder="Enter your inquiry here."></textarea>
-		</div>
-		<div id="user_input_submit_div">
-			<input id="user_input_submit_submit" class="form-control" type="submit" role="submit">
-		</div>
-	</div>
+  <div id="chat_bot_convo_div">
+    <div id="activate_chat_window_inner_div"></div>
+    <div id="chat_bot_conversation_display_div"></div>
+    <div id="user_input_div">
+      <textarea
+        class="form-control"
+        id="user_input_input"
+        type="text"
+        rows="3"
+        placeholder="Enter your inquiry here."
+      ></textarea>
+    </div>
+    <div id="user_input_submit_div">
+      <input
+        id="user_input_submit_submit"
+        class="form-control"
+        type="submit"
+        role="submit"
+      />
+    </div>
+  </div>
 </div>
 <div id="activated_chat_full_page_modal"></div>
-<div id="hover_for_live_chat">
-	<p>Live Chat</p>
-</div>
+<div id="hover_for_live_chat"><p>Live Chat</p></div>
 <div id="click_for_live_chat_div">
-	<p>Click on Sarsour And Brown Logo for live chat.</p>
+  <p>Click on Sarsour And Brown Logo for live chat.</p>
 </div>
 <div id="created_hover_div"></div>
 <div id="live_chat_hover_close_div">
-	<i id="live_chat_hover_close" class="far fa-times-circle"></i>
+  <i id="live_chat_hover_close" class="far fa-times-circle"></i>
 </div>
 <div id="live_chat_live_chat_close_div">
-	<i id="live_chat_live_chat_close_icon" class="far fa-times-circle"></i>
+  <i id="live_chat_live_chat_close_icon" class="far fa-times-circle"></i>
 </div>
 {% comment %} End Live Chat Section {% endcomment %}
 
 <div class="container" id="about_specialization_card_div">
-	<hr>
-	<div id="about_specialization_header_paragraph">
-		<p>Areas of Specialization</p>
-	</div>
-	<hr>
-	<div class="row" id="about_specialization_card_plus_complimentary_text">
-		<div class="card col about_specialization_card_card">
-			<img class="img-thumbnail about_card_img" id="about_specialization_card_image_im" src="/static/images/specializations/Immigration-Specialization.png"
-			 alt="Immigration Card">
-			<div class="about_specialization_card_text" id="about_specialization_card_text_im">
-				<h3>Immigration</h3>
-			</div>
+  <hr style="width: 90%; background-color: #5A5A5A" />
+  <div id="about_specialization_header_paragraph">
+    <p>Areas of Specialization</p>
+  </div>
+  <hr style="width: 90%; background-color: #5A5A5A" />
+  <div class="row" id="about_specialization_card_plus_complimentary_text">
+    <div class="card col about_specialization_card_card">
+      <img
+        class="img-thumbnail about_card_img"
+        id="about_specialization_card_image_im"
+        src="/static/images/specializations/Immigration-Specialization.png"
+        alt="Immigration Card"
+      />
+      <div
+        class="about_specialization_card_text"
+        id="about_specialization_card_text_im"
+      >
+        <h3>Immigration</h3>
+      </div>
+    </div>
+    <div class="col about_specialization_card_complimentary_text">
+      <p>
+        Here is a paragraph regarding our philosophy on the matter of
+        Immigration
+      </p>
+    </div>
+  </div>
+  <hr style="width: 90%; background-color: #5A5A5A" />
 
-		</div>
-		<div class="col about_specialization_card_complimentary_text">
-			<p>Here is a paragraph regarding our philosophy on the matter of Immigration</p>
-		</div>
-	</div>
-	<hr>
+  <div class="row" id="about_specialization_card_plus_complimentary_text">
+    <div class="card col about_specialization_card_card">
+      <img
+        class="img-thumbnail about_card_img"
+        id="about_specialization_card_image_im"
+        src="/static/images/specializations/Domestic-Relations-Specialization.jpg"
+        alt="Immigration Card"
+      />
+      <div
+        class="about_specialization_card_text"
+        id="about_specialization_card_text_im"
+      >
+        <h3>Domestic Relations</h3>
+      </div>
+    </div>
+    <div class="col about_specialization_card_complimentary_text">
+      <p>
+        Here is a paragraph regarding our philosophy on the matter of
+        Immigration
+      </p>
+    </div>
+  </div>
+  <hr style="width: 90%; background-color: #5A5A5A" />
 
-	<div class="row" id="about_specialization_card_plus_complimentary_text">
-		<div class="card col about_specialization_card_card">
-			<img class="img-thumbnail about_card_img" id="about_specialization_card_image_im" src="/static/images/specializations/Domestic-Relations-Specialization.jpg"
-			 alt="Immigration Card">
-			<div class="about_specialization_card_text" id="about_specialization_card_text_im">
-				<h3>Domestic Relations</h3>
-			</div>
+  <div class="row" id="about_specialization_card_plus_complimentary_text">
+    <div class="card col about_specialization_card_card">
+      <img
+        class="img-thumbnail about_card_img"
+        id="about_specialization_card_image_im"
+        src="/static/images/specializations/Criminal-Defense-Specialization.jpeg"
+        alt="Immigration Card"
+      />
+      <div
+        class="about_specialization_card_text"
+        id="about_specialization_card_text_im"
+      >
+        <h3>Criminal Defense</h3>
+      </div>
+    </div>
+    <div class="col about_specialization_card_complimentary_text">
+      <p>
+        Here is a paragraph regarding our philosophy on the matter of Criminal
+        Defense
+      </p>
+    </div>
+  </div>
+  <hr style="width: 90%; background-color: #5A5A5A" />
 
-		</div>
-		<div class="col about_specialization_card_complimentary_text">
-			<p>Here is a paragraph regarding our philosophy on the matter of Immigration</p>
-		</div>
-	</div>
-	<hr>
+  <div class="row" id="about_specialization_card_plus_complimentary_text">
+    <div class="card col about_specialization_card_card">
+      <img
+        class="img-thumbnail about_card_img"
+        id="about_specialization_card_image_im"
+        src="/static/images/specializations/Child-Custody_Specialization.jpg"
+        alt="Immigration Card"
+      />
+      <div
+        class="about_specialization_card_text"
+        id="about_specialization_card_text_im"
+      >
+        <h3>Child Custody</h3>
+      </div>
+    </div>
+    <div class="col about_specialization_card_complimentary_text">
+      <p>
+        Here is a paragraph regarding our philosophy on the matter of Child
+        Custody
+      </p>
+    </div>
+  </div>
+  <hr style="width: 90%; background-color: #5A5A5A" />
 
-	<div class="row" id="about_specialization_card_plus_complimentary_text">
-		<div class="card col about_specialization_card_card">
-			<img class="img-thumbnail about_card_img" id="about_specialization_card_image_im" src="/static/images/specializations/Criminal-Defense-Specialization.jpeg"
-			 alt="Immigration Card">
-			<div class="about_specialization_card_text" id="about_specialization_card_text_im">
-				<h3>Criminal Defense</h3>
-			</div>
-
-		</div>
-		<div class="col about_specialization_card_complimentary_text">
-			<p>Here is a paragraph regarding our philosophy on the matter of Criminal Defense</p>
-		</div>
-	</div>
-	<hr>
-
-	<div class="row" id="about_specialization_card_plus_complimentary_text">
-		<div class="card col about_specialization_card_card">
-			<img class="img-thumbnail about_card_img" id="about_specialization_card_image_im" src="/static/images/specializations/Child-Custody_Specialization.jpg"
-			 alt="Immigration Card">
-			<div class="about_specialization_card_text" id="about_specialization_card_text_im">
-				<h3>Child Custody</h3>
-			</div>
-
-		</div>
-		<div class="col about_specialization_card_complimentary_text">
-			<p>Here is a paragraph regarding our philosophy on the matter of Child Custody</p>
-		</div>
-	</div>
-	<hr>
-
-	<div class="row" id="about_specialization_card_plus_complimentary_text">
-		<div class="card col about_specialization_card_card">
-			<img class="img-thumbnail about_card_img" id="about_specialization_card_image_im" src="/static/images/specializations/Estate-Planning-Specialization.jpg"
-			 alt="Immigration Card">
-			<div class="about_specialization_card_text" id="about_specialization_card_text_im">
-				<h3>Estate Planning</h3>
-			</div>
-
-		</div>
-		<div class="col about_specialization_card_complimentary_text">
-			<p>Here is a paragraph regarding our philosophy on the matter of Estate Planning</p>
-		</div>
-	</div>
-	<hr>
-
+  <div class="row" id="about_specialization_card_plus_complimentary_text">
+    <div class="card col about_specialization_card_card">
+      <img
+        class="img-thumbnail about_card_img"
+        id="about_specialization_card_image_im"
+        src="/static/images/specializations/Estate-Planning-Specialization.jpg"
+        alt="Immigration Card"
+      />
+      <div
+        class="about_specialization_card_text"
+        id="about_specialization_card_text_im"
+      >
+        <h3>Estate Planning</h3>
+      </div>
+    </div>
+    <div class="col about_specialization_card_complimentary_text">
+      <p>
+        Here is a paragraph regarding our philosophy on the matter of Estate
+        Planning
+      </p>
+    </div>
+  </div>
+  <hr style="width: 90%; background-color: #5A5A5A" />
 </div>
 
 <div id="about_map_div">
-	<h3>Find Us!</h3>
-	<p>Our office is located in Downtown Toledo in the Maritiime Plaza on the corner of Summit and Main Street.
-		We are directly adjacent to the Maumee River between the Promenade Docks and the Toledo-Lucas
-		County Port Authority.
-	</p>
-	<hr>
-	<div id="map"></div>
-	<p id="map_div_refresh_suggestion_paragraph">(Please refresh page if map doesn't load properly.)</p>
+  <h3>Find Us!</h3>
+  <p>
+    Our office is located in Downtown Toledo in the Maritiime Plaza on the
+    corner of Summit and Main Street. We are directly adjacent to the Maumee
+    River between the Promenade Docks and the Toledo-Lucas County Port
+    Authority.
+  </p>
+  <hr style="width: 100%; background-color: #5A5A5A" />
+  <div id="map"></div>
+  <p id="map_div_refresh_suggestion_paragraph">
+    (Please refresh page if map doesn't load properly.)
+  </p>
 </div>
 {% endblock %}

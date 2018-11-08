@@ -1,172 +1,223 @@
-{% extends "home/base.html" %}
-{% load staticfiles %}
+{% extends "home/base.html" %} {% load staticfiles %} {% block contact_form %}
 
-{% block contact_form %}
+<div id="background_image_div">
+  <img
+    src="{% static 'images/Court_Room.jpg' %}"
+    alt="courtroom image"
+    id="background_image_image"
+  />
+</div>
+<div id="background_img_div_cover"></div>
 
 <div class="container" id="contact_intro_div">
-	<p>At Sarsour & Brown, our number one priority is our clientele. We take every avenue possible
-		in order to best fit the needs of our customers. 
-	</p>
+  <p>
+    At Sarsour & Brown, our number one priority is our clientele. We take every
+    avenue possible in order to best fit the needs of our customers.
+  </p>
 
-	<p>In order to reach out to us, you can find our day-time contact information to the right hand side 
-		of the page. For extenuating cases, please use the form to submit a personalized inquiry which will 
-		be forwarded to the first available member of the Sarsour & Brown team.
-	</p>
+  <p>
+    In order to reach out to us, you can find our day-time contact information
+    to the right hand side of the page. For extenuating cases, please use the
+    form to submit a personalized inquiry which will be forwarded to the first
+    available member of the Sarsour & Brown team.
+  </p>
 </div>
-<hr style="width: 90%;">
+<hr style="width: 90%; background-color: #5A5A5A" />
 
 <div id="contact-top-parent-div" class="container">
-	<div class="row" id="exception-spacing-top-contact-row">
-		<div class="col contact-top-child-div">
-			<form id="inquiry-form" role="form" action="/contact/contact_feedback/" method="post">
-				{% csrf_token %}
-				{{ form }}
-				<input class="btn btn-secondary" id="contact-submit-button" type="submit" value="Submit" name="submit">
-			</form>
-			<hr id="about_media_spaced_hr">
-		</div>
+  <div class="row" id="exception-spacing-top-contact-row">
+    <div class="col contact-top-child-div">
+      <form
+        id="inquiry-form"
+        role="form"
+        action="/contact/contact_feedback/"
+        method="post"
+      >
+        {% csrf_token %} {{ form }}
+        <input
+          class="btn btn-secondary"
+          id="contact-submit-button"
+          type="submit"
+          value="Submit"
+          name="submit"
+        />
+      </form>
+      <hr id="about_media_spaced_hr" />
+    </div>
 
-		<div class="col contact-top-child-div">
-			<h3>Connect With Us</h3>
-			<p>To schedule a consulation with us please contact an esteemed partner:
-			</p>
-			<hr>
-			<ul id="contact_phone_number_unordered_list">
-				<li style="font-weight: bold;"class="contact_phone_number">By Phone:</li>
-				<li class="contact_phone_number">Nader Sarsour: <a class="sarsour_and_brown_external_link" href="tel:+1-305-338-5907">305-338-5907</a></li>
-				<li class="contact_phone_number">Carlianne Brown: <a class="sarsour_and_brown_external_link" href="tel:+1-734-347-0897">734-347-0897</a></li>
-				<hr style="width: 60%">
-				<li style="font-weight: bold;" class="contact_phone_number">By Email:</li>
-				<li class="contact_phone_number"><a class="sarsour_and_brown_external_link" href="mailto:SarsourAndBrown@gmail.com">SarsourAndBrown@gmail.com</a></li>
-			</ul>
-			<hr>
-			<p>You can also fill out a personalized inquiry in the form to the left-hand-side of the page. Please
-				note that all fields are required.
-			</p>
-			<p>All information actively collected will be used to best get in touch
-				with you and most closely align ourselves with your
-				personal needs. For a full breakdown of our data collection policy, please refer to our
-				<a class="sarsour_and_brown_external_link" href="{% url 'privacy_policy' %}">Privacy Policy</a>.
-			</p>
-			<hr>
-			<h3>Hours Of Operation</h3>
-			<div id="contact_hours_of_operation_table_div">
-				<table class="table table-bordered" id="contact_hours_of_operation_table_table">
-					<thead class="thead-dark" id="contact_hours_of_operation_table_thead">
-						<tr>
-							<th scope="col">Day</th>
-							<th scope="col">Hours</th>
-						</tr>
-					</thead>
-					<tr>
-						<th scope="row">Monday</th>
-						<td>4:00 AM - 9:00 PM</td>
-					</tr>
-					<tr>
-						<th scope="row">Tuesday</th>
-						<td>4:00 AM - 9:00 PM</td>
-					</tr>
-					<tr>
-						<th scope="row">Wednesday</th>
-						<td>4:00 AM - 9:00 PM</td>
-					</tr>
-					<tr>
-						<th scope="row">Thursday</th>
-						<td>4:00 AM - 9:00 PM</td>
-					</tr>
-					<tr>
-						<th scope="row">Friday</th>
-						<td>4:00 AM - 9:00 PM</td>
-					</tr>
-					<tr>
-						<th scope="row">Saturday</th>
-						<td>6:00 AM - 2:00 PM</td>
-					</tr>
-					<tr>
-						<th scope="row">Sunday</th>
-						<td>Available Upon Request</td>
-					</tr>
-
-				</table>
-			</div>
-		</div>
-	</div>
+    <div class="col contact-top-child-div">
+      <h3>Connect With Us</h3>
+      <p>
+        To schedule a consulation with us please contact an esteemed partner:
+      </p>
+      <hr style="background-color: #5a5a5a"/>
+      <ul id="contact_phone_number_unordered_list">
+        <li style="font-weight: bold;" class="contact_phone_number">
+          By Phone:
+        </li>
+        <li class="contact_phone_number">
+          Nader Sarsour:
+          <a class="sarsour_and_brown_external_link" href="tel:+1-305-338-5907"
+            >305-338-5907</a
+          >
+        </li>
+        <li class="contact_phone_number">
+          Carlianne Brown:
+          <a class="sarsour_and_brown_external_link" href="tel:+1-734-347-0897"
+            >734-347-0897</a
+          >
+        </li>
+        <hr style="width: 60%; background-color: #5a5a5a" />
+        <li style="font-weight: bold;" class="contact_phone_number">
+          By Email:
+        </li>
+        <li class="contact_phone_number">
+          <a
+            class="sarsour_and_brown_external_link"
+            href="mailto:SarsourAndBrown@gmail.com"
+            >SarsourAndBrown@gmail.com</a
+          >
+        </li>
+      </ul>
+      <hr style="background-color: #5a5a5a" />
+      <p>
+        You can also fill out a personalized inquiry in the form to the
+        left-hand-side of the page. Please note that all fields are required.
+      </p>
+      <p>
+        All information actively collected will be used to best get in touch
+        with you and most closely align ourselves with your personal needs. For
+        a full breakdown of our data collection policy, please refer to our
+        <a
+          class="sarsour_and_brown_external_link"
+          href="{% url 'privacy_policy' %}"
+          >Privacy Policy</a
+        >.
+      </p>
+      <hr />
+      <h3>Hours Of Operation</h3>
+      <div id="contact_hours_of_operation_table_div">
+        <table
+          class="table table-bordered"
+          id="contact_hours_of_operation_table_table"
+        >
+          <thead class="thead-dark" id="contact_hours_of_operation_table_thead">
+            <tr>
+              <th scope="col">Day</th>
+              <th scope="col">Hours</th>
+            </tr>
+          </thead>
+          <tr>
+            <th scope="row">Monday</th>
+            <td>4:00 AM - 9:00 PM</td>
+          </tr>
+          <tr>
+            <th scope="row">Tuesday</th>
+            <td>4:00 AM - 9:00 PM</td>
+          </tr>
+          <tr>
+            <th scope="row">Wednesday</th>
+            <td>4:00 AM - 9:00 PM</td>
+          </tr>
+          <tr>
+            <th scope="row">Thursday</th>
+            <td>4:00 AM - 9:00 PM</td>
+          </tr>
+          <tr>
+            <th scope="row">Friday</th>
+            <td>4:00 AM - 9:00 PM</td>
+          </tr>
+          <tr>
+            <th scope="row">Saturday</th>
+            <td>6:00 AM - 2:00 PM</td>
+          </tr>
+          <tr clas="bottom_row_table">
+            <th clas="bottom_row_table" scope="row">Sunday</th>
+            <td clas="bottom_row_table">Available Upon Request</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>
 
 {% comment %} Begin Live Chat Section {% endcomment %}
 <span id="open_close_chat_bot_aside">
-	<img id="chat_bot_image" src="{% static 'images/logos/SB_Logo_White.png' %}" alt="SB Logo">
+  <img
+    id="chat_bot_image"
+    src="{% static 'images/logos/SB_Logo_White.png' %}"
+    alt="SB Logo"
+  />
 </span>
 <div id="chat_bot_side_nav_div">
-	<div id="chat_bot_convo_div">
-		<div id="activate_chat_window_inner_div">
-		</div>
-		<div id="chat_bot_conversation_display_div">
-		</div>
-		<div id="user_input_div">
-			<textarea class="form-control" id="user_input_input" type="text" rows="3" placeholder="Enter your inquiry here."></textarea>
-		</div>
-		<div id="user_input_submit_div">
-			<input id="user_input_submit_submit" class="form-control" type="submit" role="submit">
-		</div>
-	</div>
+  <div id="chat_bot_convo_div">
+    <div id="activate_chat_window_inner_div"></div>
+    <div id="chat_bot_conversation_display_div"></div>
+    <div id="user_input_div">
+      <textarea
+        class="form-control"
+        id="user_input_input"
+        type="text"
+        rows="3"
+        placeholder="Enter your inquiry here."
+      ></textarea>
+    </div>
+    <div id="user_input_submit_div">
+      <input
+        id="user_input_submit_submit"
+        class="form-control"
+        type="submit"
+        role="submit"
+      />
+    </div>
+  </div>
 </div>
 <div id="activated_chat_full_page_modal"></div>
-<div id="hover_for_live_chat">
-	<p>Live Chat</p>
-</div>
+<div id="hover_for_live_chat"><p>Live Chat</p></div>
 <div id="click_for_live_chat_div">
-	<p>Click on Sarsour And Brown Logo for live chat.</p>
+  <p>Click on Sarsour And Brown Logo for live chat.</p>
 </div>
 <div id="created_hover_div"></div>
 <div id="live_chat_hover_close_div">
-	<i id="live_chat_hover_close" class="far fa-times-circle"></i>
+  <i id="live_chat_hover_close" class="far fa-times-circle"></i>
 </div>
 <div id="live_chat_live_chat_close_div">
-	<i id="live_chat_live_chat_close_icon" class="far fa-times-circle"></i>
+  <i id="live_chat_live_chat_close_icon" class="far fa-times-circle"></i>
 </div>
-{% comment %} End Live Chat Section {% endcomment %}
-
-{% comment %} TODO - This modal is cool but let's implement one from bootstrap, they
-look infinitely better
-{% endcomment %}
+{% comment %} End Live Chat Section {% endcomment %} {% comment %} TODO - This
+modal is cool but let's implement one from bootstrap, they look infinitely
+better {% endcomment %}
 
 <div id="validation_failure_modal_email">
-	<div id="email-modal-content">
-		<span id="email-validation_modal_span">&times;</span>
-		<p>Please enter a valid email address.</p>
-		<p>The correct format is:</p>
-		<ul>
-			<li>Letters and/or Digits before the @</li>
-			<li>Letters and/or Digits after the @</li>
-			<li>A valid top-level domain (ex: .com, .gov, .edu) at the end.</li>
-		</ul>
-	</div>
+  <div id="email-modal-content">
+    <span id="email-validation_modal_span">&times;</span>
+    <p>Please enter a valid email address.</p>
+    <p>The correct format is:</p>
+    <ul>
+      <li>Letters and/or Digits before the @</li>
+      <li>Letters and/or Digits after the @</li>
+      <li>A valid top-level domain (ex: .com, .gov, .edu) at the end.</li>
+    </ul>
+  </div>
 </div>
 <div id="validation_failure_modal_phone_number">
-	<div id="phone-number-modal-content">
-		<span id="phone-number-validation_modal_span">&times;</span>
-		<p>Please enter a valid phone number.</p>
-		<p>The correct format is 9999999999 without spaces or hyphens.</p>
-	</div>
+  <div id="phone-number-modal-content">
+    <span id="phone-number-validation_modal_span">&times;</span>
+    <p>Please enter a valid phone number.</p>
+    <p>The correct format is 9999999999 without spaces or hyphens.</p>
+  </div>
 </div>
 
 <div id="form_full_page_modal_loader">
-	<div id="form_submit_loader_div" class="container">
-		<ul id="form_submit_loader_ul">
-			<li class="form_submit_loader_li">
-			</li>
-			<li class="form_submit_loader_li">
-			</li>
-			<li class="form_submit_loader_li">
-			</li>
-			<li class="form_submit_loader_li">
-			</li>
-			<li class="form_submit_loader_li">
-			</li>
-			<li class="form_submit_loader_li">
-			</li>
-		</ul>
-	</div>
+  <div id="form_submit_loader_div" class="container">
+    <ul id="form_submit_loader_ul">
+      <li class="form_submit_loader_li"></li>
+      <li class="form_submit_loader_li"></li>
+      <li class="form_submit_loader_li"></li>
+      <li class="form_submit_loader_li"></li>
+      <li class="form_submit_loader_li"></li>
+      <li class="form_submit_loader_li"></li>
+    </ul>
+  </div>
 </div>
 {% endblock %}

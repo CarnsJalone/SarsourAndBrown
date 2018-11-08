@@ -8,9 +8,21 @@ span {
   font-family: "Ubuntu", sans-serif;
 }
 
-body p{
+body {
   position: flex;
   flex-direction: column;
+  color: #f2f0ec;
+}
+
+p {
+  color: #f2f0ec;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #f2f0ec;
+}
+
+ul, li {
   color: #f2f0ec;
 }
 
@@ -65,7 +77,7 @@ img#background_image_image {
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 1em;
-  opacity: .25;
+  opacity: .125;
 }
 
 /*  Navigation Bar  */
@@ -80,11 +92,6 @@ nav#main-navbar {
 
 .off-white {
   background-color:#f2f0ec ;
-}
-
-/* Text Color */
-p {
-  /* color: #262626 */
 }
 
 /* Header, Footer Color Scheme */
@@ -117,6 +124,18 @@ a#footer_blog_page_link:hover {
 }
 
 /* Home - Carousel - Text - Color Scheme */
+
+div#carousel_overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  z-index: 2;
+}
+
+div#carouselIndicators {
+  border-bottom: 2.5px solid #5a5a5a;
+  background-color: #262626;
+}
 div.carousel-caption {
   color: black;
 }
@@ -126,30 +145,50 @@ div.carousel-caption {
 
 /* Contact - Hours Of Operation Table Color */
 table#contact_hours_of_operation_table_table {
-  border: 1px solid #262626; 
+  /* border: 1px solid #262626;  */
+  margin-bottom: 0px;
+  border-radius: 1em;
+  border-color: #262626;
 }
 
 thead#contact_hours_of_operation_table_thead tr th {
   background-color: #262626;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em; 
   border-color: #262626;
 }
 
 table#contact_hours_of_operation_table_table td,
 table#contact_hours_of_operation_table_table th {
   background-color: #fff;
+  border-color: #5a5a5a;
+}
+
+table {
+  border-radius: 1em;
+}
+
+table#contact_hours_of_operation_table_table tbody,
+.bottom_row_table {
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+
+.table th {
+  vertical-align: middle;
 }
 
 /* Contact - Form - Submit Button Color */
 input#contact-submit-button {
-  background-color: #262626;
+  background-color: #5a5a5a;
   color: #f2f0ec;
-  border: none;
+  border: 1px solid #f2f0ec;
 }
 
 input#contact-submit-button:hover {
   background-color: #3366ff;
   color: #fff;
-  border: .5px solid #262626;
+  border: .5px solid #f2f0ec;
 }
 
 /* Navigation Bar - Main Div */
@@ -159,6 +198,8 @@ div#navbar_main_navbar_div {
   background-color: #262626;
   color: #f2f0ec;
   z-index: 0;
+  overflow: hidden;
+  border-bottom: 2.5px solid #5A5A5A;
 } 
 nav#navbar_main_navbar_navbar {
   padding: 0px;
@@ -185,6 +226,11 @@ div#navbar_right_container {
   z-index: 10;
 }
 
+img#navbar_sarsour_and_brown_logo {
+  z-index: -1;
+  overflow: hidden;
+}
+
 /* Media Queries */
 @media (max-width: 575px) {
   div#navbar_left_container h3 {
@@ -205,8 +251,10 @@ div#navbar_right_container {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-
   }
+
+ 
+
   span#navbar_llc_span {
     font-style: italic;
     font-size: 1.125rem;
@@ -332,7 +380,7 @@ img#navbar_sarsour_and_brown_logo {
 }
 
 span#navbar_llc_span {
-  color: #41474a;
+  color: #5a5a5a;
 }
 
 /* Navigation Bar - Right Container */
@@ -435,6 +483,7 @@ div#about_map_div {
 div#about_map_div h3,
 div#about_map_div p {
   text-align: center;
+  color: #f2f0ec;
 }
 
 div#map {
@@ -503,7 +552,7 @@ div.about_specialization_card_card {
   margin-right: 15px;
   padding: 10px;
   background-color: #262626;
-  border: none;
+  border: 2.5px solid #5a5a5a;
   border-radius: 1em;
   transition: .75s;
 }
@@ -631,6 +680,7 @@ div.about_specialization_card_text {
 /*  Contact Page  */
 
 /* Contact Page - Form */
+
 form#inquiry-form input {
   margin-bottom: 7.5px;
 }
@@ -639,6 +689,9 @@ form input#contact-submit-button {
   margin-top: 15px;
 }
 
+form#inquiry-form label {
+  color: #f2f0ec;
+}
 /* Contact - Intro Div */
 div#contact_intro_div {
   width: 75%;
@@ -676,6 +729,8 @@ div.contact-top-child-div {
 
 div.contact-top-child-div h3 {
   text-align: center;
+  color: #f2f0ec;
+  margin-bottom: 30px;
 }
 
 ul#contact_phone_number_unordered_list {
@@ -723,14 +778,18 @@ li.contact_phone_number {
 
 /* Contact Page - Hours Of Operation */
 div#contact_hours_of_operation_table_div {
-  max-width: 80%;
-  margin-top: 15px;
+  max-width: auto;
+  margin-top: 0px;
   margin-left: auto;
   margin-right: auto;
+  border: 1px solid #5a5a5a;
+  border-radius: 1em;
 }
 
 table#contact_hours_of_operation_table_table {
   text-align: center;
+  border: 1px solid #5a5a5a;
+  border-radius: 1em;
 }
 
 table#contact_hours_of_operation_table_table th {
@@ -905,6 +964,7 @@ footer#footer-main {
   padding-top: 7.5px;
   padding-bottom: 7.5px;
   text-align: center;
+  border-top: 2.5px solid #5A5A5A;
 }
 
 div#main_footer_container {

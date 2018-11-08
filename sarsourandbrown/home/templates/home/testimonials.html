@@ -1,61 +1,94 @@
-{% extends "home/base.html" %}
-{% load staticfiles %}
-
+{% extends "home/base.html" %} {% load staticfiles %} 
 {% block testimonials_body %}
+
+<div id="background_image_div">
+  <img
+    src="{% static 'images/Court_Room.jpg' %}"
+    alt="courtroom image"
+    id="background_image_image"
+  />
+</div>
+<div id="background_img_div_cover"></div>
+
 <div class="container">
-    <div class="container">
-
-        <h3>Best Video On the Planet</h3>
-        <iframe id="bots_video_1" class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/JA0GFYs3x1s"
-            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
-    <div class="container">
-        <h3>Debatably the best video</h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/TnAvj7B2fIU" frameborder="0" allow="autoplay; encrypted-media"
-            allowfullscreen></iframe>
-    </div>
-    <div class="container">
-        <h3>Ok, this is definitely the best...</h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/bBCJ9qlXL-E" frameborder="0" allow="autoplay; encrypted-media"
-            allowfullscreen></iframe>
-
-    </div>
-
-
+  <div class="container">
+    <h3>Best Video On the Planet</h3>
+    <iframe
+      id="bots_video_1"
+      class="embed-responsive-item"
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/JA0GFYs3x1s"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="container">
+    <h3>Debatably the best video</h3>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/TnAvj7B2fIU"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <div class="container">
+    <h3>Ok, this is definitely the best...</h3>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/bBCJ9qlXL-E"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+    ></iframe>
+  </div>
 </div>
 
 {% comment %} Begin Live Chat Section {% endcomment %}
 <span id="open_close_chat_bot_aside">
-    <img id="chat_bot_image" src="{% static 'images/logos/SB_Logo_White.png' %}" alt="SB Logo">
+  <img
+    id="chat_bot_image"
+    src="{% static 'images/logos/SB_Logo_White.png' %}"
+    alt="SB Logo"
+  />
 </span>
 <div id="chat_bot_side_nav_div">
-    <div id="chat_bot_convo_div">
-        <div id="activate_chat_window_inner_div">
-        </div>
-        <div id="chat_bot_conversation_display_div">
-        </div>
-        <div id="user_input_div">
-            <textarea class="form-control" id="user_input_input" type="text" rows="3" placeholder="Enter your inquiry here."></textarea>
-        </div>
-        <div id="user_input_submit_div">
-            <input id="user_input_submit_submit" class="form-control" type="submit" role="submit">
-        </div>
+  <div id="chat_bot_convo_div">
+    <div id="activate_chat_window_inner_div"></div>
+    <div id="chat_bot_conversation_display_div"></div>
+    <div id="user_input_div">
+      <textarea
+        class="form-control"
+        id="user_input_input"
+        type="text"
+        rows="3"
+        placeholder="Enter your inquiry here."
+      ></textarea>
     </div>
+    <div id="user_input_submit_div">
+      <input
+        id="user_input_submit_submit"
+        class="form-control"
+        type="submit"
+        role="submit"
+      />
+    </div>
+  </div>
 </div>
 <div id="activated_chat_full_page_modal"></div>
-<div id="hover_for_live_chat">
-    <p>Live Chat</p>
-</div>
+<div id="hover_for_live_chat"><p>Live Chat</p></div>
 <div id="click_for_live_chat_div">
-    <p>Click on Sarsour And Brown Logo for live chat.</p>
+  <p>Click on Sarsour And Brown Logo for live chat.</p>
 </div>
 <div id="created_hover_div"></div>
 <div id="live_chat_hover_close_div">
-    <i id="live_chat_hover_close" class="far fa-times-circle"></i>
+  <i id="live_chat_hover_close" class="far fa-times-circle"></i>
 </div>
 <div id="live_chat_live_chat_close_div">
-    <i id="live_chat_live_chat_close_icon" class="far fa-times-circle"></i>
+  <i id="live_chat_live_chat_close_icon" class="far fa-times-circle"></i>
 </div>
-{% comment %} End Live Chat Section {% endcomment %}
-
-{% endblock %}
+{% comment %} End Live Chat Section {% endcomment %} {% endblock %}
