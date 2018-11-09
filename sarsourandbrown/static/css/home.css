@@ -131,12 +131,13 @@ div.multi_image_div_main_div {
   height: 100vh;
   z-index: 0;
   position: relative;
-  border: 1px solid #5a5a5a;
+  border: 1px solid #262626;
   background-color: #262626;
+  overflow: hidden;
 }
 
 div.full_page_image {
-  width: 100%;
+  width: auto;
   height: 100%;
   position: relative;
 }
@@ -159,7 +160,7 @@ img.multi_image_div_image_image {
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: -5;
 }
  p.multi_image_div_paragraph {
    font-size: .75;
