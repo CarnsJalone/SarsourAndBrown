@@ -123,25 +123,56 @@ a#footer_blog_page_link:hover {
   text-shadow: -.5px -.5px 7.5px #3366ff;
 }
 
-/* Home - Carousel - Text - Color Scheme */
+/* Home Page */
 
-div#carousel_overlay {
+/* Home Page - Main Images Div */
+div.multi_image_div_main_div {
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  position: relative;
+  border: 1px solid #5a5a5a;
+  background-color: #262626;
+}
+
+div.full_page_image {
   width: 100%;
   height: 100%;
-  background-color: #262626;
-  z-index: 2;
+  position: relative;
 }
 
-div#carouselIndicators {
-  border-bottom: 2.5px solid #5a5a5a;
+div.multi_image_div_image_cover {
+  position: absolute;
   background-color: #262626;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  opacity: .9;
 }
-div.carousel-caption {
-  color: black;
+
+img.multi_image_div_image_image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
+ p.multi_image_div_paragraph {
+   font-size: .75;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   color: #f2f0ec;
+   text-align: center;
+   z-index: 2;
+ }
 
 /* Contact Page */
-
 
 /* Contact - Hours Of Operation Table Color */
 table#contact_hours_of_operation_table_table {
@@ -960,6 +991,7 @@ div#logo-lower-right-hand-corner {
 
 footer#footer-main {
   position: relative;
+  flex-shrink: 0;
   width: 100%;
   padding-top: 7.5px;
   padding-bottom: 7.5px;
