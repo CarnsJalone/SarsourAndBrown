@@ -245,10 +245,10 @@ div#navbar_left_container {
 }
 
 div#navbar_left_container h3 {
+  letter-spacing: -2.5px;
   margin: 0px;
   padding: 0px;
-  letter-spacing: -1.5px;
-  font-weight: normal;
+  font-weight: normal; 
 }
 
 div#navbar_right_container {
@@ -269,6 +269,7 @@ img#navbar_sarsour_and_brown_logo {
     font-size: 1.5rem;
     margin-left: 50%;
     transform: translateX(-50%);
+    letter-spacing: 0px;
   }
   div#navbar_right_container a,
   div#navbar_right_container_expand_button_div {
@@ -583,10 +584,18 @@ div.about_specialization_card_card {
   margin-bottom: 15px;
   margin-right: 15px;
   padding: 10px;
-  background-color: #262626;
+  background-color: #5a5a5a;
   border: 2.5px solid #5a5a5a;
   border-radius: 1em;
   transition: .75s;
+  /* filter: grayscale(100%) */
+}
+
+/*  */
+
+div.about_specialization_card_card:hover {
+  /* filter: grayscale(0%);
+  opacity: .75; */
 }
 
 div.about_specialization_card_complimentary_text {
@@ -614,7 +623,7 @@ img.about_card_img {
   padding: 0;
   border: none;
   border-radius: .5em;
-  opacity: .375;
+  /* opacity: .425; */
   transition: .75s;
 }
 
