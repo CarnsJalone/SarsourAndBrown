@@ -7,6 +7,7 @@ div#main_aside_div {
     z-index: 6;
 }
 div#chat_bot_side_nav_div {
+    display: none;
     height: 100%;
     width: 0px;
     position: fixed;
@@ -56,6 +57,7 @@ span#open_close_chat_bot_aside {
     height: 130px;
     width: auto;
     transition: .75s
+    display: none;
 }
 
 img#chat_bot_image {
@@ -95,6 +97,7 @@ div#click_for_live_chat_div p {
 }
 
 div#hover_for_live_chat {
+    display: none;
     position: fixed;
     top: 45.5%;
     right: -25px;
@@ -123,6 +126,7 @@ div#hover_for_live_chat p {
 }
 
 div#created_hover_div {
+    display: none;
     position: fixed;
     width: 350px;
     height: 350px;
@@ -137,6 +141,7 @@ div#created_hover_div {
 }
 
 div#live_chat_hover_close_div {
+    display: none;
     position: fixed;
     right: -200px;
     top: 46.75%;

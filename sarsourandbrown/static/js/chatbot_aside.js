@@ -26,7 +26,12 @@ $(document).ready(function() {
     $mouse_leave_div.css({ display: "none" });
   } else {
     console.log("Not IE");
-    // return false;
+    $side_nav_div.css({ display: "block"});
+    $chat_bot_image_icon.css({ display: "none" });
+    $chat_bot_image_span.css({ display: "block" });
+    $hover_div.css({ display: "block" });
+    $hover_close_button.css({ display: "block" });
+    $mouse_leave_div.css({ display: "block" });
   }
 
   function active_hover() {
