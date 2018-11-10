@@ -1,52 +1,67 @@
-{% load staticfiles %}
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       href="https://fonts.googleapis.com/css?family=Ubuntu"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="/static/css/inquiry_email.css"
-      type="text/css"
-    />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Sarsour And Brown</title>
   </head>
-
   <body
-    id="email-body"
-    style="font-size: 1.115em; font-family: 'Ubuntu', sans-serif; background: #262626; color: #262626"
+    style="font-family: 'Ubuntu', sans-serif;
+    background-color: #5a5a5a;
+    color: #f2f0ec;"
   >
     <div
-      style="border: 1px solid #262626; background: #f2f0ec; width: 50%; height: 500px; margin-top: 25%; margin-right: auto; margin-left: auto; transform: translate(-50%, -25%); padding: 15px; border-radius: 5em;"
+      id="main_div"
+      style="background-color: #262626;
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: .5em;
+    color: #f2f0ec"
     >
-      <div style="text-align: left; position: relative; width: 90%; height: 90%; margin-top: 25%; margin-left: 25%; transform: translate(-25%, -25%);">
-        <h3 style="font-weight: bold; text-align: center;" id="email-header">
-          Hi {{ first_name }}.
-        </h3>
-        <p
-          style="padding-top: 5px; margin-left: 25px; margin-right: 25px; margin-top: 15px;"
-          class="email-paragraph"
-        >
-          Thanks for reaching out to us. Your inquiry has been forwarded to a
-          member of the Sarsour And Brown team. We will use the email and/or
-          phone number that you provided in order to reach out to you.
-        </p>
-        <p
-          style="padding-top: 10px; margin-left: 25px; margin-right: 25px; margin-top: 15px;"
-          class="email-paragraph"
-        >
-          If you have any questions in the meantime or have an urgent need to
-          speak to us, please contact Nader at 305-338-5907, Carlianne at 734-347-0897 or
-          email us at <a href="mailto:SarsourAndBrown@gmail.com">SarsourAndBrown@gmail.com</a>
-          .
-        </p>
-        <p style="text-align: center; padding-top: 15px;" class="email-paragraph">Thanks again!</p>
-        <p style="text-align: center; padding: 5px;" class="email-paragraph">- Sarsour And Brown</p>
-      
-        <img style="position: absolute; width: 120px; height: auto; top: 95%; left: 50%; transform: translate(-50%, -50%); opacity: .45" src="{% static 'images/logos/SB_Logo_Black.png' %}" alt="S and B Logo">
-    </div>
+      <div
+        id="inner_div"
+        style="height: 100%;
+    width: 100%;"
+      >
+        <div id="header"><p>Hi, {{first_name}}</p></div>
+        <div id="content">
+          <p>Thanks for contacting Sarsour and Brown.</p>
+          <hr style="width: 75%" />
+          <p>
+            Your inquiry has been forwarded to a member of the Sarsour And Brown
+            team.
+          </p>
+
+          <p>For immediate concerns, please contact:</p>
+          <ul style="list-style-type: none;">
+            <li style="list-style-type: none;">
+              Nader Sarsour:
+              <a
+                href="tel:13053385907"
+                style="text-decoration: none;
+    color: #5a5a5a;"
+                >305-338-5907</a
+              >
+            </li>
+            <li style="list-style-type: none;">
+              Carlianne Brown:
+              <a
+                href="tel:17343470897"
+                style="text-decoration: none;
+    color: #5a5a5a;"
+                >734-347-0897</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </body>
 </html>

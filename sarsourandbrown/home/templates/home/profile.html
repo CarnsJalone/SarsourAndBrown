@@ -1,100 +1,129 @@
-{% extends 'home/base.html' %}3
+{% extends 'home/base.html' %}3 {% block admin_profile %}
 
-{% block admin_profile %}
-
-<div class="container">
+<div id="profile_main_div">
+  <div class="container">
     <p id="profile_user_greeting">Hello, {{ first_name }} {{ last_name }}</p>
-</div>
+  </div>
 
-<hr style="width: 75%">
+  <hr style="width: 75%" />
 
-{% if all_entries %}
+  {% if all_entries %}
 
-<div class="container">
-    <p id="profile_entries_table_div_paragraph">Below are the current inquiries available for processing. You can mark
-        as complete/incomplete or delete from visibility.</p>
-</div>
-<div class="container" id="profile_entries_table_div">
+  <div class="container">
+    <p id="profile_entries_table_div_paragraph">
+      Below are the current inquiries available for processing. You can mark as
+      complete/incomplete or delete from visibility.
+    </p>
+  </div>
+  <div class="container" id="profile_entries_table_div">
     <table class="table table-bordered" id="profile_entries_table_table">
-        <thead class="thead-dark">
-            <tr id="profile_entries_table_tr">
-                <th scope="col">Name</th>
-                <th scope="col">Email</th>
-                <th scope="col">Phone</th>
-                <th scope="col">Inquiry</th>
-                <th scope="col">Date Posted</th>
-                <th colspan="2">Actions</th>
-            </tr>
-
-        </thead>
-        {% for entry in all_entries %}
-        {% if entry.completed %}
-        <tr class="profile_entries_table_tr" id="profile_entries_table_tr_completed">
-            <td>{{ entry.first_name }} {{ entry.last_name }}</td>
-            <td>{{ entry.email }}></td>
-            <td>{{ entry.phone_number }}</td>
-            <td>{{ entry.body }}</td>
-            <td>{{ entry.date_submitted }}</td>
-            <td>
-                <a class="btn btn-warning" href="{% url 'uncomplete_entry' entry.id %}">Mark As Incomplete</a>
-            </td>
-            <td>
-                <a id="profile_entries_delete_button" class="btn btn-danger" href="{% url 'delete_entry' entry.id %}">Delete</a>
-            </td>
+      <thead class="thead-dark">
+        <tr id="profile_entries_table_tr">
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Inquiry</th>
+          <th scope="col">Date Posted</th>
+          <th colspan="2">Actions</th>
         </tr>
-        {% else %}
-        <tr class="profile_entries_table_tr">
-            <td>{{ entry.first_name }} {{ entry.last_name }}</td>
-            <td>{{ entry.email }}</td>
-            <td>{{ entry.phone_number }}</td>
-            <td>{{ entry.body }}</td>
-            <td>{{ entry.date_submitted }}</td>
-            <td>
-                <a class="btn btn-success" href="{% url 'complete_entry' entry.id %}">Mark As Complete</a>
-            </td>
-            <td>
-                <a id="profile_entries_delete_button" class="btn btn-danger" href="{% url 'delete_entry' entry.id %}">Delete</a>
-            </td>
-        </tr>
-        {% endif %}
-        {% endfor %}
+      </thead>
+      {% for entry in all_entries %} {% if entry.completed %}
+      <tr
+        class="profile_entries_table_tr"
+        id="profile_entries_table_tr_completed"
+      >
+        <td>{{ entry.first_name }} {{ entry.last_name }}</td>
+        <td>{{ entry.email }}></td>
+        <td>{{ entry.phone_number }}</td>
+        <td>{{ entry.body }}</td>
+        <td>{{ entry.date_submitted }}</td>
+        <td>
+          <a
+            class="btn btn-warning"
+            href="{% url 'uncomplete_entry' entry.id %}"
+            >Mark As Incomplete</a
+          >
+        </td>
+        <td>
+          <a
+            id="profile_entries_delete_button"
+            class="btn btn-danger"
+            href="{% url 'delete_entry' entry.id %}"
+            >Delete</a
+          >
+        </td>
+      </tr>
+      {% else %}
+      <tr class="profile_entries_table_tr">
+        <td>{{ entry.first_name }} {{ entry.last_name }}</td>
+        <td>{{ entry.email }}</td>
+        <td>{{ entry.phone_number }}</td>
+        <td>{{ entry.body }}</td>
+        <td>{{ entry.date_submitted }}</td>
+        <td>
+          <a class="btn btn-success" href="{% url 'complete_entry' entry.id %}"
+            >Mark As Complete</a
+          >
+        </td>
+        <td>
+          <a
+            id="profile_entries_delete_button"
+            class="btn btn-danger"
+            href="{% url 'delete_entry' entry.id %}"
+            >Delete</a
+          >
+        </td>
+      </tr>
+      {% endif %} {% endfor %}
     </table>
 
     <div class="container" id="profile_generate_pdf">
-        <a id="profile_generate_pdf_button" href="{% url 'generate_pdf' %}" class="btn btn-info" target="_blank">Generate
-            PDF</a>
-    
+      <a
+        id="profile_generate_pdf_button"
+        href="{% url 'generate_pdf' %}"
+        class="btn btn-info"
+        target="_blank"
+        >Generate PDF</a
+      >
     </div>
 
     {% else %}
     <div class="container" id="profile_no_entries_div">
-        <h3>There are currently no entries in the database.</h3>
-        <p>Entries will be displayed here as information is collected from user submissions on the About Page.</p>
+      <h3>There are currently no entries in the database.</h3>
+      <p>
+        Entries will be displayed here as information is collected from user
+        submissions on the About Page.
+      </p>
     </div>
     {% endif %}
-</div>
+  </div>
 
+  <hr style="width: 75%;" />
 
-<hr style="width: 75%;">
+  <div class="container" id="profile_for_more_info_div">
+    <p>
+      For more information, you can refer to the
+      <a class="sarsour_and_brown_external_link" href="{% url 'admin:index' %}">
+        pre-built administration page.</a
+      >
+    </p>
+    <p>
+      Here you can add users and provide credentials to those users. As a word
+      of caution, please do not adjust any of the created classes. Please,
+      instead, use this page to manage entries.
+    </p>
+  </div>
+  <hr style="width: 75%" />
 
-
-<div class="container" id="profile_for_more_info_div">
-    <p>For more information, you can refer to the <a class="sarsour_and_brown_external_link" href="{% url 'admin:index' %}">
-            pre-built administration page.</a></p>
-    <p>Here you can add users and provide credentials to those users. As a word of caution, please do not adjust
-        any of the created classes. Please, instead, use this page to manage entries.</p>
-</div>
-<hr style="width: 75%">
-
-
-<div class="container" id="profile_entries_blog_page_button_div">
+  <div class="container" id="profile_entries_blog_page_button_div">
     <a class="btn btn-info" href="{% url 'all_blogs' %}">Blog Page</a>
-</div>
+  </div>
 
-<hr style="width: 75%;">
+  <hr style="width: 75%;" />
 
-<div class="container" id="profile_entries_logout_button_div">
+  <div class="container" id="profile_entries_logout_button_div">
     <a class="btn btn-info" href="{% url 'logout' %}">Log Out</a>
+  </div>
 </div>
 
 {% endblock %}

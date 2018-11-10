@@ -1184,6 +1184,20 @@ div.black-section-filler-div {
 
 /* Login Page - Main Form Div */
 
+div#main-login-div p,
+div#main-login-div h1, 
+div#main-login-div h2, 
+div#main-login-div h3, 
+div#main-login-div h4, 
+div#main-login-div h5, 
+div#main-login-div h6, 
+div#main-login-div ul,
+div#main-login-div ol, 
+div#main-login-div li, 
+div#main-login-div label {
+  color: #262626;
+}
+
 div#main-login-div.container {
   width: 100%;
   text-align: center;
@@ -1193,9 +1207,33 @@ div#main-login-div.container {
   padding-right: 0px;
   margin-top: 50px;
   margin-bottom: 50px;
+  color: #262626;
 }
 
+div#main-login-div.container p {
+  color: #262626;
+}
 /* Login Page - Form */
+
+/* Begin Profile Page */
+
+div#profile_main_div {
+  width: auto;
+  height: auto;
+}
+
+div#profile_main_div p,
+div#profile_main_div h1,
+div#profile_main_div h2,
+div#profile_main_div h3, 
+div#profile_main_div h4, 
+div#profile_main_div h5, 
+div#profile_main_div h6, 
+div#profile_main_div ul,
+div#profile_main_div ol, 
+div#profile_main_div li {
+  color: #262626;
+}
 
 /* Profile Page - User Greeting */
 
