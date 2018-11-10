@@ -245,7 +245,6 @@ div#navbar_left_container {
 }
 
 div#navbar_left_container h3 {
-  letter-spacing: -2.5px;
   margin: 0px;
   padding: 0px;
   font-weight: normal; 
@@ -263,13 +262,19 @@ img#navbar_sarsour_and_brown_logo {
   overflow: hidden;
 }
 
+@media (min-width: 576px) {
+  div#navbar_left_container h3 {
+    letter-spacing: -2.5px
+  }
+}
+
 /* Media Queries */
 @media (max-width: 575px) {
   div#navbar_left_container h3 {
     font-size: 1.5rem;
     margin-left: 50%;
     transform: translateX(-50%);
-    letter-spacing: 0px;
+    letter-spacing: -1.5px;
   }
   div#navbar_right_container a,
   div#navbar_right_container_expand_button_div {

@@ -118,7 +118,7 @@ $(document).ready(function() {
         .children("h3")
         .css({
           fontSize: "2.5em",
-          textShadow: "10px 10px 10px #262626", 
+          textShadow: "10px 10px 10px #262626"
         });
     } else if ($(window).width() >= 1200 && $(window).width() <= 1499) {
       $(this)
@@ -126,7 +126,7 @@ $(document).ready(function() {
         .children("h3")
         .css({
           fontSize: "2.5em",
-          textShadow: "10px 10px 10px #262626",
+          textShadow: "10px 10px 10px #262626"
         });
     } else if ($(window).width() >= 979 && $(window).width() <= 1199) {
       $(this)
@@ -134,7 +134,7 @@ $(document).ready(function() {
         .children("h3")
         .css({
           fontSize: "2.5em",
-          textShadow: "10px 10px 10px #262626",
+          textShadow: "10px 10px 10px #262626"
         });
     } else if ($(window).width() >= 769 && $(window).width() <= 978) {
       $(this)
@@ -142,7 +142,7 @@ $(document).ready(function() {
         .children("h3")
         .css({
           fontSize: "2.5em",
-          textShadow: "10px 10px 10px #262626",
+          textShadow: "10px 10px 10px #262626"
         });
     } else if ($(window).width() >= 480 && $(window).width() <= 768) {
       $(this)
@@ -150,7 +150,7 @@ $(document).ready(function() {
         .children("h3")
         .css({
           fontSize: "2.0em",
-          textShadow: "10px 10px 10px #262626",
+          textShadow: "10px 10px 10px #262626"
         });
     } else if ($(window).width() >= 200 && $(window).width() <= 479) {
       $(this)
@@ -158,7 +158,7 @@ $(document).ready(function() {
         .children("h3")
         .css({
           fontSize: "1.5em",
-          textShadow: "10px 10px 10px #262626",
+          textShadow: "10px 10px 10px #262626"
         });
     } else {
       $(this)
@@ -166,7 +166,7 @@ $(document).ready(function() {
         .children("h3")
         .css({
           fontSize: "1.25em",
-          textShadow: "10px 10px 10px #262626",
+          textShadow: "10px 10px 10px #262626"
         });
     }
   });
@@ -230,4 +230,34 @@ $(document).ready(function() {
         });
     }
   });
+
+  // This function will determine if the User is using Internet Explorer
+  function detectIE() {
+    var ua = window.navigator.userAgent;
+
+    var msie = ua.indexOf("MSIE ");
+    if (msie > 0) {
+      // IE 10 or older => return version number
+      return parseInt(ua.substring(msie + 5, ua.indexOf(".", msie)), 10);
+    }
+
+    var trident = ua.indexOf("Trident/");
+    if (trident > 0) {
+      // IE 11 => return version number
+      var rv = ua.indexOf("rv:");
+      return parseInt(ua.substring(rv + 3, ua.indexOf(".", rv)), 10);
+    }
+
+    var edge = ua.indexOf("Edge/");
+    if (edge > 0) {
+      // Edge (IE 12+) => return version number
+      return parseInt(ua.substring(edge + 5, ua.indexOf(".", edge)), 10);
+    }
+
+    // other browser
+    return false;
+  }
+
+  console.log('IE: ' + detectIE());
+
 });
