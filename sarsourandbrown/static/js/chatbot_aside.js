@@ -10,7 +10,24 @@ $(document).ready(function() {
   var $conversation_display = $("#chat_bot_conversation_display_div");
   var $user_input = $("#user_input_div");
   var $submit_button = $("#user_input_submit_div");
-  var $activate_chat_modal = $('#activated_chat_full_page_modal');
+  var $activate_chat_modal = $("#activated_chat_full_page_modal");
+
+  var isIE =
+    !!navigator.userAgent.match(/Trident/g) ||
+    !!navigator.userAgent.match(/MSIE/g);
+
+  if (isIE) {
+    console.log("Chatbot is unavailable in Internet Explorer");
+    $side_nav_div.css({ display: "none"});
+    $chat_bot_image_icon.css({ display: "none" });
+    $chat_bot_image_span.css({ display: "none" });
+    $hover_div.css({ display: "none" });
+    $hover_close_button.css({ display: "none" });
+    $mouse_leave_div.css({ display: "none" });
+  } else {
+    console.log("Not IE");
+    // return false;
+  }
 
   function active_hover() {
     $side_nav_div.css({ width: "10px" });
@@ -112,7 +129,7 @@ $(document).ready(function() {
     });
     $user_input.css({ left: "-335px" });
     $submit_button.css({ right: "256px" });
-    $activate_chat_modal.css({width: "0%"})
+    $activate_chat_modal.css({ width: "0%" });
   };
 
   $live_chat_close_button.click(function() {
@@ -143,7 +160,7 @@ $(document).ready(function() {
     $conversation_display.css({ right: "-200px", left: "340px" });
     $user_input.css({ left: "335px" });
     $submit_button.css({ right: "-335px" });
-    $activate_chat_modal.css({width: "0%"})
+    $activate_chat_modal.css({ width: "0%" });
     $hover_div.html("Live Chat");
   }
 });
