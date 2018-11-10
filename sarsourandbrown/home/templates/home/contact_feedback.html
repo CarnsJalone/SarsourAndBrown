@@ -1,13 +1,22 @@
-{% extends 'home/base.html' %}
-{% block contact_feedback %}
+{% extends 'home/base.html' %} {% block contact_feedback %}
 <div class="container" id="contact_feedback_div">
+  <div id="contact_feedback_content">
     <div class="row" id="contact_feedback_header">
-        <h3>Thanks for your feedback, {{ first_name }}!</h3>
+      <h3>Thanks for your feedback, {{ first_name }}!</h3>
     </div>
+    <hr style="background-color: #5a5a5a" />
     <div class="row" id="contact_feedback_paragraph">
-        <p>Your inquiry has been submitted to Sarsour And Brown.
-            We will contact you as soon as we are able to!
-        </p>
+      <p>
+        Your inquiry has been submitted to Sarsour And Brown. An email has been
+        sent to
+        <a href="mailto:sarsourandbrown@gmail.com">SarsourAndBrown@gmail.com</a>
+        and a receipt of this inquiry has been sent to {{ email }}.
+      </p>
+      <hr style="background-color: #5a5a5a; width: 60%;" />
+      <p>
+        We will be in contact with you regarding the next steps of your inquiry.
+      </p>
     </div>
+  </div>
 </div>
 {% endblock %}
