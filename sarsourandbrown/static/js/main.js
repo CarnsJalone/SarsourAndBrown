@@ -1,4 +1,9 @@
 $(document).ready(function() {
+
+  // Initialize AOS function for home page
+  AOS.init();
+
+
   // Email Regex Function
   var $email_field = $("#id_email");
   var $phone_number_field = $("#id_phone_number");
